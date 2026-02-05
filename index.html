@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shrimplify</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Quicksand:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        .step-offset {
+          transform: translateY(100px);
+        }
+
+        @media (max-width: 768px) {
+          .step-offset {
+            transform: translateY(0);
+          }
+        }
+
+        .slide {
+          transition: opacity 0.3s ease;
+        }
+
+        .dot {
+          cursor: pointer;
+        }
+
+        .dot.active {
+          color: #111827;
+          font-weight: 600;
+        }
+    </style>
+  </head>
+
+  <body style="font-family: Inter, sans-serif;">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg py-3" style="background:#366FB6;">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="./images/navbar-icon.png" alt="Shrimplify" height="40" />
+        </a>
+
+        <!-- Toggle -->
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+          <ul class="navbar-nav gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link text-white fw-semibold" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <a
+          href="#"
+          class="btn rounded-pill px-4"
+          style="background:#ffffff; color:#366FB6; font-weight:400;"
+        >
+          Reach Us
+        </a>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-5 pb-4" style="background:#366FB6;">
+      <div class="container pt-4">
+        <div class="row align-items-center gy-4 gx-5">
+
+          <!-- LEFT -->
+          <div class="col-lg-7">
+            <span
+              class="d-inline-block mb-3 px-3 py-2 rounded-pill text-white"
+              style="background: rgba(255,255,255,0.15); font-size:14px;"
+            >
+              Shrimplify Presents
+            </span>
+
+            <h1
+              style="
+                font-family: Quicksand, sans-serif;
+                font-weight: 700;
+                font-size: 64px;
+                line-height: 1;
+                color: #ffffff;
+              "
+            >
+              The Best Harvest Starts
+              with the Right Seed.
+            </h1>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="col-lg-5 ms-auto">
+            <p
+              style="
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #ffffff;
+                max-width: 520px;
+              "
+            >
+              Introducing <strong>HatchPro</strong> — Shrimplify’s intelligent seed
+              sourcing service that uses Aqua Intelligence to identify the most
+              suitable hatchery for your stocking date, backed by on-ground seed
+              validation by our experts.
+            </p>
+
+            <div class="d-flex gap-3 mt-4 flex-wrap">
+              <a
+                href="#"
+                class="btn rounded-pill px-4 py-2 text-white"
+                style="background:#F7931E; font-weight:600;"
+              >
+                Book Now →
+              </a>
+
+              <a
+                href="#"
+                class="btn rounded-pill px-4 py-2"
+                style="border:2px solid #C6FF4E; color:#C6FF4E;"
+              >
+                Search Right Hatchery 🔍
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section
+      class="position-relative"
+      style="background:#366FB6; padding-bottom:30px; border-radius: 0 0 100px 100px;"
+    >
+      <div class="d-flex justify-content-center w-100">
+        <div
+          class="overflow-hidden"
+          style="
+            border-radius: 40px;
+            background: #000;
+            max-width: 1400px;
+            width: 100%;
+          "
+        >
+          <div class="ratio" style="--bs-aspect-ratio: 40%;">
+            <iframe
+              src="https://www.youtube.com/embed/sJUqkuYY9zw?si=8ffmAwGPaX4jrDCn"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+            <!-- Floating Shrimp Icon -->
+      <div
+        class="position-absolute start-50 translate-middle-x"
+        style="bottom:-56px;"
+      >
+        <div
+          class="d-flex align-items-center justify-content-center rounded-circle bg-white"
+          style="
+            width: 130px;
+            height: 130px;
+            border: 11px solid #F58524;
+          "
+        >
+          <img
+            src="./images/shrimp.png"
+            alt="Shrimp"
+            style="width: 58px; height: auto;"
+          />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- WHAT SHRIMPLIFY DOES -->
+    <section class="position-relative py-5 bg-white "
+    style="margin-top:58px;">
+      <div class="container py-4">
+
+        <!-- Decorative SVGs -->
+        <img
+          src="./images/svg1.svg"
+          alt=""
+          class="position-absolute"
+          style="top: -5%; left: 100px; width: 150px;"
+        />
+
+        <img
+          src="./images/fish.svg"
+          alt=""
+          class="position-absolute"
+          style="bottom: -30px; right: 100px; width: 160px;"
+        />
+
+        <!-- HEADER ROW -->
+        <div class="row align-items-start mb-5 gx-5">
+          <!-- LEFT TITLE -->
+          <div class="col-lg-6">
+            <span
+              class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
+              style="border:1px solid #E6F0F7; font-family:Poppins, sans-serif; font-size:14px;"
+            >
+              <span
+                style="width:10px; height:10px; background:#2F80ED; border-radius:50%; display:inline-block;"
+              ></span>
+              About Us
+            </span>
+
+            <h2
+              style="
+                font-family: Quicksand, sans-serif;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 1.3;
+                letter-spacing: -0.04em;
+                color: #2F80ED;
+              "
+            >
+              What Shrimplify Does
+            </h2>
+          </div>
+
+          <!-- RIGHT DESCRIPTION -->
+          <div class="col-lg-6">
+            <p
+              style="
+                font-family: Poppins, sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.3;
+                letter-spacing: -0.02em;
+                color: #333333;
+                max-width: 100%;
+                margin-top: 56px;
+              "
+            >
+              Shrimplify is an Aqua Intelligence platform designed to simplify
+              shrimp farming operations — starting with verified seed sourcing
+              and extending through efficient farming operations to harvest.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARDS ROW -->
+        <div class="row g-4 align-items-stretch">
+
+          <!-- CARD 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="h-100 p-4 rounded-4"
+              style="background:#E8F8FF;"
+            >
+              <h3
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 600;
+                  font-size: 48px;
+                  margin-bottom: 16px;
+                "
+              >
+                450+
+              </h3>
+
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 20px;
+                  line-height: 1.4;
+                  letter-spacing: -0.04em;
+                  margin-bottom: 8px;
+                "
+              >
+                Smart Farming Enablement
+              </p>
+
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-size: 16px;
+                  color: #6B7280;
+                "
+              >
+                Enabling data-driven shrimp farming through smart tools and insights.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 2 (IMAGE) -->
+          <div class="col-lg-3 col-md-6">
+            <div class="h-100 rounded-4 overflow-hidden">
+              <img
+                src="./images/about-shrimp.png"
+                alt="Shrimp"
+                class="w-100 h-100"
+                style="object-fit: cover;"
+              />
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="h-100 p-4 rounded-4"
+              style="background:#E8F8FF;"
+            >
+              <h3
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 600;
+                  font-size: 48px;
+                  margin-bottom: 16px;
+                "
+              >
+                600+
+              </h3>
+
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 20px;
+                  line-height: 1.4;
+                  letter-spacing: -0.04em;
+                  margin-bottom: 8px;
+                "
+              >
+                Stronger Local Communities
+              </p>
+
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-size: 16px;
+                  color: #6B7280;
+                "
+              >
+                Training and technology that strengthen farmer livelihoods.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 4 (IMAGE) -->
+          <div class="col-lg-3 col-md-6">
+            <div class="h-100 rounded-4 overflow-hidden">
+              <img
+                src="./images/about-boat.png"
+                alt="Community"
+                class="w-100 h-100"
+                style="object-fit: cover;"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+
+        <!-- HEADER ROW -->
+        <div class="row align-items-start mb-5 gx-5">
+
+          <!-- LEFT -->
+          <div class="col-lg-6">
+            <span
+              class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
+              style="border:1px solid #E6F0F7; font-family:Poppins, sans-serif; font-size:14px;"
+            >
+              <span
+                style="width:10px; height:10px; background:#2F80ED; border-radius:50%; display:inline-block;"
+              ></span>
+              Services
+            </span>
+
+            <h2
+              style="
+                font-family: Quicksand, sans-serif;
+                font-weight: 600;
+                font-size: 46px;
+                line-height: 1.2;
+                letter-spacing: -0.04em;
+                color: #2F80ED;
+                margin-bottom: 12px;
+              "
+            >
+              Our Services
+            </h2>
+
+            <h3
+              style="
+                font-family: Quicksand, sans-serif;
+                font-weight: 600;
+                font-size: 32px;
+                color: #000;
+                margin-bottom: 12px;
+              "
+            >
+              HatchPro
+            </h3>
+
+            <p
+              style="
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.4;
+                letter-spacing: 0;
+                color: #4B5563;
+                max-width: 100%;
+              "
+            >
+              Verified Vannamei seed sourcing that identifies the right hatchery
+              for your stocking date and confirms seed quality through on-ground
+              expert validation.
+            </p>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="col-lg-6 d-flex flex-column align-items-end">
+            <p
+              style="
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.4;
+                letter-spacing: 0;
+                color: #4B5563;
+                max-width: 100%;
+                margin-bottom: 24px;
+                margin-top: 56px;
+              "
+            >
+              Shrimplify is an Aqua Intelligence platform designed to simplify shrimp
+              farming operations — starting with verified seed sourcing and extending
+              through efficient farming operations to harvest.
+            </p>
+
+            <a
+              href="#"
+              class="btn rounded-pill px-4 py-2 text-white"
+              style="background:#F7931E; font-family:'Plus Jakarta Sans', sans-serif; font-weight:600; font-size:18px; line-height:1.5; letter-spacing:0;"
+            >
+              How it Works →
+            </a>
+          </div>
+        </div>
+
+        <!-- CONTENT ROW -->
+        <div class="row align-items-center gx-5">
+
+          <!-- LEFT STEPS -->
+          <div class="col-lg-6">
+            <div class="row g-4">
+
+              <!-- STEP 01 -->
+              <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/service-feature1.png" width="52" />
+                    <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 50px;
+                        line-height: 1;
+                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      01
+                      </span>
+
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    Pond preparation guidance before seed stocking
+                  </p>
+                </div>
+              </div>
+
+              <!-- STEP 02 -->
+              <div class="col-md-6 step-offset">
+                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/service-feature2.png" width="52" />
+                      <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 50px;
+                        line-height: 1;
+                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      02
+                      </span>
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    Hatchery shortlisting based on stocking plans
+                  </p>
+                </div>
+              </div>
+
+              <!-- STEP 03 -->
+              <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/service-feature3.png" width="52" />
+                      <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 50px;
+                        line-height: 1;
+                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      03
+                      </span>
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    On-site seed quality verification
+                  </p>
+                </div>
+              </div>
+
+              <!-- STEP 04 -->
+              <div class="col-md-6 step-offset">
+                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/service-feature4.png" width="52" />
+                      <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 50px;
+                        line-height: 1;
+                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      04
+                      </span>
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    Seed transport handled using best practices to reduce PL stress
+                  </p>
+                </div>
+              </div>
+
+              <!-- STEP 05 -->
+              <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/service-feature5.png" width="52" />
+                      <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 50px;
+                        line-height: 1;
+                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      05
+                      </span>
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    Confidence from Day 1 or reduced risk from Day 1
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="col-lg-6">
+            <div class="rounded-4 overflow-hidden">
+              <img
+                src="./images/service-shrimp.png"
+                class="w-100"
+                style="height: 650px; object-fit: cover;"
+                alt="Shrimp"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FarmPro -->
+    <section class="py-5 bg-white position-relative">
+      <div class="container py-4">
+        <!-- HEADER -->
+        <div class="row align-items-start mb-5 gx-5">
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <h2
+                style="
+                  font-family: Quicksand, sans-serif;
+                  font-weight: 600;
+                  font-size: 46px;
+                  line-height: 1.2;
+                  letter-spacing: -0.04em;
+                  margin: 0;
+                "
+              >
+                FarmPro
+              </h2>
+
+              <span
+                class="px-3 py-1 rounded-pill text-white"
+                style="background:#F7931E; font-family:Poppins, sans-serif; font-size:14px;"
+              >
+                ⏱ Coming Soon
+              </span>
+            </div>
+
+            <p
+              style="
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.4;
+                letter-spacing: 0;
+                color: #4B5563;
+                max-width: 100%;
+              "
+            >
+              A comprehensive farm management service designed to enable efficient,
+              disciplined, and sustainable shrimp farming through best-practice operations.
+            </p>
+          </div>
+
+          <div class="col-lg-6 d-flex justify-content-end align-items-start">
+            <a
+              href="#"
+              class="btn rounded-pill px-4 py-2"
+              style="
+                border:1.5px solid #6B8E23;
+                color:#6B8E23;
+                font-family:'Plus Jakarta Sans', sans-serif;
+                font-weight:600;
+                font-size:18px;
+                line-height:1.5;
+                letter-spacing:0;
+                margin-top: 72px;
+              "
+            >
+              Join Waitlist →
+            </a>
+          </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="row align-items-center gx-5">
+
+          <!-- LEFT IMAGE -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="rounded-4 overflow-hidden">
+              <img
+                src="./images/farmpro.png"
+                class="w-100"
+                style="height: 520px; object-fit: cover;"
+                alt="Farm Ponds"
+              />
+            </div>
+          </div>
+
+          <!-- RIGHT STEPS -->
+          <div class="col-lg-6">
+            <div class="row g-4">
+
+              <!-- STEP 01 -->
+              <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:#EAF7FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/farmpro-icon1.png" width="52" />
+                    <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 44px;
+                        background: linear-gradient(180deg, #EAF7FF 0%, #6AAEF0 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      01
+                    </span>
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    Structured farm operations & protocols
+                  </p>
+                </div>
+              </div>
+
+              <!-- STEP 02 (OFFSET) -->
+              <div class="col-md-6 step-offset">
+                <div class="p-4 rounded-4 h-100" style="background:#EAF7FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/farmpro-icon2.png" width="52" />
+                    <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 44px;
+                        background: linear-gradient(180deg, #EAF7FF 0%, #6AAEF0 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      02
+                    </span>
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    Health, growth & performance monitoring
+                  </p>
+                </div>
+              </div>
+
+              <!-- STEP 03 -->
+              <div class="col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:#EAF7FF;">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/farmpro-icon3.png" width="52" />
+                    <span
+                      style="
+                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-weight: 600;
+                        font-size: 44px;
+                        background: linear-gradient(180deg, #EAF7FF 0%, #6AAEF0 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      03
+                    </span>
+                  </div>
+                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                    Sustainability-focused farming practices
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT BOTTOM FISH -->
+            <img
+            src="./images/fish.svg"
+            alt="Decorative Fish"
+            style="
+                position: absolute;
+                right: 80px;
+                bottom: 0;
+                width: 280px;
+                opacity: 0.9;
+                pointer-events: none;
+            "
+            />
+
+    </section>
+
+    <!-- Where we Operate -->
+     <section class="py-5 bg-white position-relative" style="background:#366FB6;">
+      <div class="container py-4">
+
+        <!-- CARD WRAPPER -->
+        <div
+          class="p-5 position-relative"
+          style="
+            background: #ffffff;
+            border-radius: 32px;
+            border: 1px solid #EAF0F6;
+            box-shadow:
+              0px 8px 24px rgba(16, 24, 40, 0.04),
+              0px 2px 6px rgba(16, 24, 40, 0.03);
+          "
+        >
+          <div class="row align-items-center gx-5">
+
+            <!-- LEFT MAP -->
+            <div class="col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center">
+              <div
+                class="d-flex align-items-center justify-content-center"
+                style="
+                  width: 500px;
+                  height: 500px;
+                  border-radius: 50%;
+                  background: #D0F5FF;
+                "
+              >
+                <img
+                  src="./images/ap.png"
+                  alt="Andhra Pradesh Map"
+                  style="width: 120%; height: auto;"
+                />
+              </div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="col-lg-6">
+
+              <!-- PILL -->
+              <span
+                class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
+                style="
+                  background: #F7931E;
+                  color: #fff;
+                  font-family: 'Plus Jakarta Sans', sans-serif;
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 1.5;
+                  letter-spacing: -0.02em;
+                "
+              >
+                📍 Currently Serving
+              </span>
+
+              <!-- HEADING -->
+              <h2
+                style="
+                  font-family: Quicksand, sans-serif;
+                  font-weight: 700;
+                  font-size: 46px;
+                  line-height: 1.2;
+                  letter-spacing: 0;
+                  color: #2F6FC2;
+                  margin-bottom: 16px;
+                "
+              >
+                Where We Operate
+              </h2>
+
+              <!-- DESCRIPTION -->
+              <p
+                style="
+                  font-family: 'Plus Jakarta Sans', sans-serif;
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 1.4;
+                  letter-spacing: 0;
+                  color: #4B5563;
+                  max-width: 480px;
+                  margin-bottom: 24px;
+                "
+              >
+                HatchPro services are currently available across Andhra Pradesh,
+                with on-ground coordination based on hatchery and farm locations.
+              </p>
+
+              <!-- TAG -->
+              <span
+                class="px-4 py-2 rounded-pill d-inline-block"
+                style="
+                  background: #D0F5FF;
+                  color: #2F6FC2;
+                  font-family: 'Plus Jakarta Sans', sans-serif;
+                  font-weight: 600;
+                  font-size: 16px;
+                "
+              >
+                Whole Coastal Andhra
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Us-->
+     <section class="py-5 bg-white position-relative overflow-hidden">
+      <div class="container py-5 text-center">
+
+        <!-- DECORATIVE SVGs -->
+        <img
+          src="./images/left-fish.svg"
+          alt=""
+          style="
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 200px;
+            opacity: 0.6;
+            pointer-events: none;
+          "
+        />
+
+        <img
+          src="./images/right-fish.svg"
+          alt=""
+          style="
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            width: 200px;
+            opacity: 0.6;
+            pointer-events: none;
+          "
+        />
+
+        <!-- PILL -->
+        <span
+          class="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill mb-3"
+          style="
+            border: 1px solid #E6F0F7;
+            font-family: Poppins, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1F4FD8;
+          "
+        >
+          ● Why Choose Us
+        </span>
+
+        <!-- HEADING -->
+        <h2
+          style="
+            font-family: Quicksand, sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 1.3;
+            letter-spacing: -0.04em;
+            color: #2F6FC2;
+            margin-bottom: 16px;
+            text-align: center;
+          "
+        >
+          Why Shrimplify
+        </h2>
+
+        <!-- DESCRIPTION -->
+        <p
+          style="
+            font-family: Poppins, sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+            color: #4B5563;
+            max-width: 720px;
+            margin: 0 auto 100px;
+            text-align: center;
+          "
+        >
+          Built by aquaculture-focused professionals with 30+ years of family
+          experience in aquaculture. Combines intelligence with on-ground execution
+        </p>
+
+        <!-- CONTENT ROW -->
+        <div
+          class="row align-items-center justify-content-center gx-0"
+          style="margin-top: 40px;"
+        >
+
+          <!-- LEFT CARD -->
+          <div class="col-lg-3 d-flex justify-content-start mb-4 mb-lg-0">
+            <div
+              class="p-3 rounded-4 text-start"
+              style="background:#EAF7FF; max-width: 280px; margin-right: auto;"
+            >
+              <img
+                src="./images/why-card-1.png"
+                class="w-100 rounded-3 mb-3"
+                alt=""
+              />
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 24px;
+                  line-height: 1.4;
+                  letter-spacing: -0.04em;
+                  margin: 0;
+                "
+              >
+                Farmer-first, not commission-first
+              </p>
+            </div>
+          </div>
+
+          <!-- CENTER IMAGE -->
+          <div class="col-lg-6 d-flex justify-content-center mb-4 mb-lg-0">
+            <div
+              class="position-relative d-flex justify-content-center align-items-end"
+              style="
+                width: 420px;
+                height: 420px;
+              "
+            >
+              <!-- BACKGROUND CIRCLE -->
+              <div
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  width: 400px;
+                  height: 400px;
+                  background: #EAF7FF;
+                  border-radius: 50%;
+                  z-index: 1;
+                "
+              ></div>
+
+              <!-- IMAGE -->
+              <img
+                src="./images/why-card-center.png"
+                alt="Happy Farmer"
+                style="
+                  position: relative;
+                  z-index: 2;
+                  width: 380px;
+                  height: 380px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  margin-bottom: 10px;
+                "
+              />
+            </div>
+          </div>
+
+          <!-- RIGHT CARD -->
+          <div class="col-lg-3 d-flex justify-content-end">
+            <div
+              class="p-3 rounded-4 text-start"
+              style="background:#EAF7FF; max-width: 280px; margin-left: auto;"
+            >
+              <img
+                src="./images/why-card-2.png"
+                class="w-100 rounded-3 mb-3"
+                alt=""
+              />
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 24px;
+                  line-height: 1.4;
+                  letter-spacing: -0.04em;
+                  margin: 0;
+                "
+              >
+                Designed for farmers for long-term farming success
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA + DOTTED DIVIDER -->
+    <div class="position-relative mt-5 d-flex justify-content-center align-items-center">
+
+      <!-- DOTTED LINE -->
+      <!-- DOTTED LINE -->
+    <div
+      style="
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        transform: translateY(-50%);
+        background-image: repeating-linear-gradient(
+          to right,
+          #D1D5DB 0,
+          #D1D5DB 8px,
+          transparent 8px,
+          transparent 18px
+        );
+        z-index: 1;
+      "
+    ></div>
+
+
+      <!-- BUTTON -->
+      <a
+        href="#"
+        class="btn rounded-pill px-5 py-3 text-white position-relative"
+        style="
+          background:#F58524;
+          font-family:Poppins, sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20.86px;
+          letter-spacing: -0.04em;
+          z-index: 2;
+          background-clip: padding-box;
+        "
+      >
+        Explore Services
+      </a>
+
+    </div>
+
+
+      </div>
+     </section>
+
+    <!-- What Customers say --> 
+    <section class="py-5 bg-white">
+      <div class="container ">
+
+        <!-- HEADER -->
+        <div class="row mb-5">
+          <div class="col-lg-6">
+            <h2
+              style="
+                font-family: Quicksand, sans-serif;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 62px;
+                letter-spacing: 0%;
+                color: #366FB6;
+                text-transform: capitalize;
+                margin-bottom: 0;
+              "
+            >
+              What Customers say
+            </h2>
+          </div>
+          <div class="col-lg-6">
+            <p
+              style="
+                font-family: Inter, sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0%;
+                color: #4B5563;
+                margin-top: 16px;
+                margin-bottom: 0;
+              "
+            >
+              Real stories from people who’ve experienced the freshness,
+              quality, and care behind every harvest from dedicated farmers
+              to satisfied customers who now trust Shrimplify for their daily needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- SLIDER -->
+        <div id="testimonialSlider" class="position-relative">
+
+          <!-- SLIDES -->
+          <div class="row align-items-center slide active">
+
+            <div class="col-lg-5">
+              <img
+                src="./images/manasa.png"
+                class="img-fluid rounded-4"
+                alt="Customer"
+              />
+            </div>
+
+            <div class="col-lg-7 ps-lg-5">
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 28px;
+                  line-height: 1.5;
+                  letter-spacing: 0%;
+                  text-transform: capitalize;
+                  color: #4C4C4C;
+                  margin-bottom: 16px;
+                "
+              >
+                Shrimplify’s HatchPro Service gave us access to verified,
+                healthy seed with complete traceability. The quality
+                consistency and technical support helped us improve
+                survival rates from the very first cycle.
+              </p>
+
+              <h6
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 24px;
+                  line-height: 1.5;
+                  letter-spacing: 0%;
+                  color: #254039;
+                  margin-bottom: 4px;
+                "
+              >
+                Manasa
+              </h6>
+              <small
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 1;
+                  letter-spacing: 0%;
+                  text-align: center;
+                  text-transform: capitalize;
+                  color: #25403980;
+                "
+              >
+                Lorem text
+              </small>
+            </div>
+
+          </div>
+
+          <div class="row align-items-center slide d-none">
+
+            <div class="col-lg-5">
+              <img
+                src="./images/manasa.png"
+                class="img-fluid rounded-4"
+                alt="Customer"
+              />
+            </div>
+
+            <div class="col-lg-7 ps-lg-5">
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 28px;
+                  line-height: 1.5;
+                  letter-spacing: 0%;
+                  text-transform: capitalize;
+                  color: #4C4C4C;
+                  margin-bottom: 16px;
+                "
+              >
+                The transparency and on-ground support helped us
+                plan cycles better and reduce losses significantly.
+              </p>
+
+              <h6
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 24px;
+                  line-height: 1.5;
+                  letter-spacing: 0%;
+                  color: #254039;
+                  margin-bottom: 4px;
+                "
+              >
+                Ramesh
+              </h6>
+              <small
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 1;
+                  letter-spacing: 0%;
+                  text-align: center;
+                  text-transform: capitalize;
+                  color: #25403980;
+                "
+              >
+                Shrimp Farmer
+              </small>
+            </div>
+
+          </div>
+
+          <div class="row align-items-center slide d-none">
+
+            <div class="col-lg-5">
+              <img
+                src="./images/manasa.png"
+                class="img-fluid rounded-4"
+                alt="Customer"
+              />
+            </div>
+
+            <div class="col-lg-7 ps-lg-5">
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 28px;
+                  line-height: 1.5;
+                  letter-spacing: 0%;
+                  text-transform: capitalize;
+                  color: #4C4C4C;
+                  margin-bottom: 16px;
+                "
+              >
+                A farmer-first platform that genuinely understands
+                long-term farming success.
+              </p>
+
+              <h6
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 24px;
+                  line-height: 1.5;
+                  letter-spacing: 0%;
+                  color: #254039;
+                  margin-bottom: 4px;
+                "
+              >
+                Suresh
+              </h6>
+              <small
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 1;
+                  letter-spacing: 0%;
+                  text-align: center;
+                  text-transform: capitalize;
+                  color: #25403980;
+                "
+              >
+                Aquaculture Partner
+              </small>
+            </div>
+
+          </div>
+
+          <!-- CONTROLS -->
+          <div class="position-absolute bottom-0 end-0 d-flex align-items-center gap-3 p-4">
+
+            <button class="btn btn-outline-secondary rounded-circle px-3" id="prevBtn" style="border: none; background: transparent;">
+              <img src="./images/left-arrow.png" width="40" height="40" alt="Previous" />
+            </button>
+
+            <div class="d-flex gap-5" id="dots">
+              <span
+                class="dot active"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 1;
+                  letter-spacing: 0%;
+                  text-align: center;
+                  text-transform: capitalize;
+                  color: #25403980;
+                "
+              >
+                01
+              </span>
+              <span
+                class="dot"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 1;
+                  letter-spacing: 0%;
+                  text-align: center;
+                  text-transform: capitalize;
+                  color: #25403980;
+                "
+              >
+                02
+              </span>
+              <span
+                class="dot"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 1;
+                  letter-spacing: 0%;
+                  text-align: center;
+                  text-transform: capitalize;
+                  color: #25403980;
+                "
+              >
+                03
+              </span>
+            </div>
+
+            <button class="btn rounded-circle px-3" id="nextBtn" style="border: none; background: transparent;">
+              <img src="./images/right-arrow.png" width="40" height="40" alt="Next" />
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <script>
+      const TestimonialSlider = {
+        slides: document.querySelectorAll(".slide"),
+        dots: document.querySelectorAll(".dot"),
+        index: 0,
+
+        init() {
+          document.getElementById("nextBtn").onclick = () => this.next();
+          document.getElementById("prevBtn").onclick = () => this.prev();
+
+          this.dots.forEach((dot, i) => {
+            dot.onclick = () => this.goTo(i);
+          });
+        },
+
+        update() {
+          this.slides.forEach(slide => slide.classList.add("d-none"));
+          this.dots.forEach(dot => dot.classList.remove("active"));
+
+          this.slides[this.index].classList.remove("d-none");
+          this.dots[this.index].classList.add("active");
+        },
+
+        next() {
+          this.index = (this.index + 1) % this.slides.length;
+          this.update();
+        },
+
+        prev() {
+          this.index =
+            (this.index - 1 + this.slides.length) % this.slides.length;
+          this.update();
+        },
+
+        goTo(i) {
+          this.index = i;
+          this.update();
+        }
+      };
+
+      TestimonialSlider.init();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
