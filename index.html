@@ -149,6 +149,13 @@
           section:last-child {
             margin-bottom: 0 !important;
           }
+          
+          /* Remove video background color on mobile */
+          @media (max-width: 768px) {
+            .video-container-mobile {
+              background: transparent !important;
+            }
+          }
         }
     </style>
   </head>
@@ -194,7 +201,7 @@
         <!-- CTA -->
         <a
           href="#"
-          class="btn rounded-pill px-4"
+          class="btn rounded-pill px-4 d-none d-lg-block"
           style="background:#ffffff; color:#366FB6; font-weight:400;"
         >
           Reach Us
@@ -272,54 +279,57 @@
 
     <!-- VIDEO SECTION -->
     <section
-      class="position-relative"
-      style="background:#366FB6; padding-bottom:30px; border-radius: 0 0 100px 100px;"
+  class="position-relative video-section"
+  style="background:#366FB6; padding-bottom:30px; border-radius: 0 0 100px 100px;"
+>
+  <div class="d-flex justify-content-center w-100">
+    <div
+      class="overflow-hidden video-container-mobile"
+      style="border-radius: 40px; background: #000; max-width: 1400px; width: 100%;"
+      data-aos="fade-up"
     >
-      <div class="d-flex justify-content-center w-100">
-        <div
-          class="overflow-hidden"
-          style="
-            border-radius: 40px;
-            background: #000;
-            max-width: 1400px;
-            width: 100%;
-          "
-        >
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/sJUqkuYY9zw?si=8ffmAwGPaX4jrDCn"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/sJUqkuYY9zw?si=8ffmAwGPaX4jrDCn"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
-            <!-- Floating Shrimp Icon -->
-      <div
-        class="position-absolute start-50 translate-middle-x d-none d-lg-block"
-        style="bottom:-56px;"
-      >
-        <div
-          class="d-flex align-items-center justify-content-center rounded-circle bg-white"
-          style="
-            width: 130px;
-            height: 130px;
-            border: 11px solid #F58524;
-          "
-          data-aos="zoom-in"
-        >
-          <img
-            src="./images/shrimp.png"
-            alt="Shrimp"
-            class="img-fluid"
-            style="width: 58px; height: auto; max-width: 70%;"
-          />
-        </div>
-      </div>
+    </div>
+  </div>
 
-    </section>
+  <!-- Floating Shrimp Icon -->
+  <div
+    class="position-absolute start-50 translate-middle-x d-none d-lg-block"
+    style="bottom:-56px;"
+  >
+    <div
+      class="d-flex align-items-center justify-content-center rounded-circle bg-white"
+      style="width: 130px; height: 130px; border: 11px solid #F58524;"
+      data-aos="zoom-in"
+    >
+      <img
+        src="./images/shrimp.png"
+        alt="Shrimp"
+        class="img-fluid"
+        style="width: 58px; height: auto; max-width: 70%;"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+/* REMOVE BG ON MOBILE */
+@media (max-width: 576px) {
+  .video-section {
+    background: none !important;
+    border-radius: 0 !important; /* optional, remove corner rounding on mobile if needed */
+  }
+}
+</style>
+
 
     <!-- WHAT SHRIMPLIFY DOES -->
     <section class="position-relative py-5 bg-white "
