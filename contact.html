@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrimplify</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
+  <style>
+  .icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon-img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* Contact form typography */
+  .contact-heading {
+    font-family: Quicksand, sans-serif;
+    font-weight: 700;
+    font-size: 24.73px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+  }
+  
+  .contact-subtext {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+  }
+  
+  .form-label-text {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 16.48px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+  }
+  
+  .lets-talk-text {
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Form input styling */
+  .form-control {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 16.48px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+  }
+  
+  .form-control::placeholder {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 16.48px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+    color: #6c757d;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-heading {
+      font-size: 22px !important;
+    }
+    
+    .contact-subtext {
+      font-size: 18px !important;
+    }
+    
+    .form-label-text {
+      font-size: 15px !important;
+    }
+    
+    .icon-circle {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    
+    .icon-img {
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+
+  .object-fit-cover {
+  object-fit: cover;
+}
+
+</style>
+
+</head>
+
+<body style="font-family: Inter, sans-serif;">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Navbar underline CSS -->
+  <style>
+    .navbar-nav .nav-link {
+      position: relative;
+      display: inline-flex;
+      padding-bottom: 8px;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+  </style>
+  <script>
+    fetch("components/navbar.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+
+        // 🔥 ACTIVE LINK LOGIC (runs AFTER navbar loads)
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+
+        document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+          const linkPage = link.getAttribute("href").replace("../", "");
+
+          if (linkPage === currentPage) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+  </script>
+
+  <!-- Hero Section -->
+   <section
+  class="position-relative d-flex align-items-center"
+  style="
+    background: #366FB6;
+    padding: 50px 0 80px;
+    border-radius: 0 0 120px 120px;
+  "
+>
+  <div class="container text-center text-white">
+    <h1 class="fw-bold mb-3">
+      Let’s Talk About Agriculture,<br />
+      Innovation & Growth
+    </h1>
+  </div>
+</section>
+
+<!-- Contact Form -->
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 g-lg-5 align-items-start">
+
+      <!-- LEFT INFO CARD -->
+      <div class="col-12 col-lg-5">
+        <div class="p-4 p-lg-5 rounded-4 h-100 bg-info bg-opacity-10">
+
+          <!-- Item -->
+          <div class="d-flex gap-3 mb-4">
+            <div class="icon-circle bg-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+              <img src="./images/location.png" alt="Location" class="icon-img">
+            </div>
+            <div>
+              <h6 class="contact-heading mb-2 mb-lg-1">Head Office</h6>
+              <p class="contact-subtext mb-0 small">
+                AgriTech Solutions Ltd.<br>
+                45 Green Valley Road, Suite 220<br>
+                Austin, TX 73301, USA
+              </p>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="d-flex gap-3 mb-4">
+            <div class="icon-circle bg-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+              <img src="./images/email.png" alt="Email" class="icon-img">
+            </div>
+            <div>
+              <h6 class="contact-heading mb-2 mb-lg-1">Email</h6>
+              <p class="contact-subtext mb-0 small">
+                support@agritechfarm.com<br>
+                sales@agritechfarm.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="d-flex gap-3 mb-4">
+            <div class="icon-circle bg-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+              <img src="./images/phone.png" alt="Phone" class="icon-img">
+            </div>
+            <div>
+              <h6 class="contact-heading mb-2 mb-lg-1">Phone</h6>
+              <p class="contact-subtext mb-0 small">+1 234 567 8900</p>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="d-flex gap-3">
+            <div class="icon-circle bg-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+              <img src="./images/business-hours.png" alt="Business Hours" class="icon-img">
+            </div>
+            <div>
+              <h6 class="contact-heading mb-2 mb-lg-1">Business Hours</h6>
+              <p class="contact-subtext mb-0 small">
+                Mon – Fri: 9:00 AM – 6:00 PM<br>
+                Saturday & Sunday: Closed
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="col-12 col-lg-7">
+        <h3 class="contact-heading mb-3 mb-lg-2">Send Message</h3>
+        <p class="contact-subtext text-muted mb-4 small">
+          Let's Talk About Agriculture, Innovation & Growth
+        </p>
+      
+        <form class="row g-3">
+          <div class="col-12">
+            <input type="text" class="form-control rounded-pill px-4 py-2 py-lg-3" placeholder="Full Name">
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control rounded-pill px-4 py-2 py-lg-3" placeholder="Phone">
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control rounded-pill px-4 py-2 py-lg-3" placeholder="Email">
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control rounded-pill px-4 py-2 py-lg-3" placeholder="Subject">
+          </div>
+          <div class="col-12">
+            <textarea
+              rows="4"
+              class="form-control rounded-4 px-4 pt-3"
+              placeholder="Your Message..."
+            ></textarea>
+          </div>
+      
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-warning rounded-pill px-4 py-2 py-lg-3 text-white lets-talk-text w-100 w-lg-auto"
+            >
+              Let's Talk →
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div reminder>
+</section>
+
+<!-- Map -->
+<div class="my-4 my-lg-5">
+  <div class="w-100" style="height: 50vh; height: 60vh;">
+    <img
+      src="./images/map.png"
+      alt="Map"
+      class="img-fluid w-100 h-100 object-fit-cover rounded-4"
+    >
+  </div>
+</div>
+
+
+
+
+    <!-- Footer -->
+     <div id="footer-placeholder"></div>
+
+      <script>
+        fetch('components/footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          });
+      </script>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
