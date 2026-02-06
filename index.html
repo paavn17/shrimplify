@@ -104,45 +104,64 @@
           }
         }
 
-        /* Consistent mobile spacing */
+        /* Consistent mobile spacing - Senior Dev Approach */
         @media (max-width: 768px) {
+          /* Base padding reductions for all sections */
           .py-5 {
-            padding-top: 1.5rem !important;
-            padding-bottom: 1.5rem !important;
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
           }
           
           .py-4 {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
           }
           
+          /* Margin adjustments for consistent spacing */
           .mb-5 {
-            margin-bottom: 1.5rem !important;
+            margin-bottom: 1rem !important;
           }
           
           .mt-5 {
-            margin-top: 1.5rem !important;
+            margin-top: 1rem !important;
           }
           
-          /* Specific section spacing adjustments */
+          /* Section-specific optimizations */
           .hero {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
           }
           
           .about, .services, .why-choose, .testimonials {
-            padding-top: 1.5rem !important;
-            padding-bottom: 1.5rem !important;
-          }
-          
-          .operate {
             padding-top: 1rem !important;
             padding-bottom: 1rem !important;
           }
           
-          /* Reduce gaps between sections */
+          .operate {
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+          }
+          
+          /* Systematic gap reduction between sections */
           section {
-            margin-bottom: 0.5rem !important;
+            margin-bottom: 0 !important;
+          }
+          
+          /* Fine-tune specific section combinations */
+          .hero + section {
+            margin-top: 0.5rem !important;
+          }
+          
+          .about + .services {
+            margin-top: 0.5rem !important;
+          }
+          
+          .services + .why-choose {
+            margin-top: 0.5rem !important;
+          }
+          
+          .why-choose + .testimonials {
+            margin-top: 0.5rem !important;
           }
           
           /* Remove extra bottom margin from last section */
@@ -155,6 +174,20 @@
             .video-container-mobile {
               background: transparent !important;
             }
+          }
+        }
+        
+        /* Desktop only: space for floating shrimp */
+        @media (min-width: 992px) {
+          .video-section {
+            margin-bottom: 100px; /* adjust if needed */
+          }
+        }
+
+        /* Mobile only: space above video */
+        @media (max-width: 991.98px) {
+          .video-container-mobile {
+            margin-top: 24px;
           }
         }
     </style>
@@ -282,7 +315,7 @@
     </section>
 
     <!-- VIDEO SECTION -->
-    <section
+<section
   class="position-relative video-section"
   style="background:#366FB6; padding-bottom:30px; border-radius: 0 0 100px 100px;"
 >
@@ -292,7 +325,7 @@
       style="border-radius: 40px; background: #000; max-width: 1400px; width: 100%;"
       data-aos="fade-up"
     >
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-21x9">
         <iframe
           src="https://www.youtube.com/embed/sJUqkuYY9zw?si=8ffmAwGPaX4jrDCn"
           title="YouTube video player"
@@ -324,6 +357,7 @@
   </div>
 </section>
 
+
 <style>
 /* REMOVE BG ON MOBILE */
 @media (max-width: 576px) {
@@ -337,7 +371,7 @@
 
     <!-- WHAT SHRIMPLIFY DOES -->
     <section class="position-relative py-5 bg-white "
-    style="margin-top:58px;">
+    style="margin-top:30px;">
       <div class="container py-4">
 
         <!-- Decorative SVGs -->
@@ -394,7 +428,7 @@
                 letter-spacing: -0.02em;
                 color: #333333;
                 max-width: 100%;
-                margin-top: 56px;
+                margin-top: 30px;
               "
             >
               Shrimplify is an Aqua Intelligence platform designed to simplify
@@ -592,8 +626,8 @@
                 letter-spacing: 0;
                 color: #4B5563;
                 max-width: 100%;
-                margin-bottom: 24px;
-                margin-top: 56px;
+                margin-bottom: 16px;
+                margin-top: 30px;
               "
             >
               Shrimplify is an Aqua Intelligence platform designed to simplify shrimp
@@ -663,7 +697,7 @@
                       02
                       </span>
                   </div>
-                  <p style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:20px; line-height:1.4; letter-spacing:-0.02em;">
+                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
                     Hatchery shortlisting based on stocking plans
                   </p>
                 </div>
@@ -819,7 +853,7 @@
                 font-size:18px;
                 line-height:1.5;
                 letter-spacing:0;
-                margin-top: 72px;
+                margin-top: 40px;
               "
             >
               Join Waitlist →
@@ -1123,7 +1157,7 @@
             letter-spacing: -0.02em;
             color: #4B5563;
             max-width: 720px;
-            margin: 0 auto 100px;
+            margin: 0 auto 40px;
             text-align: center;
           "
         >
@@ -1164,7 +1198,7 @@
           </div>
 
           <!-- CENTER IMAGE -->
-          <div class="col-lg-6 col-md-8 d-flex justify-content-center mb-4">
+          <div class="col-lg-6 col-md-8 d-none d-lg-flex justify-content-center mb-4">
             <div
               class="position-relative d-flex justify-content-center align-items-end"
               style="
@@ -1407,7 +1441,7 @@
 
   /* Reduce text size */
   .testimonial-text {
-    font-size: 0.9rem !important;
+    font-size: 1.125rem !important; /* 18px equivalent */
   }
 
   .testimonial-name {
@@ -1424,7 +1458,7 @@
   }
   .section-text {
     font-size: 0.9rem !important;
-    margin-top: 0.5rem !important;
+    margin-top: 0.25rem !important;
   }
 
   /* Slider controls below slides */
@@ -1433,7 +1467,7 @@
     flex-direction: row !important;
     justify-content: center !important;
     gap: 15px !important;
-    margin-top: 1rem !important;
+    margin-top: 0.75rem !important;
   }
 
   .slider-controls button img {
@@ -1451,7 +1485,7 @@
   }
 
   .col-lg-5 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 }
 </style>
