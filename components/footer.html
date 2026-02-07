@@ -109,7 +109,12 @@
 }
 
 .footer {
-  background: linear-gradient(180deg, #1C8DBB 0%, #034E87 100%);
+  background: linear-gradient(
+    180deg,
+    #1C8DBB 0%,
+    #1C8DBB 25%,
+    #034E87 100%
+  );
   color: #fff;
 }
 
@@ -314,5 +319,81 @@
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+
+  /* Reduce overall footer padding */
+  .footer-inner {
+    padding: 40px 16px 20px;
+  }
+
+  /* Tighten CTA section */
+  .footer-cta {
+    gap: 12px;
+  }
+
+  .footer-cta h2 {
+    font-size: 28px;
+  }
+
+  /* Reduce divider spacing */
+  .divider {
+    margin: 32px 0;
+  }
+
+  /* Reduce spacing between footer sections */
+  .footer-main {
+    gap: 28px;
+  }
+
+  .footer-brand p {
+    margin: 10px 0;
+  }
+
+  /* Newsletter spacing fix */
+  .footer-newsletter p {
+    margin-bottom: 8px;
+  }
+
+  /* Make contact section compact */
+  .footer-contact {
+    gap: 16px;
+  }
+
+  .contact-item {
+    gap: 8px;
+  }
+
+  /* Smaller contact icons */
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-icon img {
+    width: 16px;
+  }
+
+  /* Slightly smaller contact text */
+  .contact-item div {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  /* Reduce copyright spacing */
+  .footer-copy {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+   .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand-row {
+    justify-content: center;
+  }
+}
+
 
 </style>

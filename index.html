@@ -220,6 +220,31 @@
     .navbar-nav .nav-link.active::after {
       width: 100%;
     }
+    @media (max-width: 991px) {
+
+  /* Reduce navbar vertical padding */
+  .navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Remove extra space below collapsed menu */
+  .navbar-collapse {
+    margin-bottom: 0;
+  }
+
+  /* Tighten nav links spacing */
+  .navbar-nav {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .navbar-nav .nav-link {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
   </style>
 
   <!-- Load navbar + activate underline -->
@@ -305,7 +330,7 @@
                 class="btn rounded-pill px-4 py-2"
                 style="border:2px solid #C6FF4E; color:#C6FF4E;"
               >
-                Search Right Hatchery 🔍
+                Search Right Hatchery <span><img src="./images/search-logo.svg"/></span>
               </a>
             </div>
           </div>
@@ -313,6 +338,22 @@
         </div>
       </div>
     </section>
+    <style>
+      @media (max-width: 991px) {
+
+  /* Reduce hero top spacing */
+  section[style*="#366FB6"] {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem;
+  }
+
+  section[style*="#366FB6"] .container {
+    padding-top: 0 !important;
+  }
+
+}
+
+    </style>
 
     <!-- VIDEO SECTION -->
 <section
@@ -818,8 +859,8 @@
               </h2>
 
               <span
-                class="px-3 py-1 rounded-pill text-white"
-                style="background:#F7931E; font-family:Poppins, sans-serif; font-size:14px;"
+                class="px-3 py-2 rounded-pill text-white"
+                style="background:#F58524; font-family:Poppins, sans-serif; font-size:14px;"
               >
                 ⏱ Coming Soon
               </span>
@@ -975,6 +1016,73 @@
 
     </section>
 
+    <!--Are you ready-->
+    <section class="hero-section d-flex align-items-center">
+  <div class="container text-white">
+    <span class="badge rounded-pill px-3 py-2 mb-3 d-inline-block hero-badge">
+      Ready to Cultivate Change
+    </span>
+
+    <h1 class="fw-bold display-5 mt-3 hero-title">
+      Are You Ready to Grow <br />
+      Smarter and Farm Greener?
+    </h1>
+
+    <a href="#" class="btn btn-warning btn-lg mt-4 px-4 py-3 rounded-pill hero-button">
+      Join the Green Revolution
+    </a>
+  </div>
+</section>
+<style>
+  .hero-section {
+  min-height: 75vh; 
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("./images/ready-bg.png"); /* update path */
+  background-size: cover;
+  background-position: center bottom; 
+  background-repeat: no-repeat;
+}
+
+.hero-badge {
+  /* background-color: #FFFFFF; */
+  border: 1px solid #e5e7eb; /* light neutral */
+  border-radius: 16px;
+  color: #ffffff;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -2%;
+}
+
+.hero-title {
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 60px;
+  line-height: 130%;
+  letter-spacing: -4%;
+}
+
+.hero-button {
+  background: #F58524;
+  border: none;
+  color: #ffffff;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 20.86px;
+  letter-spacing: 0%;
+}
+
+</style>
+
     <!-- Where we Operate -->
      <section class="py-5 bg-white position-relative" style="background:#366FB6;">
       <div class="container py-4">
@@ -1028,7 +1136,7 @@
                   letter-spacing: -0.02em;
                 "
               >
-                📍 Currently Serving
+                <span><img src="./images/mark.svg"/></span> Currently Serving
               </span>
 
               <!-- HEADING -->
@@ -1166,105 +1274,75 @@
         </p>
 
         <!-- CONTENT ROW -->
-        <div
-          class="row align-items-center justify-content-center gx-0 gy-4"
-          style="margin-top: 40px;"
-        >
+<div
+  class="row align-items-center justify-content-center gx-0 gy-4"
+  style="margin-top: 40px;"
+>
+  <!-- LEFT CARD -->
+  <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+    <div
+      class="p-3 rounded-4 text-start"
+      style="background:#EAF7FF; max-width: 280px; width: 100%;"
+    >
+      <img
+        src="./images/why-card-1.png"
+        class="w-100 rounded-3 mb-3"
+        alt=""
+      />
+      <p
+        style="
+          font-family: Poppins, sans-serif;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 1.4;
+          letter-spacing: -0.04em;
+          margin: 0;
+        "
+      >
+        Farmer-first, not commission-first
+      </p>
+    </div>
+  </div>
 
-          <!-- LEFT CARD -->
-          <div class="col-lg-3 col-md-6 d-flex justify-content-center mb-4">
-            <div
-              class="p-3 rounded-4 text-start"
-              style="background:#EAF7FF; max-width: 280px; width: 100%;"
-            >
-              <img
-                src="./images/why-card-1.png"
-                class="w-100 rounded-3 mb-3"
-                alt=""
-              />
-              <p
-                style="
-                  font-family: Poppins, sans-serif;
-                  font-weight: 500;
-                  font-size: 24px;
-                  line-height: 1.4;
-                  letter-spacing: -0.04em;
-                  margin: 0;
-                "
-              >
-                Farmer-first, not commission-first
-              </p>
-            </div>
-          </div>
+ <!-- CENTER IMAGE -->
+<div class="col-lg-6 col-md-8 d-none d-md-flex justify-content-center">
+  <img
+    src="./images/why-card-center.png"
+    alt="Happy Farmer"
+    class="img-fluid rounded-circle"
+    style="max-width: 420px;"
+  />
+</div>
 
-          <!-- CENTER IMAGE -->
-          <div class="col-lg-6 col-md-8 d-none d-lg-flex justify-content-center mb-4">
-            <div
-              class="position-relative d-flex justify-content-center align-items-end"
-              style="
-                width: 100%;
-                max-width: 420px;
-                height: auto;
-                aspect-ratio: 1/1;
-              "
-            >
-              <!-- BACKGROUND CIRCLE -->
-              <div
-                style="
-                  position: absolute;
-                  bottom: 0;
-                  width: 95%;
-                  height: 95%;
-                  background: #EAF7FF;
-                  border-radius: 50%;
-                  z-index: 1;
-                "
-              ></div>
 
-              <!-- IMAGE -->
-              <img
-                src="./images/why-card-center.png"
-                alt="Happy Farmer"
-                class="img-fluid rounded-circle"
-                style="
-                  position: relative;
-                  z-index: 2;
-                  width: 90%;
-                  height: 90%;
-                  object-fit: cover;
-                  margin-bottom: 10px;
-                "
-              />
-            </div>
-          </div>
 
-          <!-- RIGHT CARD -->
-          <div class="col-lg-3 col-md-6 d-flex justify-content-center mb-4">
-            <div
-              class="p-3 rounded-4 text-start"
-              style="background:#EAF7FF; max-width: 280px; width: 100%;"
-            >
-              <img
-                src="./images/why-card-2.png"
-                class="w-100 rounded-3 mb-3"
-                alt=""
-              />
-              <p
-                style="
-                  font-family: Poppins, sans-serif;
-                  font-weight: 500;
-                  font-size: 24px;
-                  line-height: 1.4;
-                  letter-spacing: -0.04em;
-                  margin: 0;
-                "
-              >
-                Designed for farmers for long-term farming success
-              </p>
-            </div>
-          </div>
+  <!-- RIGHT CARD -->
+  <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+    <div
+      class="p-3 rounded-4 text-start"
+      style="background:#EAF7FF; max-width: 280px; width: 100%;"
+    >
+      <img
+        src="./images/why-card-2.png"
+        class="w-100 rounded-3 mb-3"
+        alt=""
+      />
+      <p
+        style="
+          font-family: Poppins, sans-serif;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 1.4;
+          letter-spacing: -0.04em;
+          margin: 0;
+        "
+      >
+        Designed for farmers for long-term farming success
+      </p>
+    </div>
+  </div>
+</div>
 
-        </div>
 
         <!-- CTA + DOTTED DIVIDER -->
     <div class="position-relative mt-5 d-flex justify-content-center align-items-center">
@@ -1425,70 +1503,70 @@
   </div>
 </section>
 
-<style>
-/* MOBILE STYLES ONLY */
-@media (max-width: 576px) {
-  /* Stack slides vertically */
-  #testimonialSlider .row.slide {
-    flex-direction: column;
-  }
+    <style>
+    /* MOBILE STYLES ONLY */
+    @media (max-width: 576px) {
+      /* Stack slides vertically */
+      #testimonialSlider .row.slide {
+        flex-direction: column;
+      }
 
-  /* Images smaller and centered */
-  .testimonial-img {
-    max-width: 180px;
-    margin: 0 auto;
-  }
+      /* Images smaller and centered */
+      .testimonial-img {
+        max-width: 180px;
+        margin: 0 auto;
+      }
 
-  /* Reduce text size */
-  .testimonial-text {
-    font-size: 1.125rem !important; /* 18px equivalent */
-  }
+      /* Reduce text size */
+      .testimonial-text {
+        font-size: 1.125rem !important; /* 18px equivalent */
+      }
 
-  .testimonial-name {
-    font-size: 1rem !important;
-  }
+      .testimonial-name {
+        font-size: 1rem !important;
+      }
 
-  .testimonial-role {
-    font-size: 0.8rem !important;
-  }
+      .testimonial-role {
+        font-size: 0.8rem !important;
+      }
 
-  /* Header adjustments */
-  .section-title {
-    font-size: 1.75rem !important;
-  }
-  .section-text {
-    font-size: 0.9rem !important;
-    margin-top: 0.25rem !important;
-  }
+      /* Header adjustments */
+      .section-title {
+        font-size: 1.75rem !important;
+      }
+      .section-text {
+        font-size: 0.9rem !important;
+        margin-top: 0.25rem !important;
+      }
 
-  /* Slider controls below slides */
-  .slider-controls {
-    position: static !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    gap: 15px !important;
-    margin-top: 0.75rem !important;
-  }
+      /* Slider controls below slides */
+      .slider-controls {
+        position: static !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        margin-top: 0.75rem !important;
+      }
 
-  .slider-controls button img {
-    width: 30px !important;
-    height: 30px !important;
-  }
+      .slider-controls button img {
+        width: 30px !important;
+        height: 30px !important;
+      }
 
-  .slider-controls .dot {
-    font-size: 0.75rem !important;
-  }
+      .slider-controls .dot {
+        font-size: 0.75rem !important;
+      }
 
-  /* Padding adjustments for mobile text */
-  .col-lg-7.ps-lg-5 {
-    padding-left: 0 !important;
-  }
+      /* Padding adjustments for mobile text */
+      .col-lg-7.ps-lg-5 {
+        padding-left: 0 !important;
+      }
 
-  .col-lg-5 {
-    margin-bottom: 0.75rem;
-  }
-}
-</style>
+      .col-lg-5 {
+        margin-bottom: 0.75rem;
+      }
+    }
+    </style>
 
 
     <script>

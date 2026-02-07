@@ -51,14 +51,6 @@
     letter-spacing: 0%;
   }
   
-  .lets-talk-text {
-    font-family: Plus Jakarta Sans, sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-  }
-  
   /* Form input styling */
   .form-control {
     font-family: Inter, sans-serif;
@@ -161,7 +153,7 @@
   </script>
 
   <!-- Hero Section -->
-   <section
+  <section
   class="position-relative d-flex align-items-center"
   style="
     background: #366FB6;
@@ -169,6 +161,14 @@
     border-radius: 0 0 120px 120px;
   "
 >
+  <style>
+    @media (max-width: 576px) {
+      .position-relative.d-flex.align-items-center {
+        padding: 30px 0 40px !important;
+        border-radius: 0 0 60px 60px !important;
+      }
+    }
+  </style>
   <div class="container text-center text-white">
     <h1 class="fw-bold mb-3">
       Let’s Talk About Agriculture,<br />
@@ -230,7 +230,7 @@
           <!-- Item -->
           <div class="d-flex gap-3">
             <div class="icon-circle bg-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-              <img src="./images/business-hours.png" alt="Business Hours" class="icon-img">
+              <img src="./images/business-hours.svg" alt="Business Hours" class="icon-img">
             </div>
             <div>
               <h6 class="contact-heading mb-2 mb-lg-1">Business Hours</h6>
@@ -273,12 +273,10 @@
           </div>
       
           <div class="col-12">
-            <button
-              type="submit"
-              class="btn btn-warning rounded-pill px-4 py-2 py-lg-3 text-white lets-talk-text w-100 w-lg-auto"
-            >
-              Let's Talk →
-            </button>
+           <button type="submit" class="lets-talk-btn lets-talk-text">
+  Let's Talk →
+</button>
+
           </div>
         </form>
       </div>
@@ -286,6 +284,37 @@
     </div>
   </div reminder>
 </section>
+<style>
+.lets-talk-btn {
+  background-color: #F58524;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lets-talk-btn:hover {
+  background-color: #e0761f;
+  transform: translateY(-1px);
+}
+
+.lets-talk-btn:active {
+  transform: translateY(0);
+}
+
+.lets-talk-btn:focus-visible {
+  outline: 3px solid rgba(245, 133, 36, 0.4);
+  outline-offset: 2px;
+}
+
+
+</style>
 
 <!-- Map -->
 <div class="my-4 my-lg-5">
