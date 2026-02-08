@@ -15,6 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
   <style>
   .icon-circle {
     width: 48px;
@@ -106,6 +108,21 @@
   object-fit: cover;
 }
 
+/* Prevent horizontal scrolling/slider on all devices */
+body {
+  overflow-x: hidden;
+}
+
+.container, .container-fluid {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Prevent any horizontal overflow */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 </style>
 
 </head>
@@ -160,30 +177,1244 @@
       });
   </script>
 
+
+
   <!-- Hero Section -->
-  <section
-  class="position-relative d-flex align-items-center"
-  style="
-    background: #366FB6;
-    padding: 50px 0 80px;
-    border-radius: 0 0 120px 120px;
-  "
->
-  <style>
+      <section
+      class="position-relative d-flex align-items-center"
+      style="
+        background: #366FB6;
+        padding: 50px 0 80px;
+        border-radius: 0 0 120px 120px;
+      "
+    >
+      <style>
+        @media (max-width: 576px) {
+          .position-relative.d-flex.align-items-center {
+            padding: 30px 0 40px !important;
+            border-radius: 0 0 60px 60px !important;
+          }
+        }
+      </style>
+      <div class="container text-center text-white">
+        <h1 class="fw-bold mb-3">
+          HachPro
+        </h1>
+      </div>
+    </section>
+    <style>
+      @media (max-width: 576px) {
+  .position-relative.d-flex.align-items-center {
+    padding: 30px 0 40px !important;
+    border-radius: 0 0 60px 60px !important;
+    margin-bottom: 2rem !important; /* Add gap after this section */
+  }
+
+  /* Remove top margin from next section */
+  .position-relative.d-flex.align-items-center + section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+    </style>
+
+  <!-- Service Hero -->
+    <section class="hero-wrapper d-flex align-items-center">
+      <div class="container text-center text-white">
+
+        <!-- HERO CONTENT -->
+        <h1
+          class="fw-semibold display-5 mb-3 hero-title"
+        >
+          Verified <span class="text-colour">Vannamei Seed</span>, <br />
+          Sourced the Right Way.
+        </h1>
+
+        <p class="lead mb-4 hero-subtitle">
+          HatchPro connects shrimp farmers with verified hatcheries for quality seed procurement —
+          transparent, reliable, on time.
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="d-flex justify-content-center gap-3 flex-wrap hero-buttons">
+          <a href="./contact.html" class="btn btn-warning hero-btn-primary">
+            Book Now →
+          </a>
+          <a href="#" class="btn btn-outline-warning hero-btn-outline">
+            Search Right Hatchery <span><img src="./images/search-logo.svg"/></span>
+          </a>
+        </div>
+
+        <!-- STATS -->
+        <div class="row g-3 hero-stats mt-5 align-items-stretch">
+
+          <div class="col-6 col-md-3 d-flex">
+            <div class="stat-card w-100">
+              <h4>20+</h4>
+              <small>Hatcheries Partnered</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex">
+            <div class="stat-card w-100">
+              <h4>100%</h4>
+              <small>Success Rate in Seed Selection</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex">
+            <div class="stat-card w-100">
+              <h4>12,000+</h4>
+              <small>PL Delivered</small>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 d-flex">
+            <div class="stat-card w-100">
+              <h4>10+</h4>
+              <small>Years of Experience</small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <style>
+    .hero-wrapper {
+      min-height: 70vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35)),
+        url("./images/service-hero.png");
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      margin: 24px;
+    }
+    .text-colour{
+      color : #F58524;
+    }
+
+    /* HERO TEXT */
+    .hero-title {
+      font-family: Quicksand, sans-serif;
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 120%;
+      text-align: center;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      margin: 0 auto;
+      font-family: Poppins, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      opacity: 0.9;
+    }
+
+    /* BUTTONS */
+    .hero-buttons .btn {
+      width: 230px;
+      height: 50px;
+      border-radius: 100px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Poppins, sans-serif;
+      font-size: 16px;
+    }
+
+    .hero-btn-primary {
+      background: #F58524;
+      border: none;
+      color: #fff;
+    }
+
+    .hero-btn-outline {
+      width: 350px; 
+      border: 2px solid #F58524;
+      color: #F58524;
+      background: transparent;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* STATS */
+    .hero-stats {
+      margin-top: 3rem;
+    }
+
+    .stat-card {
+      height: 150px;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(4px);
+      border-radius: 16px;
+      padding: 20px 16px;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .stat-card h4 {
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      font-size: 44px;
+      line-height: 100%;
+      margin-bottom: 8px;
+    }
+
+    .stat-card small {
+      font-family: Poppins, sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 145%;
+      opacity: 0.85;
+    }
+
+    /* MOBILE */
     @media (max-width: 576px) {
-      .position-relative.d-flex.align-items-center {
-        padding: 30px 0 40px !important;
-        border-radius: 0 0 60px 60px !important;
+      .hero-wrapper {
+        border-radius: 0;
+        margin: 0;
+        padding-top: 1.5rem; /* Add top padding in mobile mode */
+      }
+
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .stat-card {
+        height: 120px;
+      }
+
+      .stat-card h4 {
+        font-size: 32px;
+      }
+
+      .stat-card small {
+        font-size: 16px;
+      }
+
+      .hero-buttons .btn {
+        width: 160px;
+        height: 45px;
+        font-size: 14px;
+      }
+      
+      /* Make buttons responsive on mobile */
+      .hero-btn-outline {
+        width: auto !important;
+        white-space: normal !important;
+        padding: 8px 16px !important;
+      }
+      
+      .hero-btn-primary {
+        width: auto !important;
+        padding: 8px 16px !important;
       }
     }
-  </style>
-  <div class="container text-center text-white">
-    <h1 class="fw-bold mb-3">
-      HachPro
-    </h1>
+
+    </style>
+
+  <!-- How HachPro Works-->
+
+<section class="process-section">
+  <div class="process-container">
+
+    <div class="process-header">
+      <span class="process-badge">
+        <span class="dot"></span> Simple Process
+      </span>
+      <h2>How HatchPro Works</h2>
+    </div>
+
+    <div class="process-steps">
+
+      <div class="process-step">
+        <div class="process-timeline">
+          <span class="process-number">01</span>
+        </div>
+        <div class="process-card">
+          <div class="process-image">
+            <img src="./images/step1.png" alt="Step 1">
+          </div>
+          <div class="process-content">
+            <div class="process-icon"><img src="./images/step-icon1.svg" alt=""></div>
+            <h4>Place Your Seed Request</h4>
+            <p>Farmer submits a Vannamei seed requirement with preferred stocking date and farm details.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-timeline">
+          <span class="process-number">02</span>
+        </div>
+        <div class="process-card">
+          <div class="process-image"><img src="./images/step2.png" alt="Step 2"></div>
+          <div class="process-content">
+            <div class="process-icon"><img src="./images/step-icon2svg.svg" alt=""></div>
+            <h4>Hatchery Shortlisting</h4>
+            <p>Based on the stocking date and availability, suitable hatcheries are identified using Aqua Intelligence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-timeline">
+          <span class="process-number">03</span>
+        </div>
+        <div class="process-card">
+          <div class="process-image"><img src="./images/step3.png" alt="Step 3"></div>
+          <div class="process-content">
+            <div class="process-icon"><img src="./images/step-icon3.svg" alt=""></div>
+            <h4>On-Ground Seed Verification</h4>
+            <p>Experts physically verify PL quality through standard health and stress tests.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-timeline">
+          <span class="process-number">04</span>
+        </div>
+        <div class="process-card">
+          <div class="process-image"><img src="./images/step4.png" alt="Step 4"></div>
+          <div class="process-content">
+            <div class="process-icon"><img src="./images/step-icon4.svg" alt=""></div>
+            <h4>Verified Transport Coordination</h4>
+            <p>Transport is coordinated using best practices to minimize stress during movement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step last">
+        <div class="process-timeline">
+          <span class="process-number">05</span>
+        </div>
+        <div class="process-card">
+          <div class="process-image"><img src="./images/step5.png" alt="Step 5"></div>
+          <div class="process-content">
+            <div class="process-icon"><img src="./images/step-icon5.svg" alt=""></div>
+            <h4>On-Time Delivery to Farm</h4>
+            <p>Verified Vannamei seed is delivered to the farm exactly on the scheduled date.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
+
+<style>
+/* ===== SECTION ===== */
+.process-section {
+  background: #F6FAFF;
+  padding: 80px 20px;
+}
+
+.process-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.process-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.process-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E8F1FF;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.process-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: #2E6AE3;
+  border-radius: 50%;
+}
+
+.process-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* ===== STEPS CONTAINER ===== */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* CONTINUOUS VERTICAL LINE - From number 1 to number 5 ONLY */
+.process-steps::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 26px; /* Center of first circle */
+  height: calc(100% - 52px); /* Stops at bottom of step 5 */
+  width: 4px;
+  background: #CCCCCC;
+  z-index: 0;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.process-step.last {
+  margin-bottom: 0;
+  align-items: flex-end; /* Move number 5 to bottom */
+}
+
+/* ===== TIMELINE (LEFT SIDE) ===== */
+.process-timeline {
+  width: 60px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.process-number {
+  width: 52px;
+  height: 52px;
+  background: #FF9F43;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Special styling for first step number */
+.process-step:first-child .process-number {
+  background: #fbd7b8; /* Light color matching section background */
+  color: #F58524; /* Orange color */
+  border: 2px solid #F58524;
+}
+
+/* ===== CARD ===== */
+.process-card {
+  display: flex;
+  width: 100%;
+  background: #EAF7FF;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* IMAGE */
+.process-image {
+  width: 45%;
+  flex-shrink: 0;
+}
+
+.process-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENT */
+.process-content {
+  width: 55%;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.process-icon {
+  width: 42px;
+  height: 42px;
+  background: #2E6AE3;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.process-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.process-content h4 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.process-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #555;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .process-section {
+    padding: 60px 20px;
+  }
+
+  .process-header {
+    margin-bottom: 40px;
+  }
+
+  .process-header h2 {
+    font-size: 32px;
+  }
+
+  .process-steps {
+    gap: 0;
+  }
+
+  /* Hide the continuous line on mobile */
+  .process-steps::before {
+    display: none;
+  }
+
+  .process-step {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+
+  .process-step.last {
+    margin-bottom: 0;
+    align-items: flex-start; /* Reset to normal on mobile */
+  }
+
+  /* Hide timeline completely on mobile */
+  .process-timeline {
+    display: none;
+  }
+
+  .process-card {
+    flex-direction: column;
+  }
+
+  .process-image,
+  .process-content {
+    width: 100%;
+  }
+
+  .process-content {
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .process-icon {
+    margin: 0 auto 12px;
+  }
+
+  .process-content h4 {
+    font-size: 22px;
+  }
+
+  .process-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-content h4 {
+    font-size: 20px;
+  }
+
+  .process-content p {
+    font-size: 15px;
+  }
+}
+</style>
+  
+  <!-- Search the right -->
+  <section class="py-5">
+  <div class="container">
+
+    <!-- TOP BADGE -->
+    <div class="text-center mb-3">
+      <span class="badge rounded-pill px-3 py-2 search-badge d-inline-flex align-items-center gap-2">
+        <img src="./images/service-cup.svg" style="height: 20px; width: auto;"/> Find Your Hatchery
+      </span>
+    </div>
+
+    <!-- TITLE -->
+    <h2 
+      class="text-center fw-semibold mb-2 search-title"
+      style="
+        font-family: Quicksand, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 46px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+      "
+    >
+      Search the Right Hatchery
+    </h2>
+    <p 
+      class="text-center text-muted mb-4"
+      style="
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+      "
+    >
+      Browse verified hatcheries with real-time broodstock import <br class="d-none d-md-block" />
+      data and certifications.
+    </p>
+
+    <!-- FILTERS -->
+    <div class="row g-3 justify-content-center mb-4">
+      <div class="col-md-4">
+        <div class="position-relative">
+          <input type="text" class="form-control filter-input ps-5" placeholder="Search Hatchery Name..." style="background: #E8F8FF;" />
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="position-absolute" 
+            style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <input type="date" class="form-control filter-input" style="background: #E8F8FF;" />
+      </div>
+      <div class="col-md-3">
+        <select class="form-select filter-input" style="background: #E8F8FF;">
+          <option>Most Recent Import</option>
+          <option>Oldest Import</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-responsive hatchery-table-wrapper">
+      <table class="table align-middle hatchery-table">
+        <thead style="background: #F58524 !important; color: #fff !important;">
+  <tr style="background: #F58524 !important;">
+    <th style="background: #F58524 !important; color: #fff !important;">Hatchery Name</th>
+    <th style="background: #F58524 !important; color: #fff !important;">Recent Broodstock Import</th>
+    <th style="background: #F58524 !important; color: #fff !important;">CAA Registered</th>
+    <th style="background: #F58524 !important; color: #fff !important;">Sapahri Certified</th>
+    <th style="background: #F58524 !important; color: #fff !important;">BAP</th>
+    <th style="background: #F58524 !important; color: #fff !important;">Actions</th>
+  </tr>
+</thead>
+
+        <tbody>
+          <!-- ROW 1 -->
+          <tr>
+            <td data-label="Hatchery Name">Neptune Seed Labs</td>
+            <td data-label="Recent Broodstock Import">3 Feb 2026</td>
+            <td data-label="CAA Registered"><span class="pill pill-success">✔ CAA</span></td>
+            <td data-label="Sapahri Certified"><span class="pill pill-muted">✖ Sapahri</span></td>
+            <td data-label="BAP"><span class="pill pill-muted">✖ BAP</span></td>
+            <td data-label="Actions">
+              <a href="#" class="btn btn-outline-primary btn-sm action-btn">↗ View</a>
+            </td>
+          </tr>
+
+          <!-- ROW 2 -->
+          <tr>
+            <td data-label="Hatchery Name">Neptune Seed Labs</td>
+            <td data-label="Recent Broodstock Import">3 Feb 2026</td>
+            <td data-label="CAA Registered"><span class="pill pill-success">✔ CAA</span></td>
+            <td data-label="Sapahri Certified"><span class="pill pill-success">✔ Sapahri</span></td>
+            <td data-label="BAP"><span class="pill pill-muted">✖ BAP</span></td>
+            <td data-label="Actions">
+              <a href="#" class="btn btn-outline-primary btn-sm action-btn">↗ View</a>
+            </td>
+          </tr>
+
+          <!-- ROW 3 -->
+          <tr>
+            <td data-label="Hatchery Name">Neptune Seed Labs</td>
+            <td data-label="Recent Broodstock Import">3 Feb 2026</td>
+            <td data-label="CAA Registered"><span class="pill pill-success">✔ CAA</span></td>
+            <td data-label="Sapahri Certified"><span class="pill pill-muted">✖ Sapahri</span></td>
+            <td data-label="BAP"><span class="pill pill-success">✔ BAP</span></td>
+            <td data-label="Actions">
+              <a href="#" class="btn btn-outline-primary btn-sm action-btn">↗ View</a>
+            </td>
+          </tr>
+
+          <!-- ROW 4 -->
+          <tr>
+            <td data-label="Hatchery Name">Aquatic Genetics Inc</td>
+            <td data-label="Recent Broodstock Import">15 Jan 2026</td>
+            <td data-label="CAA Registered"><span class="pill pill-success">✔ CAA</span></td>
+            <td data-label="Sapahri Certified"><span class="pill pill-success">✔ Sapahri</span></td>
+            <td data-label="BAP"><span class="pill pill-success">✔ BAP</span></td>
+            <td data-label="Actions">
+              <a href="#" class="btn btn-outline-primary btn-sm action-btn">↗ View</a>
+            </td>
+          </tr>
+
+          <!-- ROW 5 -->
+          <tr>
+            <td data-label="Hatchery Name">Blue Ocean Hatchery</td>
+            <td data-label="Recent Broodstock Import">22 Jan 2026</td>
+            <td data-label="CAA Registered"><span class="pill pill-muted">✖ CAA</span></td>
+            <td data-label="Sapahri Certified"><span class="pill pill-success">✔ Sapahri</span></td>
+            <td data-label="BAP"><span class="pill pill-muted">✖ BAP</span></td>
+            <td data-label="Actions">
+              <a href="#" class="btn btn-outline-primary btn-sm action-btn">↗ View</a>
+            </td>
+          </tr>
+
+          <!-- ROW 6 -->
+          <tr>
+            <td data-label="Hatchery Name">Marine Life Systems</td>
+            <td data-label="Recent Broodstock Import">5 Feb 2026</td>
+            <td data-label="CAA Registered"><span class="pill pill-success">✔ CAA</span></td>
+            <td data-label="Sapahri Certified"><span class="pill pill-muted">✖ Sapahri</span></td>
+            <td data-label="BAP"><span class="pill pill-success">✔ BAP</span></td>
+            <td data-label="Actions">
+              <a href="#" class="btn btn-outline-primary btn-sm action-btn">↗ View</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+<style>
+  /* BADGE */
+.search-badge {
+  background: #EEF2FF;
+  color: #1D4ED8;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+/* TITLE */
+.search-title {
+  /* Styles moved to inline CSS above */
+}
+
+/* FILTER INPUTS */
+.filter-input {
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-family: Poppins, sans-serif;
+}
+
+/* TABLE */
+.hatchery-table-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  max-width: 1200px; /* Limit width on desktop */
+  margin: 0 auto; /* Center the table */
+}
+
+.hatchery-table thead {
+  background: #F58524;
+  color: #fff;
+}
+
+.hatchery-table th {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 16px;
+  white-space: nowrap;
+}
+
+.hatchery-table td {
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  padding: 18px;
+}
+
+/* STATUS PILLS */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pill-success {
+  background: #D1FFD6;
+  color: #0F9D58;
+}
+
+.pill-muted {
+  background: #E0E0E0;
+  color: #555;
+}
+
+/* ACTION BUTTON */
+.action-btn {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* MOBILE RESPONSIVE */
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .search-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .search-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    margin-bottom: 12px;
+  }
+  
+  .text-center.text-muted {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  
+  .position-relative .filter-input {
+    padding-left: 40px;
+  }
+  
+  .row.g-3 {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .col-md-4, .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .hatchery-table-wrapper {
+    border-radius: 10px;
+    border: none; /* Remove wrapper border */
+  }
+  
+  .hatchery-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .hatchery-table thead {
+    display: none;
+  }
+  
+  .hatchery-table tbody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0;
+  }
+  
+  .hatchery-table tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 14px;
+    background: #fff;
+    margin: 0;
+  }
+  
+  .hatchery-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 13px;
+    border: none;
+  }
+  
+  .hatchery-table td:first-child {
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F3F4F6;
+    margin-bottom: 6px;
+  }
+  
+  .hatchery-table td:last-child {
+    padding-bottom: 0;
+    padding-top: 10px;
+    margin-top: 6px;
+  }
+  
+  .hatchery-table td::before {
+    content: attr(data-label);
+    font-weight: 500;
+    color: #6B7280;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  
+  .hatchery-table td:first-child::before {
+    display: none; /* Hide label for hatchery name */
+  }
+  
+  .action-btn {
+    width: auto;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 13px;
+    min-width: 80px;
+  }
+  
+  .pill {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+  
+  section.py-5 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* SMALL MOBILE (576px and below) - SINGLE COLUMN */
+@media (max-width: 576px) {
+  .search-title {
+    font-size: 20px;
+  }
+  
+  .search-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  
+  .text-center.text-muted {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  
+  /* Switch to single column on small screens */
+  .hatchery-table tbody {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .hatchery-table tr {
+    padding: 12px;
+  }
+  
+  .hatchery-table td {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+  
+  .hatchery-table td:first-child {
+    font-size: 14px;
+  }
+  
+  .filter-input {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  
+  .position-relative .filter-input {
+    padding-left: 35px;
+  }
+  
+  .action-btn {
+    width: auto;
+    padding: 6px 14px;
+    font-size: 12px;
+    min-width: 70px;
+  }
+  
+  .pill {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  section.py-5 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+</style>
+
+ <!-- Why Choose Us-->
+  <section class="why-section">
+  <div class="why-container">
+
+    <div class="why-header">
+      <span class="why-badge">
+        <span class="dot"></span> Why Choose Us
+      </span>
+
+      <h2>
+        Why Farmers Trust <span>HatchPro</span>
+      </h2>
+
+      <p>
+        We combine real transparency, expert quality checks, and certified
+        hatchery partnerships to eliminate guesswork at the very first step
+        of farming.
+      </p>
+    </div>
+
+    <div class="why-content">
+
+      <!-- LEFT -->
+      <div class="why-list">
+        <div class="why-item">
+          <img src="./images/trust1.svg" alt="">
+          <div>
+            <h4>100% Transparent</h4>
+            <p>
+              Full visibility into hatchery selection, broodstock sources,
+              and seed verification process.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <img src="./images/trust2.svg" alt="">
+          <div>
+            <h4>100% Verified</h4>
+            <p>
+              Every batch undergoes on-ground quality checks by our trained
+              aquaculture experts.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER IMAGE -->
+      <div class="why-image">
+        <img src="./images/service-why-choose-us.png" alt="Shrimp inspection">
+      </div>
+
+      <!-- RIGHT -->
+      <div class="why-list">
+        <div class="why-item">
+          <img src="./images/trust3.svg" alt="">
+          <div>
+            <h4>Certified Partners</h4>
+            <p>
+              We partner only with CAA registered, Saphari certified, and
+              BAP accredited hatcheries.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <img src="./images/trust4.svg" alt="">
+          <div>
+            <h4>On-Time Delivery</h4>
+            <p>
+              Coordinated logistics ensure seed reached your farm stress-free
+              and on schedule.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .why-section {
+  background: #F6FAFF;
+  padding: 80px 20px;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px;
+}
+
+.why-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E8F1FF;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.why-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: #2E6AE3;
+  border-radius: 50%;
+}
+
+.why-header h2 {
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+
+.why-header h2 span {
+  color: #2E6AE3;
+}
+
+.why-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* CONTENT GRID */
+.why-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LIST ITEMS */
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.why-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.why-item img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.why-item h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.why-item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* IMAGE */
+.why-image {
+  display: flex;
+  justify-content: center;
+}
+
+.why-image img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 20px;
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+   ===================== */
+@media (max-width: 992px) {
+  .why-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .why-list {
+    align-items: center;
+  }
+
+  .why-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .why-header h2 {
+    font-size: 32px;
+  }
+
+  .why-image {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
+
+</style>
 
 
 
@@ -200,6 +1431,36 @@
       </script>
 
 
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+</style>
+
+
+
+
+    <!-- Footer -->
+     <div id="footer-placeholder"></div>
+
+      <script>
+        fetch('components/footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          });
+      </script>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

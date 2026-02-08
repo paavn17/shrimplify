@@ -184,10 +184,42 @@
           }
         }
 
+        /* Prevent horizontal scrolling/slider on all devices */
+        body {
+          overflow-x: hidden;
+        }
+        
+        .container, .container-fluid {
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+        
+        /* Prevent any horizontal overflow */
+        * {
+          -webkit-overflow-scrolling: touch;
+        }
+        
         /* Mobile only: space above video */
         @media (max-width: 991.98px) {
           .video-container-mobile {
             margin-top: 24px;
+          }
+        }
+        
+        /* Prevent horizontal scrolling/slider on mobile */
+        @media (max-width: 768px) {
+          body {
+            overflow-x: hidden;
+          }
+          
+          .container, .container-fluid {
+            max-width: 100vw;
+            overflow-x: hidden;
+          }
+          
+          /* Prevent any horizontal overflow */
+          * {
+            -webkit-overflow-scrolling: touch;
           }
         }
     </style>
@@ -328,7 +360,7 @@
               <a
                 href="#"
                 class="btn rounded-pill px-4 py-2"
-                style="border:2px solid #C6FF4E; color:#C6FF4E;"
+                style="border:2px solid #FFC491; color: #FFC491;"
               >
                 Search Right Hatchery <span><img src="./images/search-logo.svg"/></span>
               </a>
@@ -405,6 +437,12 @@
   .video-section {
     background: none !important;
     border-radius: 0 !important; /* optional, remove corner rounding on mobile if needed */
+  }
+  
+  /* Reduce horizontal width on mobile */
+  .video-container-mobile {
+    max-width: 90% !important;
+    margin: 0 auto !important;
   }
 }
 </style>
@@ -887,8 +925,8 @@
               href="./contact.html"
               class="btn rounded-pill px-4 py-2"
               style="
-                border:1.5px solid #6B8E23;
-                color:#6B8E23;
+                border:1.5px solid #F58524;
+                color:#F58524;
                 font-family:'Plus Jakarta Sans', sans-serif;
                 font-weight:600;
                 font-size:18px;
@@ -1001,14 +1039,14 @@
 
       <!-- RIGHT BOTTOM FISH (Hidden on mobile) -->
             <img
-            src="./images/fish.svg"
+            src="./images/crab.svg"
             alt="Decorative Fish"
             class="d-none d-lg-block"
             style="
                 position: absolute;
                 right: 80px;
                 bottom: 0;
-                width: 280px;
+                width: 230px;
                 opacity: 0.9;
                 pointer-events: none;
             "
