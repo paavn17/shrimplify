@@ -201,6 +201,65 @@
           }
         }
         
+        /* Button Hover Effects - Darker Shade */
+        .btn:hover,
+        .lets-talk-btn:hover,
+        .action-btn:hover,
+        .cta-btn:hover,
+        .footer-newsletter button:hover {
+          filter: brightness(0.85);
+          transform: translateY(-2px);
+          transition: all 0.3s ease;
+        }
+        
+        /* Specific button hover effects for navbar */
+        .navbar .btn:hover {
+          filter: brightness(0.9);
+        }
+        
+        /* Slider navigation buttons */
+        .prev-btn:hover,
+        .next-btn:hover {
+          filter: brightness(0.85);
+        }
+        
+        /* Map Image Styles - Responsive */
+        .map-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: 500px;
+        }
+        
+        .map-image {
+          max-width: 100%;
+          height: auto;
+        
+        }
+        
+        /* Responsive adjustments for different screen sizes */
+        @media (max-width: 991px) {
+          .map-container {
+            max-width: 400px;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .map-container {
+            max-width: 300px;
+          }
+          
+          .map-image {
+            border-radius: 6px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .map-container {
+            max-width: 250px;
+          }
+        }
         
     </style>
   </head>
@@ -1121,19 +1180,11 @@
 
             <!-- LEFT MAP -->
             <div class="col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center">
-              <div
-                class="d-flex align-items-center justify-content-center"
-                style="
-                  width: 500px;
-                  height: 500px;
-                  border-radius: 50%;
-                  background: #D0F5FF;
-                "
-              >
+              <div class="map-container">
                 <img
                   src="./images/ap.png"
                   alt="Andhra Pradesh Map"
-                  style="width: 120%; height: auto;"
+                  class="img-fluid map-image"
                 />
               </div>
             </div>

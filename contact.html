@@ -109,6 +109,28 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Button Hover Effects - Darker Shade */
+.btn:hover,
+.lets-talk-btn:hover,
+.action-btn:hover,
+.cta-btn:hover,
+.footer-newsletter button:hover {
+  filter: brightness(0.85);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Specific button hover effects for navbar */
+.navbar .btn:hover {
+  filter: brightness(0.9);
+}
+
+/* Slider navigation buttons */
+.prev-btn:hover,
+.next-btn:hover {
+  filter: brightness(0.85);
+}
+
 </style>
 
 </head>
@@ -310,8 +332,9 @@ body {
 }
 
 .lets-talk-btn:hover {
-  background-color: #e0761f;
-  transform: translateY(-1px);
+  filter: brightness(0.85);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
 
 .lets-talk-btn:active {

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg py-3" style="background:#366FB6;">
+<nav class="navbar navbar-expand-lg navbar-dark py-3" style="background:#366FB6;">
   <div class="container">
 
     <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
@@ -34,10 +34,16 @@
     <a
       href="../contact.html"
       class="btn rounded-pill px-4 d-none d-lg-block"
-      style="background:#ffffff; color:#366FB6;"
+      style="background:#ffffff; color:#366FB6; transition: all 0.3s ease;"
     >
       Reach Us
     </a>
+    <style>
+      .navbar .btn:hover {
+        filter: brightness(0.9);
+        transform: translateY(-2px);
+      }
+    </style>
 
   </div>
 </nav>

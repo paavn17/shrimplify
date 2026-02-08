@@ -118,6 +118,28 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Button Hover Effects - Darker Shade */
+.btn:hover,
+.lets-talk-btn:hover,
+.action-btn:hover,
+.cta-btn:hover,
+.footer-newsletter button:hover {
+  filter: brightness(0.85);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Specific button hover effects for navbar */
+.navbar .btn:hover {
+  filter: brightness(0.9);
+}
+
+/* Slider navigation buttons */
+.prev-btn:hover,
+.next-btn:hover {
+  filter: brightness(0.85);
+}
+
 </style>
 
 </head>
@@ -286,6 +308,21 @@ body {
       background-position: center;
       border-radius: 20px;
       margin: 24px;
+      padding: 40px 0; /* Add vertical padding on desktop */
+    }
+    
+    /* Adjust padding for medium desktop screens */
+    @media (min-width: 769px) and (max-width: 1199px) {
+      .hero-wrapper {
+        padding: 30px 0; /* Slightly less padding on medium screens */
+      }
+    }
+    
+    /* Standard desktop screens */
+    @media (min-width: 1200px) {
+      .hero-wrapper {
+        padding: 50px 0; /* More padding on larger desktop screens */
+      }
     }
     .text-colour{
       color : #F58524;
