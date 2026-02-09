@@ -726,6 +726,25 @@ body {
   z-index: 0;
 }
 
+/* Add image at the end of the vertical line */
+.process-steps::after {
+  content: '';
+  position: absolute;
+  left: 16px; /* Centered with the 4px line */
+  bottom: 0; /* Aligned with the bottom of step 5 */
+  width: 50px;
+  height: 50px;
+  background: url('./images/trust4.svg') no-repeat center center;
+  background-size: contain;
+  z-index: 1;
+}
+@media (max-width: 576px) {
+  .process-steps::after {
+    display: none;
+  }
+}
+
+
 .process-step {
   display: flex;
   align-items: flex-start;
@@ -736,7 +755,6 @@ body {
 
 .process-step.last {
   margin-bottom: 0;
-  align-items: flex-end; /* Move number 5 to bottom */
 }
 
 /* ===== TIMELINE (LEFT SIDE) ===== */
