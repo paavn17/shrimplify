@@ -18,6 +18,99 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
   <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee {
+            animation: marquee 20s linear infinite;
+        }
+        .marquee-container {
+            background: #F58524;
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            color: white;
+            font-family: Poppins, sans-serif;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 28px;
+            line-height: 42px;
+            letter-spacing: 0%;
+            text-transform: uppercase;
+        }
+        .marquee-item {
+            display: inline-block;
+            margin: 0 30px;
+        }
+        .marquee-star {
+            display: inline-block;
+            margin: 0 20px;
+            color: white;
+            font-size: 32px;
+        }
+        .marquee-circle {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 20px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .marquee-container {
+                padding: 12px 0;
+            }
+            
+            .marquee-content {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            
+            .marquee-star {
+                font-size: 24px;
+                margin: 0 15px;
+            }
+            
+            .marquee-circle {
+                width: 18px;
+                height: 18px;
+                margin: 0 15px;
+            }
+            
+            .marquee-item {
+                margin: 0 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .marquee-content {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            
+            .marquee-star {
+                font-size: 20px;
+                margin: 0 12px;
+            }
+            
+            .marquee-circle {
+                width: 14px;
+                height: 14px;
+                margin: 0 12px;
+            }
+            
+            .marquee-item {
+                margin: 0 15px;
+            }
+        }
+    
   .icon-circle {
     width: 48px;
     height: 48px;
@@ -461,6 +554,20 @@ body {
     }
 
     </style>
+
+  <!-- Marquee Section -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span class="marquee-item">Octopus: Whole Round / Whole Cleaned</span>
+      <span class="marquee-star">✦</span>
+      <span class="marquee-item">Squid: Whole Round / Whole Cleaned / Tube / Rings</span>
+      <span class="marquee-circle"></span>
+      <span class="marquee-item">Octopus: Whole Round / Whole Cleaned</span>
+      <span class="marquee-star"><img src="./images/star.svg"/></span>
+      <span class="marquee-item">Squid: Whole Round / Whole Cleaned / Tube / Rings</span>
+      <span class="marquee-circle"></span>
+    </div>
+  </div>
 
   <!-- How HachPro Works-->
 

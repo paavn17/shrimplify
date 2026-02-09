@@ -1,174 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shrimplify</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shrimplify</title>
 
-  <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-  .icon-circle {
-    width: 48px;
-    height: 48px;
-  }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500&family=Quicksand:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .icon-circle {
+        width: 48px;
+        height: 48px;
+      }
 
-  .icon-img {
-    width: 22px;
-    height: 22px;
-  }
-  
-  /* Contact form typography */
-  .contact-heading {
-    font-family: Quicksand, sans-serif;
-    font-weight: 700;
-    font-size: 24.73px;
-    line-height: 1.5;
-    letter-spacing: 0%;
-  }
-  
-  .contact-subtext {
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: 0%;
-  }
-  
-  .form-label-text {
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 16.48px;
-    line-height: 1.5;
-    letter-spacing: 0%;
-  }
-  
-  .lets-talk-text {
-    font-family: Plus Jakarta Sans, sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-  }
-  
-  /* Form input styling */
-  .form-control {
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 16.48px;
-    line-height: 1.5;
-    letter-spacing: 0%;
-  }
-  
-  .form-control::placeholder {
-    font-family: Inter, sans-serif;
-    font-weight: 400;
-    font-size: 16.48px;
-    line-height: 1.5;
-    letter-spacing: 0%;
-    color: #6c757d;
-  }
-  
-  /* Mobile responsive adjustments */
-  @media (max-width: 768px) {
-    .contact-heading {
-      font-size: 22px !important;
-    }
-    
-    .contact-subtext {
-      font-size: 18px !important;
-    }
-    
-    .form-label-text {
-      font-size: 15px !important;
-    }
-    
-    .icon-circle {
-      width: 40px !important;
-      height: 40px !important;
-    }
-    
-    .icon-img {
-      width: 18px !important;
-      height: 18px !important;
-    }
-  }
+      .icon-img {
+        width: 22px;
+        height: 22px;
+      }
 
-  .object-fit-cover {
-  object-fit: cover;
-}
+      /* Contact form typography */
+      .contact-heading {
+        font-family: Quicksand, sans-serif;
+        font-weight: 700;
+        font-size: 24.73px;
+        line-height: 1.5;
+        letter-spacing: 0%;
+      }
 
-/* Prevent horizontal scrolling/slider on all devices */
-body {
-  overflow-x: hidden;
-}
+      .contact-subtext {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 0%;
+      }
 
-/* Prevent any horizontal overflow */
-* {
-  -webkit-overflow-scrolling: touch;
-}
+      .form-label-text {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 16.48px;
+        line-height: 1.5;
+        letter-spacing: 0%;
+      }
 
-/* Section */
-.hero-2 {
-  background: #ffffff;
-}
+      .lets-talk-text {
+        font-family:
+          Plus Jakarta Sans,
+          sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+      }
 
-/* Badge */
-.hero-badge {
-  background: #eaf2ff;
-  color: #2b6cb0;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 16px;
-  line-height: 90%;
-  letter-spacing: 0%;
-}
+      /* Form input styling */
+      .form-control {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 16.48px;
+        line-height: 1.5;
+        letter-spacing: 0%;
+      }
 
-/* Typography */
-.hero-title {
-  font-family: Quicksand, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 46px;
-  line-height: 120%;
-  letter-spacing: 0%;
-}
+      .form-control::placeholder {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 16.48px;
+        line-height: 1.5;
+        letter-spacing: 0%;
+        color: #6c757d;
+      }
 
-.hero-text {
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 18px;
-  line-height: 140%;
-  letter-spacing: 0%;
-  color: #444;
-}
+      /* Mobile responsive adjustments */
+      @media (max-width: 768px) {
+        .contact-heading {
+          font-size: 22px !important;
+        }
 
-/* Images */
-.hero-main-img {
-  width: 100%;
-  height: auto;
-}
+        .contact-subtext {
+          font-size: 18px !important;
+        }
 
+        .form-label-text {
+          font-size: 15px !important;
+        }
 
-.hero-main-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+        .icon-circle {
+          width: 40px !important;
+          height: 40px !important;
+        }
 
-/* Quote PNG overlay */
-/* .hero-quote-png {
+        .icon-img {
+          width: 18px !important;
+          height: 18px !important;
+        }
+      }
+
+      .object-fit-cover {
+        object-fit: cover;
+      }
+
+      /* Prevent horizontal scrolling/slider on all devices */
+      body {
+        overflow-x: hidden;
+      }
+
+      /* Prevent any horizontal overflow */
+      * {
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Section */
+      .hero-2 {
+        background: #ffffff;
+      }
+
+      /* Badge */
+      .hero-badge {
+        background: #eaf2ff;
+        color: #2b6cb0;
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 16px;
+        line-height: 90%;
+        letter-spacing: 0%;
+      }
+
+      /* Typography */
+      .hero-title {
+        font-family: Quicksand, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 46px;
+        line-height: 120%;
+        letter-spacing: 0%;
+      }
+
+      .hero-text {
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        color: #444;
+      }
+
+      /* Images */
+      .hero-main-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .hero-main-img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Quote PNG overlay */
+      /* .hero-quote-png {
   position: absolute;
   bottom: -40px;
   left: 50%;
@@ -178,834 +185,847 @@ body {
   z-index: 2;
 } */
 
-.hero-img-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.hero-main-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Quote PNG */
-.hero-quote-png {
-  position: absolute;  
-  transform: translate(-30%, -70%) scale(1.5);
-  transform-origin: center;
-  width: 60%;
-  max-width: none;
-  height: auto;
-  z-index: 2;
-}
-
-/* Get Started Button */
-.btn-get-started {
-  font-family: Plus Jakarta Sans, sans-serif;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: -2%;
-}
-
-/* Mobile fallback */
-@media (max-width: 991px) {
-  .hero-quote-png {
-    display: none;
-  }
-}
-
-/* Button Hover Effects - Darker Shade */
-.btn:hover,
-.lets-talk-btn:hover,
-.action-btn:hover,
-.cta-btn:hover,
-.footer-newsletter button:hover {
-  filter: brightness(0.85);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-
-/* Specific button hover effects for navbar */
-.navbar .btn:hover {
-  filter: brightness(0.9);
-}
-
-/* Slider navigation buttons */
-.prev-btn:hover,
-.next-btn:hover {
-  filter: brightness(0.85);
-}
-</style>
-
-</head>
-
-<body style="font-family: Inter, sans-serif;">
-
-  <!-- Navbar -->
-  <div id="navbar"></div>
-
-  <!-- Navbar underline CSS -->
-  <style>
-    .navbar-nav .nav-link {
-      position: relative;
-      display: inline-flex;
-      padding-bottom: 8px;
-    }
-
-    .navbar-nav .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 3px;
-      background-color: currentColor;
-      transition: width 0.3s ease;
-    }
-
-    .navbar-nav .nav-link.active::after {
-      width: 100%;
-    }
-    .quote-card {
-  position: absolute;
-  bottom: -30px;
-  left: -40px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  max-width: 360px;
-}
-
-.quote-icon {
-  font-size: 32px;
-  line-height: 1;
-  color: #0d6efd;
-}
-    
-/* Problem Section Typography */
-.problem-title {
-  font-family: Quicksand, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 40px;
-  line-height: 120%;
-  letter-spacing: 0%;
-}
-
-.problem-description {
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 18px;
-  line-height: 140%;
-  letter-spacing: 0%;
-  color: #6c757d;
-}
-
-.problem-highlight {
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 15px;
-  line-height: 150%;
-  letter-spacing: 0%;
-}
-.quote-card {
-  position: absolute;
-  bottom: -30px;
-  left: -40px;
-  background: rgba(255, 255, 255, 0.85); /* subtle transparency */
-  border-radius: 16px;
-  padding: 16px;
-  max-width: 360px;
-  backdrop-filter: blur(6px); /* premium glass effect */
-}
-.quote-image {
-  width: 100%;
-  height: auto;
-  opacity: 0.65;
-  border-radius: 12px;
-}
-
-/* Goal Section Typography */
-.goal-title {
-  font-family: Quicksand, sans-serif;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 46px;
-  line-height: 120%;
-  letter-spacing: -4%;
-  text-align: center;
-}
-
-.goal-description {
-  font-family: Poppins, sans-serif;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 26px;
-  line-height: 140%;
-  letter-spacing: 0%;
-  text-align: center;
-  color: #6c757d;
-}
-
-.goal-card-title {
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 28px;
-  line-height: 140%;
-  letter-spacing: 0%;
-}
-
-.goal-card-description {
-  font-family: Poppins, sans-serif;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 24px;
-  line-height: 140%;
-  letter-spacing: 0%;
-  color: #6c757d;
-}
-
-/* Forward Section Typography */
-.forward-title {
-  font-family: Quicksand, sans-serif;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 46px;
-  line-height: 120%;
-  letter-spacing: -4%;
-  text-align: center;
-}
-
-.forward-card-title {
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 22px;
-  line-height: 140%;
-  letter-spacing: -2%;
-}
-
-.forward-card-description {
-  font-family: Poppins, sans-serif;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 20px;
-  line-height: 140%;
-  letter-spacing: -2%;
-  color: #6c757d;
-}
-/* Heading */
-.goal-title {
-  font-family: Quicksand, sans-serif;
-  font-weight: 700;
-}
-
-/* Wider description */
-.goal-description {
-  max-width: 1040px; /* increased width */
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #212529;
-}
-
-/* Goal card styling */
-.goal-card {
-  background-color: #d0f5ff;
-}
-
-/* Icon */
-.goal-icon {
-  width: 72px;
-  height: 72px;
-  background-color: #3072b6;
-  flex-shrink: 0;
-}
-
-/* Card text */
-.goal-card-title {
-  font-family: Plus Jakarta Sans, sans-serif;
-  font-size: 18px;
-}
-
-.goal-card-description {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #212529;
-}
-
-/* Mobile polish */
-@media (max-width: 768px) {
-  .goal-description {
-    font-size: 16px;
-  }
-
-  .goal-card {
-    text-align: left;
-  }
-}
-
-section h2 {
-  font-family: Quicksand, sans-serif;
-}
-
-h5 {
-  font-family: Plus Jakarta Sans, sans-serif;
-}
-
-p {
-  font-family: Inter, sans-serif;
-  line-height: 1.6;
-}
-/* Services Section Typography */
-.services-intro {
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 26px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  text-align: center;
-}
-
-/* Gradient Cards */
-.hatchpro-card {
-  background: linear-gradient(104.82deg, #06b4d2 3.17%, #07a5c4 95.37%);
-}
-
-.farmpro-card {
-  background: linear-gradient(104.74deg, #3a80f5 4.74%, #2766ec 95.85%);
-}
-
-/* Icon container */
-.icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-box img {
-  width: 24px;
-  height: 24px;
-}
-
-/* Text polish */
-section p {
-  line-height: 1.6;
-}
-/* Section background */
-.belief-section {
-  background: linear-gradient(180deg, #0A89B6 0%, #366FB6 100%);
-}
-
-/* Badge */
-.belief-badge {
-  background: rgba(255, 255, 255, 0.2);
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 16px;
-  line-height: 90%;
-  letter-spacing: 0%;
-}
-
-/* Title */
-.belief-title {
-  font-family: Quicksand, sans-serif;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 40px;
-  line-height: 120%;
-  letter-spacing: 0%;
-  text-align: center;
-}
-
-/* Subtitle */
-.belief-subtitle {
-  font-family: Poppins, sans-serif;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 26px;
-  line-height: 140%;
-  letter-spacing: 0%;
-  text-align: center;
-  opacity: 0.9;
-}
-
-/* Highlight box */
-.belief-highlight {
-  max-width: 720px;
-  background: rgba(255, 255, 255, 0.25);
-  font-family: Poppins, sans-serif;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 24px;
-  line-height: 140%;
-  letter-spacing: 0%;
-  text-align: center;
-}
-
-/* Responsive tuning */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 40px !important;
-  }
-  
-  .hero-text {
-    font-size: 20px !important;
-  }
-  
-  .btn-get-started {
-    font-size: 22px !important;
-  }
-  
-  .belief-title {
-    font-size: 28px;
-  }
-
-  .belief-subtitle {
-    font-size: 16px;
-  }
-}
-@media (min-width: 992px) {
-  .hero-left-content {
-    max-width: 520px;
-  }
-}
-
-
-
-  </style>
-  <script>
-    fetch("components/navbar.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-
-        // 🔥 ACTIVE LINK LOGIC (runs AFTER navbar loads)
-        const currentPage =
-          window.location.pathname.split("/").pop() || "index.html";
-
-        document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-          const linkPage = link.getAttribute("href").replace("../", "");
-
-          if (linkPage === currentPage) {
-            link.classList.add("active");
-          } else {
-            link.classList.remove("active");
-          }
-        });
-      });
-  </script>
-
-  <!-- Hero Section -->
-  <section
-  class="position-relative d-flex align-items-center"
-  style="
-    background: #366FB6;
-    padding: 50px 0 80px;
-    border-radius: 0 0 120px 120px;
-  "
->
-  <style>
-    @media (max-width: 576px) {
-      .hero-title {
-        font-size: 36px !important;
+      .hero-img-wrapper {
+        position: relative;
+        width: 100%;
       }
-      
-      .hero-text {
-        font-size: 18px !important;
+
+      .hero-main-img {
+        width: 100%;
+        height: auto;
+        display: block;
       }
-      
+
+      /* Quote PNG */
+      .hero-quote-png {
+        position: absolute;
+        transform: translate(-30%, -70%) scale(1.5);
+        transform-origin: center;
+        width: 60%;
+        max-width: none;
+        height: auto;
+        z-index: 2;
+      }
+
+      /* Get Started Button */
       .btn-get-started {
-        font-size: 20px !important;
+        font-family:
+          Plus Jakarta Sans,
+          sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: -2%;
+        background-color: #f58524;
+        color: white;
       }
-      
-      .position-relative.d-flex.align-items-center {
-        padding: 30px 0 40px !important;
-        border-radius: 0 0 60px 60px !important;
+
+      /* Mobile fallback */
+      @media (max-width: 991px) {
+        .hero-quote-png {
+          display: none;
+        }
       }
-    }
-  </style>
-  <div class="container text-center text-white">
-    <h1 class="fw-bold mb-3">
-      Bridging Agriculture & <br/> Innovation
-    </h1>
-  </div>
-</section>
 
-<!-- Hero Section - 2 -->
-<section class="hero-2 py-5">
-  <div class="container">
-    <div class="row align-items-center g-5">
+      /* Button Hover Effects - Darker Shade */
+      .btn:hover,
+      .lets-talk-btn:hover,
+      .action-btn:hover,
+      .cta-btn:hover,
+      .footer-newsletter button:hover {
+        filter: brightness(0.85);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
 
-      <!-- LEFT CONTENT -->
-      <div class="col-lg-6">
-        <div class="hero-left-content">
-        <span class="badge rounded-pill px-4 py-3 mb-2" style="background: #eaf2ff; color: #000000; font-family: Poppins, sans-serif; font-weight: 600; font-style: SemiBold; font-size: 16px; line-height: 90%; letter-spacing: 0%;">
-          <span><img src= "./images/motto-logo.svg"/></span> Our Motto
-        </span>
+      /* Specific button hover effects for navbar */
+      .navbar .btn:hover {
+        filter: brightness(0.9);
+      }
 
-        <h1 class="fw-bold mb-3 hero-title">
-          Where Shrimplify Began
+      /* Slider navigation buttons */
+      .prev-btn:hover,
+      .next-btn:hover {
+        filter: brightness(0.85);
+      }
+    </style>
+  </head>
+
+  <body style="font-family: Inter, sans-serif">
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Navbar underline CSS -->
+    <style>
+      .navbar-nav .nav-link {
+        position: relative;
+        display: inline-flex;
+        padding-bottom: 8px;
+      }
+
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: currentColor;
+        transition: width 0.3s ease;
+      }
+
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+      }
+      .quote-card {
+        position: absolute;
+        bottom: -30px;
+        left: -40px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 20px;
+        max-width: 360px;
+      }
+
+      .quote-icon {
+        font-size: 32px;
+        line-height: 1;
+        color: #0d6efd;
+      }
+
+      /* Problem Section Typography */
+      .problem-title {
+        font-family: Quicksand, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: 0%;
+      }
+
+      .problem-description {
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        color: #6c757d;
+      }
+
+      .problem-highlight {
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 15px;
+        line-height: 150%;
+        letter-spacing: 0%;
+      }
+      .quote-card {
+        position: absolute;
+        bottom: -30px;
+        left: -40px;
+        background: rgba(255, 255, 255, 0.85); /* subtle transparency */
+        border-radius: 16px;
+        padding: 16px;
+        max-width: 360px;
+        backdrop-filter: blur(6px); /* premium glass effect */
+      }
+      .quote-image {
+        width: 100%;
+        height: auto;
+        opacity: 0.65;
+        border-radius: 12px;
+      }
+
+      /* Goal Section Typography */
+      .goal-title {
+        font-family: Quicksand, sans-serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 46px;
+        line-height: 120%;
+        letter-spacing: -4%;
+        text-align: center;
+      }
+
+      .goal-description {
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 26px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #6c757d;
+      }
+
+      .goal-card-title {
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 28px;
+        line-height: 140%;
+        letter-spacing: 0%;
+      }
+
+      .goal-card-description {
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 24px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        color: #6c757d;
+      }
+
+      /* Forward Section Typography */
+      .forward-title {
+        font-family: Quicksand, sans-serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 46px;
+        line-height: 120%;
+        letter-spacing: -4%;
+        text-align: center;
+      }
+
+      .forward-card-title {
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 22px;
+        line-height: 140%;
+        letter-spacing: -2%;
+      }
+
+      .forward-card-description {
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -2%;
+        color: #6c757d;
+      }
+      /* Heading */
+      .goal-title {
+        font-family: Quicksand, sans-serif;
+        font-weight: 700;
+      }
+
+      /* Wider description */
+      .goal-description {
+        max-width: 1040px; /* increased width */
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #212529;
+      }
+
+      /* Goal card styling */
+      .goal-card {
+        background-color: #d0f5ff;
+      }
+
+      /* Icon */
+      .goal-icon {
+        width: 72px;
+        height: 72px;
+        background-color: #3072b6;
+        flex-shrink: 0;
+      }
+
+      /* Card text */
+      .goal-card-title {
+        font-family:
+          Plus Jakarta Sans,
+          sans-serif;
+        font-size: 18px;
+      }
+
+      .goal-card-description {
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #212529;
+      }
+
+      /* Mobile polish */
+      @media (max-width: 768px) {
+        .goal-description {
+          font-size: 16px;
+        }
+
+        .goal-card {
+          text-align: left;
+        }
+      }
+
+      section h2 {
+        font-family: Quicksand, sans-serif;
+      }
+
+      h5 {
+        font-family:
+          Plus Jakarta Sans,
+          sans-serif;
+      }
+
+      p {
+        font-family: Inter, sans-serif;
+        line-height: 1.6;
+      }
+      /* Services Section Typography */
+      .services-intro {
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 26px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+
+      /* Gradient Cards */
+      .hatchpro-card {
+        background: linear-gradient(104.82deg, #06b4d2 3.17%, #07a5c4 95.37%);
+      }
+
+      .farmpro-card {
+        background: linear-gradient(104.74deg, #3a80f5 4.74%, #2766ec 95.85%);
+      }
+
+      /* Icon container */
+      .icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon-box img {
+        width: 24px;
+        height: 24px;
+      }
+
+      /* Text polish */
+      section p {
+        line-height: 1.6;
+      }
+      /* Section background */
+      .belief-section {
+        background: linear-gradient(180deg, #0a89b6 0%, #366fb6 100%);
+      }
+
+      /* Badge */
+      .belief-badge {
+        background: rgba(255, 255, 255, 0.2);
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 16px;
+        line-height: 90%;
+        letter-spacing: 0%;
+      }
+
+      /* Title */
+      .belief-title {
+        font-family: Quicksand, sans-serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+
+      /* Subtitle */
+      .belief-subtitle {
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 26px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+        opacity: 0.9;
+      }
+
+      /* Highlight box */
+      .belief-highlight {
+        max-width: 720px;
+        background: rgba(255, 255, 255, 0.25);
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 24px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+
+      /* Responsive tuning */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 40px !important;
+        }
+
+        .hero-text {
+          font-size: 20px !important;
+        }
+
+        .btn-get-started {
+          font-size: 22px !important;
+        }
+
+        .belief-title {
+          font-size: 28px;
+        }
+
+        .belief-subtitle {
+          font-size: 16px;
+        }
+      }
+      @media (min-width: 992px) {
+        .hero-left-content {
+          max-width: 520px;
+        }
+      }
+    </style>
+    <script>
+      fetch("components/navbar.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("navbar").innerHTML = html;
+
+          // 🔥 ACTIVE LINK LOGIC (runs AFTER navbar loads)
+          const currentPage =
+            window.location.pathname.split("/").pop() || "index.html";
+
+          document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+            const linkPage = link.getAttribute("href").replace("../", "");
+
+            if (linkPage === currentPage) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section
+      class="position-relative d-flex align-items-center"
+      style="
+        background: #366fb6;
+        padding: 50px 0 80px;
+        border-radius: 0 0 120px 120px;
+      "
+    >
+      <style>
+        @media (max-width: 576px) {
+          .hero-title {
+            font-size: 36px !important;
+          }
+
+          .hero-text {
+            font-size: 18px !important;
+          }
+
+          .btn-get-started {
+            font-size: 20px !important;
+          }
+
+          .position-relative.d-flex.align-items-center {
+            padding: 30px 0 40px !important;
+            border-radius: 0 0 60px 60px !important;
+          }
+        }
+      </style>
+      <div class="container text-center text-white">
+        <h1 class="fw-bold mb-3">
+          Bridging Agriculture & <br />
+          Innovation
         </h1>
-
-        <p class="hero-text">
-          Shrimplify was not born in a boardroom or a pitch deck.
-          It was born beside shrimp ponds — in conversations with
-          farmers who did everything right, yet still lost crops.
-        </p>
-
-        <p class="hero-text">
-          In long nights spent questioning seed quality. In repeated
-          struggles caused not by lack of effort, but by uncertainty.
-        </p>
-
-        <p class="hero-text">
-          We saw farmers invest their time, money, and trust — only
-          to face avoidable risks at the very first step of farming.
-          And we knew something had to change.
-        </p>
-
-        <a href="./contact.html" class="btn btn-warning rounded-pill px-4 py-2 mt-3 btn-get-started">
-          Get Started →
-        </a>
-        </div>
       </div>
+    </section>
 
-      <!-- RIGHT IMAGE STACK -->
-     <div class="col-lg-6">
-  <div class="hero-img-wrapper">
+    <!-- Hero Section - 2 -->
+    <section class="hero-2 py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- LEFT CONTENT -->
+          <div class="col-lg-6">
+            <div class="hero-left-content">
+              <span
+                class="badge rounded-pill px-4 py-3 mb-2"
+                style="
+                  background: #eaf2ff;
+                  color: #000000;
+                  font-family: Poppins, sans-serif;
+                  font-weight: 600;
+                  font-style: SemiBold;
+                  font-size: 16px;
+                  line-height: 90%;
+                  letter-spacing: 0%;
+                "
+              >
+                <span><img src="./images/motto-logo.svg" /></span> Our Motto
+              </span>
 
-    <!-- Main Image -->
-    <img
-      src="./images/about-hero1.png"
-      alt="Shrimp Farmer"
-      class="img-fluid rounded-4 hero-main-img"
-    >
+              <h1 class="fw-bold mb-3 hero-title">Where Shrimplify Began</h1>
 
-    <!-- Quote PNG -->
-    <img
-      src="./images/about-hero2.png"
-      alt="Quote"
-      class="hero-quote-png"
-    >
+              <p class="hero-text">
+                Shrimplify was not born in a boardroom or a pitch deck. It was
+                born beside shrimp ponds — in conversations with farmers who did
+                everything right, yet still lost crops.
+              </p>
 
-  </div>
-</div>
+              <p class="hero-text">
+                In long nights spent questioning seed quality. In repeated
+                struggles caused not by lack of effort, but by uncertainty.
+              </p>
 
-    </div>
-  </div>
-</section>
+              <p class="hero-text">
+                We saw farmers invest their time, money, and trust — only to
+                face avoidable risks at the very first step of farming. And we
+                knew something had to change.
+              </p>
 
+              <a
+                href="./contact.html"
+                class="btn btn-warning rounded-pill px-4 py-2 mt-3 btn-get-started"
+              >
+                Get Started →
+              </a>
+            </div>
+          </div>
 
-<!-- The Problem was bigger than -->
+          <!-- RIGHT IMAGE STACK -->
+          <div class="col-lg-6">
+            <div class="hero-img-wrapper">
+              <!-- Main Image -->
+              <img
+                src="./images/about-hero1.png"
+                alt="Shrimp Farmer"
+                class="img-fluid rounded-4 hero-main-img"
+              />
 
-<section class="container py-5">
-  <div class="row align-items-center g-5">
-    <!-- Left Image -->
-    <div class="col-lg-6">
-      <img
-        src="./images/the-prob.png"
-        alt="Farmers examining shrimp seed"
-        class="img-fluid rounded-4 shadow-sm"
-      />
-    </div>
-
-    <!-- Right Content -->
-    <div class="col-lg-6">
-      <h2 class="fw-bold mb-3 problem-title">
-        The Problem Was Bigger<br />
-        Than Seed
-      </h2>
-
-      <p class="problem-description mb-3">
-        Seed quality was only the beginning.
-      </p>
-
-      <p class="problem-description mb-4">
-        We observed that many farmers were farming without fully
-        knowing why certain decisions were being made. Practices were
-        often followed based on external guidance — from technicians,
-        advisors, or influences — without clear understanding of their
-        impact.
-      </p>
-
-      <!-- Highlight Box -->
-      <div class="d-flex align-items-start p-3 bg-light rounded-3">
-        <div class="me-3">
-          <div
-            class="d-flex align-items-center justify-content-center bg-info bg-opacity-25 rounded-circle"
-            style="width: 44px; height: 44px;"
-          >
-            <img
-              src="./images/farmer-logo.svg"
-              alt="Info icon"
-              style="width: 30px; height: 30px;"
-            />
+              <!-- Quote PNG -->
+              <img
+                src="./images/about-hero2.png"
+                alt="Quote"
+                class="hero-quote-png"
+              />
+            </div>
           </div>
         </div>
-
-        <p class="mb-0 problem-highlight">
-          <strong>When decisions are followed blindly</strong> farming becomes fragile.
-          <br />
-          <strong>When farmers understand what & why</strong> farming becomes reliable.
-        </p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Awarness -->
-<section class="belief-section text-center text-white py-5">
-  <div class="container py-4">
+    <!-- The Problem was bigger than -->
 
-    <!-- Badge -->
-    <span class="badge rounded-pill px-3 py-3 mb-4 belief-badge">
-      <span><img src="./images/cup.svg"/></span> What We Believe
-    </span>
-
-    <!-- Main Heading -->
-    <h2 class="fw-bold mb-4 belief-title">
-      Shrimp farming should not be driven by<br />
-      manipulation or guesswork.
-    </h2>
-
-    <!-- Subheading -->
-    <p class="fs-5 mb-4 belief-subtitle">
-      It should be driven by awareness and clarity.
-    </p>
-
-    <!-- Highlight Box -->
-    <div class="mx-auto belief-highlight px-4 py-3 rounded-3">
-      <p class="mb-0">
-        Farmers deserve systems that don't just instruct —
-        but explain, validate, and support informed decisions.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Goal -->
-<section class="container py-5 text-center">
-  <!-- Heading -->
-  <h2 class="fw-bold mb-3 goal-title">
-    Why We Built Shrimplify
-  </h2>
-
-  <!-- Subtext (WIDER) -->
-  <p class="goal-description mx-auto mb-5">
-    Shrimplify exists to simplify shrimp farming end-to-end — from choosing the
-    right seed, to running disciplined farm operations, to reaching harvest
-    with confidence.
-  </p>
-
-  <!-- Goal Card (NARROWER) -->
-  <div class="row justify-content-center">
-    <div class="col-lg-6 col-md-8">
-      <div
-        class="d-flex align-items-start align-items-md-center p-4 p-md-5 rounded-4 goal-card"
-      >
-        <!-- Icon -->
-        <div
-          class="d-flex align-items-center justify-content-center rounded-circle text-white me-3 me-md-4 goal-icon"
-        >
+    <section class="container py-5">
+      <div class="row align-items-center g-5">
+        <!-- Left Image -->
+        <div class="col-lg-6">
           <img
-            src="./images/goal-logo.svg"
-            alt="Goal Icon"
-            class="img-fluid"
-            style="width: 50px; height: 50px;"
+            src="./images/the-prob.png"
+            alt="Farmers examining shrimp seed"
+            class="img-fluid rounded-4 shadow-sm"
           />
         </div>
 
-        <!-- Text -->
-        <div class="text-start">
-          <h5 class="goal-card-title fw-semibold mb-2">
-            Our Goal
-          </h5>
-          <p class="goal-card-description mb-0">
-            Our goal is not to replace farmers' judgment, but to strengthen it
-            with structure, visibility, and reliable processes.
+        <!-- Right Content -->
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3 problem-title">
+            The Problem Was Bigger<br />
+            Than Seed
+          </h2>
+
+          <p class="problem-description mb-3">
+            Seed quality was only the beginning.
           </p>
+
+          <p class="problem-description mb-4">
+            We observed that many farmers were farming without fully knowing why
+            certain decisions were being made. Practices were often followed
+            based on external guidance — from technicians, advisors, or
+            influences — without clear understanding of their impact.
+          </p>
+
+          <!-- Highlight Box -->
+          <div class="d-flex align-items-start p-3 bg-light rounded-3">
+            <div class="me-3">
+              <div
+                class="d-flex align-items-center justify-content-center bg-info bg-opacity-25 rounded-circle"
+                style="width: 44px; height: 44px"
+              >
+                <img
+                  src="./images/farmer-logo.svg"
+                  alt="Info icon"
+                  style="width: 30px; height: 30px"
+                />
+              </div>
+            </div>
+
+            <p class="mb-0 problem-highlight">
+              <strong>When decisions are followed blindly</strong> farming
+              becomes fragile.
+              <br />
+              <strong>When farmers understand what & why</strong> farming
+              becomes reliable.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- How we movw forward  -->
-<section class="py-5" style="background-color: #F9FAFB;">
-  <div class="container text-center">
-    <!-- Title -->
-    <h2 class="fw-bold mb-5 forward-title">
-      How We Move Forward
-    </h2>
-    
-    <!-- Cards -->
-    <div class="row g-4 justify-content-center">
-      <!-- Card 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="h-100 p-4 rounded-4 bg-white shadow-sm text-start">
-          <div
-            class="d-flex align-items-center justify-content-center rounded-3 mb-3"
-            style="width: 44px; height: 44px; background-color: #EAF4FF;"
-          >
-            <!-- SVG Icon -->
-            <img src="./images/flag-icon.svg" alt="Flag" width="22" height="22" />
-          </div>
-    
-          <h5 class="forward-card-title fw-semibold mb-2">
-            We start where risk begins
-          </h5>
-          <p class="forward-card-description text-muted mb-0">
-            Identifying and addressing the critical first steps that determine
-            farming success.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Card 2 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="h-100 p-4 rounded-4 bg-white shadow-sm text-start">
-          <div
-            class="d-flex align-items-center justify-content-center rounded-3 mb-3"
-            style="width: 44px; height: 44px; background-color: #EAF4FF;"
-          >
-            <img src="./images/step-icon.svg" alt="Steps" width="22" height="22" />
-          </div>
-    
-          <h5 class="forward-card-title fw-semibold mb-2">
-            We build step by step
-          </h5>
-          <p class="forward-card-description text-muted mb-0">
-            Creating systematic solutions that grow with farmers' needs
-            and understanding.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Card 3 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="h-100 p-4 rounded-4 bg-white shadow-sm text-start">
-          <div
-            class="d-flex align-items-center justify-content-center rounded-3 mb-3"
-            style="width: 44px; height: 44px; background-color: #EAF4FF;"
-          >
-            <img src="./images/handshake.svg" alt="Reality" width="22" height="22" />
-          </div>
-    
-          <h5 class="forward-card-title fw-semibold mb-2">
-            We stay close to reality
-          </h5>
-          <p class="forward-card-description text-muted mb-0">
-            Grounded in the real challenges of real farms.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Awarness -->
+    <section class="belief-section text-center text-white py-5">
+      <div class="container py-4">
+        <!-- Badge -->
+        <span class="badge rounded-pill px-3 py-3 mb-4 belief-badge">
+          <span><img src="./images/cup.svg" /></span> What We Believe
+        </span>
 
-<!-- Hatchpro Farnpro-->
+        <!-- Main Heading -->
+        <h2 class="fw-bold mb-4 belief-title">
+          Shrimp farming should not be driven by<br />
+          manipulation or guesswork.
+        </h2>
 
-<section class="container py-5">
-  <!-- Intro Text -->
-  <p class="text-center services-intro fw-semibold fs-5 mb-5">
-    Through services like
-    <span class="text-primary">HatchPro</span> today and
-    <span class="text-primary">FarmPro</span> tomorrow, we aim to make farmers
-    aware, confident, and in control of their farming decisions.
-  </p>
-
-  <!-- Cards -->
-  <div class="row g-4 justify-content-center">
-    <!-- HatchPro -->
-    <div class="col-lg-5">
-      <div class="h-100 p-4 p-md-5 rounded-4 text-white hatchpro-card">
-        <!-- Header -->
-        <div class="d-flex align-items-center mb-3">
-          <div class="icon-box me-3">
-            <img src="./images/hatchpro-logo.svg" alt="HatchPro Icon" />
-          </div>
-          <h4 class="mb-0 fw-semibold">HatchPro</h4>
-        </div>
-
-        <!-- Description -->
-        <p class="mb-4">
-          Ensuring seed quality and transparency from the very beginning of the
-          farming journey.
+        <!-- Subheading -->
+        <p class="fs-5 mb-4 belief-subtitle">
+          It should be driven by awareness and clarity.
         </p>
 
-        <!-- Status -->
-        <div class="d-flex align-items-center fw-semibold">
-          <span>Available Now</span>
-          <span class="ms-2">
-            <img src="./images/tick-logo.svg" alt="Available" />
-          </span>
+        <!-- Highlight Box -->
+        <div class="mx-auto belief-highlight px-4 py-3 rounded-3">
+          <p class="mb-0">
+            Farmers deserve systems that don't just instruct — but explain,
+            validate, and support informed decisions.
+          </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- FarmPro -->
-    <div class="col-lg-5">
-      <div class="h-100 p-4 p-md-5 rounded-4 text-white farmpro-card">
-        <!-- Header -->
-        <div class="d-flex align-items-center mb-3">
-          <div class="icon-box me-3">
-            <img src="./images/farmpro-logo.svg" alt="FarmPro Icon" />
+    <!-- Goal -->
+    <section class="container py-5 text-center">
+      <!-- Heading -->
+      <h2 class="fw-bold mb-3 goal-title">Why We Built Shrimplify</h2>
+
+      <!-- Subtext (WIDER) -->
+      <p class="goal-description mx-auto mb-5">
+        Shrimplify exists to simplify shrimp farming end-to-end — from choosing
+        the right seed, to running disciplined farm operations, to reaching
+        harvest with confidence.
+      </p>
+
+      <!-- Goal Card (NARROWER) -->
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div
+            class="d-flex align-items-start align-items-md-center p-4 p-md-5 rounded-4 goal-card"
+          >
+            <!-- Icon -->
+            <div
+              class="d-flex align-items-center justify-content-center rounded-circle text-white me-3 me-md-4 goal-icon"
+            >
+              <img
+                src="./images/goal-logo.svg"
+                alt="Goal Icon"
+                class="img-fluid"
+                style="width: 50px; height: 50px"
+              />
+            </div>
+
+            <!-- Text -->
+            <div class="text-start">
+              <h5 class="goal-card-title fw-semibold mb-2">Our Goal</h5>
+              <p class="goal-card-description mb-0">
+                Our goal is not to replace farmers' judgment, but to strengthen
+                it with structure, visibility, and reliable processes.
+              </p>
+            </div>
           </div>
-          <h4 class="mb-0 fw-semibold">FarmPro</h4>
-        </div>
-
-        <!-- Description -->
-        <p class="mb-4">
-          Complete farm operations management for disciplined, informed farming
-          decisions.
-        </p>
-
-        <!-- Status -->
-        <div class="d-flex align-items-center fw-semibold">
-          <span>Coming Soon</span>
-          <span class="ms-2">
-            <img src="./images/cmgsoon-logo.svg" alt="Coming Soon" />
-          </span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- How we movw forward  -->
+    <section class="py-5" style="background-color: #f9fafb">
+      <div class="container text-center">
+        <!-- Title -->
+        <h2 class="fw-bold mb-5 forward-title">How We Move Forward</h2>
 
+        <!-- Cards -->
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 p-4 rounded-4 bg-white shadow-sm text-start">
+              <div
+                class="d-flex align-items-center justify-content-center rounded-3 mb-3"
+                style="width: 44px; height: 44px; background-color: #eaf4ff"
+              >
+                <!-- SVG Icon -->
+                <img
+                  src="./images/flag-icon.svg"
+                  alt="Flag"
+                  width="22"
+                  height="22"
+                />
+              </div>
 
+              <h5 class="forward-card-title fw-semibold mb-2">
+                We start where risk begins
+              </h5>
+              <p class="forward-card-description text-muted mb-0">
+                Identifying and addressing the critical first steps that
+                determine farming success.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 p-4 rounded-4 bg-white shadow-sm text-start">
+              <div
+                class="d-flex align-items-center justify-content-center rounded-3 mb-3"
+                style="width: 44px; height: 44px; background-color: #eaf4ff"
+              >
+                <img
+                  src="./images/step-icon.svg"
+                  alt="Steps"
+                  width="22"
+                  height="22"
+                />
+              </div>
+
+              <h5 class="forward-card-title fw-semibold mb-2">
+                We build step by step
+              </h5>
+              <p class="forward-card-description text-muted mb-0">
+                Creating systematic solutions that grow with farmers' needs and
+                understanding.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h-100 p-4 rounded-4 bg-white shadow-sm text-start">
+              <div
+                class="d-flex align-items-center justify-content-center rounded-3 mb-3"
+                style="width: 44px; height: 44px; background-color: #eaf4ff"
+              >
+                <img
+                  src="./images/handshake.svg"
+                  alt="Reality"
+                  width="22"
+                  height="22"
+                />
+              </div>
+
+              <h5 class="forward-card-title fw-semibold mb-2">
+                We stay close to reality
+              </h5>
+              <p class="forward-card-description text-muted mb-0">
+                Grounded in the real challenges of real farms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hatchpro Farnpro-->
+
+    <section class="container py-5">
+      <!-- Intro Text -->
+      <p class="text-center services-intro fw-semibold fs-5 mb-5">
+        Through services like
+        <span class="text-primary">HatchPro</span> today and
+        <span class="text-primary">FarmPro</span> tomorrow, we aim to make
+        farmers aware, confident, and in control of their farming decisions.
+      </p>
+
+      <!-- Cards -->
+      <div class="row g-4 justify-content-center">
+        <!-- HatchPro -->
+        <div class="col-lg-5">
+          <div class="h-100 p-4 p-md-5 rounded-4 text-white hatchpro-card">
+            <!-- Header -->
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <img src="./images/hatchpro-logo.svg" alt="HatchPro Icon" />
+              </div>
+              <h4 class="mb-0 fw-semibold">HatchPro</h4>
+            </div>
+
+            <!-- Description -->
+            <p class="mb-4">
+              Ensuring seed quality and transparency from the very beginning of
+              the farming journey.
+            </p>
+
+            <!-- Status -->
+            <div class="d-flex align-items-center fw-semibold">
+              <span>Available Now</span>
+              <span class="ms-2">
+                <img src="./images/tick-logo.svg" alt="Available" />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FarmPro -->
+        <div class="col-lg-5">
+          <div class="h-100 p-4 p-md-5 rounded-4 text-white farmpro-card">
+            <!-- Header -->
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <img src="./images/farmpro-logo.svg" alt="FarmPro Icon" />
+              </div>
+              <h4 class="mb-0 fw-semibold">FarmPro</h4>
+            </div>
+
+            <!-- Description -->
+            <p class="mb-4">
+              Complete farm operations management for disciplined, informed
+              farming decisions.
+            </p>
+
+            <!-- Status -->
+            <div class="d-flex align-items-center fw-semibold">
+              <span>Coming Soon</span>
+              <span class="ms-2">
+                <img src="./images/cmgsoon-logo.svg" alt="Coming Soon" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-     <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-      <script>
-        fetch('components/footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-          });
-      </script>
+    <script>
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
 
-
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

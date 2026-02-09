@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,346 +31,361 @@
       rel="stylesheet"
     />
     <style>
+      .step-offset {
+        transform: translateY(100px);
+      }
+      .hero-video {
+        position: relative;
+        width: 100%;
+        height: 85vh; /* 🔥 smaller height for desktop */
+        overflow: hidden;
+      }
+
+      .hero-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Mobile height */
+      @media (max-width: 768px) {
+        .hero-video {
+          height: 45vh; /* slightly taller on mobile */
+        }
+      }
+
+      @media (max-width: 768px) {
         .step-offset {
-          transform: translateY(100px);
+          transform: translateY(0);
+        }
+      }
+
+      .slide {
+        transition: opacity 0.3s ease;
+      }
+
+      .dot {
+        cursor: pointer;
+      }
+
+      .dot.active {
+        color: #111827;
+        font-weight: 600;
+      }
+
+      /* Minimal responsive adjustments */
+      @media (max-width: 768px) {
+        .hero {
+          text-align: center;
         }
 
+        .hero .btn {
+          margin-bottom: 10px;
+        }
+
+        .service-card p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .display-3 {
+          font-size: calc(1.525rem + 3.3vw);
+        }
+
+        .lead {
+          font-size: 1rem;
+        }
+
+        .rounded-circle {
+          width: 90px !important;
+          height: 90px !important;
+          border-width: 8px !important;
+        }
+
+        .rounded-circle img {
+          max-width: 60% !important;
+        }
+
+        /* Footer specific adjustments */
+        .footer-bg h2 {
+          font-size: 2rem !important;
+        }
+
+        .footer-bg .btn {
+          width: 100% !important;
+          margin-top: 15px !important;
+        }
+
+        /* Testimonial adjustments */
+        .testimonial-slider .fs-5 {
+          font-size: 1.25rem !important;
+        }
+
+        .testimonial-slider .fs-4 {
+          font-size: 1.5rem !important;
+        }
+      }
+
+      /* Consistent mobile spacing - Senior Dev Approach */
+      @media (max-width: 768px) {
+        /* Base padding reductions for all sections */
+        .py-5 {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+
+        .py-4 {
+          padding-top: 0.75rem !important;
+          padding-bottom: 0.75rem !important;
+        }
+
+        /* Margin adjustments for consistent spacing */
+        .mb-5 {
+          margin-bottom: 1rem !important;
+        }
+
+        .mt-5 {
+          margin-top: 1rem !important;
+        }
+
+        /* Section-specific optimizations */
+        .hero {
+          padding-top: 0.75rem !important;
+          padding-bottom: 0.75rem !important;
+        }
+
+        .about,
+        .services,
+        .why-choose,
+        .testimonials {
+          padding-top: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+
+        .operate {
+          padding-top: 0.75rem !important;
+          padding-bottom: 0.75rem !important;
+        }
+
+        /* Systematic gap reduction between sections */
+        section {
+          margin-bottom: 0 !important;
+        }
+
+        /* Fine-tune specific section combinations */
+        .hero + section {
+          margin-top: 0.5rem !important;
+        }
+
+        .about + .services {
+          margin-top: 0.5rem !important;
+        }
+
+        .services + .why-choose {
+          margin-top: 0.5rem !important;
+        }
+
+        .why-choose + .testimonials {
+          margin-top: 0.5rem !important;
+        }
+
+        /* Remove extra bottom margin from last section */
+        section:last-child {
+          margin-bottom: 0 !important;
+        }
+
+        /* Remove video background color on mobile */
         @media (max-width: 768px) {
-          .step-offset {
-            transform: translateY(0);
-          }
-        }
-
-        .slide {
-          transition: opacity 0.3s ease;
-        }
-
-        .dot {
-          cursor: pointer;
-        }
-
-        .dot.active {
-          color: #111827;
-          font-weight: 600;
-        }
-
-        /* Minimal responsive adjustments */
-        @media (max-width: 768px) {
-          .hero {
-            text-align: center;
-          }
-          
-          .hero .btn {
-            margin-bottom: 10px;
-          }
-          
-          .service-card p {
-            font-size: 0.9rem;
-          }
-        }
-
-        @media (max-width: 576px) {
-          .display-3 {
-            font-size: calc(1.525rem + 3.3vw);
-          }
-          
-          .lead {
-            font-size: 1rem;
-          }
-          
-          .rounded-circle {
-            width: 90px !important;
-            height: 90px !important;
-            border-width: 8px !important;
-          }
-          
-          .rounded-circle img {
-            max-width: 60% !important;
-          }
-          
-          /* Footer specific adjustments */
-          .footer-bg h2 {
-            font-size: 2rem !important;
-          }
-          
-          .footer-bg .btn {
-            width: 100% !important;
-            margin-top: 15px !important;
-          }
-          
-          /* Testimonial adjustments */
-          .testimonial-slider .fs-5 {
-            font-size: 1.25rem !important;
-          }
-          
-          .testimonial-slider .fs-4 {
-            font-size: 1.5rem !important;
-          }
-        }
-
-        /* Consistent mobile spacing - Senior Dev Approach */
-        @media (max-width: 768px) {
-          /* Base padding reductions for all sections */
-          .py-5 {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-          }
-          
-          .py-4 {
-            padding-top: 0.75rem !important;
-            padding-bottom: 0.75rem !important;
-          }
-          
-          /* Margin adjustments for consistent spacing */
-          .mb-5 {
-            margin-bottom: 1rem !important;
-          }
-          
-          .mt-5 {
-            margin-top: 1rem !important;
-          }
-          
-          /* Section-specific optimizations */
-          .hero {
-            padding-top: 0.75rem !important;
-            padding-bottom: 0.75rem !important;
-          }
-          
-          .about, .services, .why-choose, .testimonials {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-          }
-          
-          .operate {
-            padding-top: 0.75rem !important;
-            padding-bottom: 0.75rem !important;
-          }
-          
-          /* Systematic gap reduction between sections */
-          section {
-            margin-bottom: 0 !important;
-          }
-          
-          /* Fine-tune specific section combinations */
-          .hero + section {
-            margin-top: 0.5rem !important;
-          }
-          
-          .about + .services {
-            margin-top: 0.5rem !important;
-          }
-          
-          .services + .why-choose {
-            margin-top: 0.5rem !important;
-          }
-          
-          .why-choose + .testimonials {
-            margin-top: 0.5rem !important;
-          }
-          
-          /* Remove extra bottom margin from last section */
-          section:last-child {
-            margin-bottom: 0 !important;
-          }
-          
-          /* Remove video background color on mobile */
-          @media (max-width: 768px) {
-            .video-container-mobile {
-              background: transparent !important;
-            }
-          }
-        }
-        
-        /* Desktop only: space for floating shrimp */
-        @media (min-width: 992px) {
-          .video-section {
-            margin-bottom: 100px; /* adjust if needed */
-          }
-        }
-
-        /* Prevent horizontal scrolling/slider on all devices */
-        body {
-          overflow-x: hidden;
-        }
-     
-        /* Prevent any horizontal overflow */
-        * {
-          -webkit-overflow-scrolling: touch;
-        }
-        
-        /* Mobile only: space above video */
-        @media (max-width: 991.98px) {
           .video-container-mobile {
-            margin-top: 24px;
+            background: transparent !important;
           }
         }
-        
-        /* Button Hover Effects - Darker Shade */
-        .btn:hover,
-        .lets-talk-btn:hover,
-        .action-btn:hover,
-        .cta-btn:hover,
-        .footer-newsletter button:hover {
-          filter: brightness(0.85);
-          transform: translateY(-2px);
-          transition: all 0.3s ease;
+      }
+
+      /* Desktop only: space for floating shrimp */
+      @media (min-width: 992px) {
+        .video-section {
+          margin-bottom: 100px; /* adjust if needed */
         }
-        
-        /* Specific button hover effects for navbar */
-        .navbar .btn:hover {
-          filter: brightness(0.9);
+      }
+
+      /* Prevent horizontal scrolling/slider on all devices */
+      body {
+        overflow-x: hidden;
+      }
+
+      /* Prevent any horizontal overflow */
+      * {
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Mobile only: space above video */
+      @media (max-width: 991.98px) {
+        .video-container-mobile {
+          margin-top: 24px;
         }
-        
-        /* Slider navigation buttons */
-        .prev-btn:hover,
-        .next-btn:hover {
-          filter: brightness(0.85);
-        }
-        
-        /* Map Image Styles - Responsive */
+      }
+
+      /* Button Hover Effects - Darker Shade */
+      .btn:hover,
+      .lets-talk-btn:hover,
+      .action-btn:hover,
+      .cta-btn:hover,
+      .footer-newsletter button:hover {
+        filter: brightness(0.85);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+      }
+
+      /* Specific button hover effects for navbar */
+      .navbar .btn:hover {
+        filter: brightness(0.9);
+      }
+
+      /* Slider navigation buttons */
+      .prev-btn:hover,
+      .next-btn:hover {
+        filter: brightness(0.85);
+      }
+
+      /* Map Image Styles - Responsive */
+      .map-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .map-image {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Responsive adjustments for different screen sizes */
+      @media (max-width: 991px) {
         .map-container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          max-width: 500px;
+          max-width: 400px;
         }
-        
+      }
+
+      @media (max-width: 768px) {
+        .map-container {
+          max-width: 300px;
+        }
+
         .map-image {
-          max-width: 100%;
-          height: auto;
-        
+          border-radius: 6px;
         }
-        
-        /* Responsive adjustments for different screen sizes */
-        @media (max-width: 991px) {
-          .map-container {
-            max-width: 400px;
-          }
+      }
+
+      @media (max-width: 576px) {
+        .map-container {
+          max-width: 250px;
         }
-        
-        @media (max-width: 768px) {
-          .map-container {
-            max-width: 300px;
-          }
-          
-          .map-image {
-            border-radius: 6px;
-          }
-        }
-        
-        @media (max-width: 576px) {
-          .map-container {
-            max-width: 250px;
-          }
-        }
-        
+      }
     </style>
   </head>
 
-  <body style="font-family: Inter, sans-serif;">
-
+  <body style="font-family: Inter, sans-serif">
     <!-- NAVBAR -->
- <div id="navbar"></div>
+    <div id="navbar"></div>
 
-  <!-- Navbar underline CSS -->
-  <style>
-    .navbar-nav .nav-link {
-      position: relative;
-      display: inline-flex;
-      padding-bottom: 8px;
-    }
+    <!-- Navbar underline CSS -->
+    <style>
+      .navbar-nav .nav-link {
+        position: relative;
+        display: inline-flex;
+        padding-bottom: 8px;
+      }
 
-    .navbar-nav .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 3px;
-      background-color: currentColor;
-      transition: width 0.3s ease;
-    }
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: currentColor;
+        transition: width 0.3s ease;
+      }
 
-    .navbar-nav .nav-link.active::after {
-      width: 100%;
-    }
-    @media (max-width: 991px) {
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+      }
+      @media (max-width: 991px) {
+        /* Reduce navbar vertical padding */
+        .navbar {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
 
-  /* Reduce navbar vertical padding */
-  .navbar {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
+        /* Remove extra space below collapsed menu */
+        .navbar-collapse {
+          margin-bottom: 0;
+        }
 
-  /* Remove extra space below collapsed menu */
-  .navbar-collapse {
-    margin-bottom: 0;
-  }
+        /* Tighten nav links spacing */
+        .navbar-nav {
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
 
-  /* Tighten nav links spacing */
-  .navbar-nav {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
+        .navbar-nav .nav-link {
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+      }
+    </style>
 
-  .navbar-nav .nav-link {
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-}
+    <!-- Load navbar + activate underline -->
+    <script>
+      fetch("components/navbar.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("navbar").innerHTML = html;
 
-  </style>
+          // 🔥 ACTIVE LINK LOGIC (runs AFTER navbar loads)
+          const currentPage =
+            window.location.pathname.split("/").pop() || "index.html";
 
-  <!-- Load navbar + activate underline -->
-  <script>
-    fetch("components/navbar.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
+          document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+            const linkPage = link.getAttribute("href").replace("../", "");
 
-        // 🔥 ACTIVE LINK LOGIC (runs AFTER navbar loads)
-        const currentPage =
-          window.location.pathname.split("/").pop() || "index.html";
-
-        document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-          const linkPage = link.getAttribute("href").replace("../", "");
-
-          if (linkPage === currentPage) {
-            link.classList.add("active");
-          } else {
-            link.classList.remove("active");
-          }
+            if (linkPage === currentPage) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
         });
-      });
-  </script>
-
+    </script>
 
     <!-- HERO SECTION -->
-    <section class="pt-5 pb-4" style="background:#366FB6;">
+    <section class="pt-5 pb-4" style="background: #366fb6">
       <div class="container pt-4">
         <div class="row align-items-center gy-4 gx-5">
-
           <!-- LEFT -->
           <div class="col-lg-7">
             <span
               class="d-inline-block mb-3 px-3 py-2 rounded-pill text-white"
-              style="background: rgba(255,255,255,0.15); font-size:14px;"
+              style="background: rgba(255, 255, 255, 0.15); font-size: 14px"
             >
-              <span><img src = "./images/cup.svg" class="me-2"/></span>Shrimplify Presents
+              <span><img src="./images/cup.svg" class="me-2" /></span>Shrimplify
+              Presents
             </span>
 
             <h1
               style="
                 font-family: Quicksand, sans-serif;
                 font-weight: 700;
-                font-size: 64px;
+                font-size: 62px;
                 line-height: 1;
                 color: #ffffff;
               "
             >
-              The Best Harvest Starts
-              with the Right Seed.
+              The Best Harvest Starts with the Right Seed.
             </h1>
           </div>
 
@@ -385,17 +400,17 @@
                 max-width: 520px;
               "
             >
-              Introducing <strong>HatchPro</strong> — Shrimplify’s intelligent seed
-              sourcing service that uses Aqua Intelligence to identify the most
-              suitable hatchery for your stocking date, backed by on-ground seed
-              validation by our experts.
+              Introducing <strong>HatchPro</strong> — Shrimplify’s intelligent
+              seed sourcing service that uses Aqua Intelligence to identify the
+              most suitable hatchery for your stocking date, backed by on-ground
+              seed validation by our experts.
             </p>
 
             <div class="d-flex gap-3 mt-4 flex-wrap">
               <a
                 href="./contact.html"
                 class="btn rounded-pill px-4 py-2 text-white"
-                style="background:#F7931E; font-weight:600;"
+                style="background: #f7931e; font-weight: 600"
               >
                 Book Now →
               </a>
@@ -403,112 +418,137 @@
               <a
                 href="#"
                 class="btn rounded-pill px-4 py-2"
-                style="border:2px solid #FFC491; color: #FFC491;"
+                style="border: 2px solid #ffc491; color: #ffc491"
               >
-                Search Right Hatchery <span><img src="./images/search-logo.svg"/></span>
+                Search Right Hatchery
+                <span><img src="./images/search-logo.svg" /></span>
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
     <style>
       @media (max-width: 991px) {
+        /* Reduce hero top spacing */
+        section[style*="#366FB6"] {
+          padding-top: 2rem !important;
+          padding-bottom: 2rem;
+        }
 
-  /* Reduce hero top spacing */
-  section[style*="#366FB6"] {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem;
-  }
-
-  section[style*="#366FB6"] .container {
-    padding-top: 0 !important;
-  }
-
-}
-
+        section[style*="#366FB6"] .container {
+          padding-top: 0 !important;
+        }
+      }
     </style>
 
     <!-- VIDEO SECTION -->
-<section
-  class="position-relative video-section"
-  style="background:#366FB6; padding-bottom:30px; border-radius: 0 0 100px 100px;"
->
-  <div class="d-flex justify-content-center w-100">
-    <div
-      class="overflow-hidden video-container-mobile"
-      style="border-radius: 40px; background: #000; max-width: 1400px; width: 100%;"
-      data-aos="fade-up"
+    <section
+      class="position-relative video-section"
+      style="
+        background: #366fb6;
+        padding: 0 20px 30px 20px;
+        border-radius: 0 0 100px 100px;
+      "
     >
-      <div class="ratio ratio-21x9">
-        <iframe
-          src="https://www.youtube.com/embed/sJUqkuYY9zw?si=8ffmAwGPaX4jrDCn"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+      <div class="d-flex justify-content-center w-100">
+        <div
+          class="overflow-hidden video-container"
+          style="
+            border-radius: 40px;
+            background: #000;
+            max-width: 1400px;
+            width: 100%;
+          "
+          data-aos="fade-up"
+        >
+          <div class="hero-video">
+            <video autoplay muted loop playsinline>
+              <source src="images/Hero-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Floating Shrimp Icon -->
-  <div
-    class="position-absolute start-50 translate-middle-x d-none d-lg-block"
-    style="bottom:-56px;"
-  >
-    <div
-      class="d-flex align-items-center justify-content-center rounded-circle bg-white"
-      style="width: 130px; height: 130px; border: 11px solid #F58524;"
-      data-aos="zoom-in"
-    >
-      <img
-        src="./images/shrimp.png"
-        alt="Shrimp"
-        class="img-fluid"
-        style="width: 58px; height: auto; max-width: 70%;"
-      />
-    </div>
-  </div>
-</section>
+      <!-- Floating Shrimp Icon -->
+      <div
+        class="position-absolute start-50 translate-middle-x d-none d-lg-block"
+        style="bottom: -56px"
+      >
+        <div
+          class="d-flex align-items-center justify-content-center rounded-circle bg-white"
+          style="width: 130px; height: 130px; border: 11px solid #f58524"
+          data-aos="zoom-in"
+        >
+          <img
+            src="./images/shrimp.png"
+            alt="Shrimp"
+            class="img-fluid"
+            style="width: 58px; height: auto; max-width: 70%"
+          />
+        </div>
+      </div>
+    </section>
 
+    <style>
+      /* Desktop padding optimization */
+      @media (min-width: 1400px) {
+        .video-section {
+          padding: 0 100px 30px 100px !important;
+        }
+      }
+      
+      @media (min-width: 1200px) and (max-width: 1399px) {
+        .video-section {
+          padding: 0 60px 30px 60px !important;
+        }
+      }
+      
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .video-section {
+          padding: 0 40px 30px 40px !important;
+        }
+      }
 
-<style>
-/* REMOVE BG ON MOBILE */
-@media (max-width: 576px) {
-  .video-section {
-    background: none !important;
-    border-radius: 0 !important; /* optional, remove corner rounding on mobile if needed */
-  }
-  
-  /* Reduce horizontal width on mobile */
-  .video-container-mobile {
-    max-width: 90% !important;
-    margin: 0 auto !important;
-  }
-}
-</style>
+      /* REMOVE BG ON MOBILE */
+      @media (max-width: 576px) {
+        .video-section {
+          background: none !important;
+          border-radius: 0 !important;
+          padding: 0 15px 30px 15px !important;
+        }
 
+        /* Reduce horizontal width on mobile */
+        .video-container {
+          max-width: 90% !important;
+          margin: 0 auto !important;
+        }
+      }
+      
+      /* Tablet optimization */
+      @media (min-width: 577px) and (max-width: 991px) {
+        .video-section {
+          padding: 0 30px 30px 30px !important;
+        }
+      }
+    </style>
 
     <!-- WHAT SHRIMPLIFY DOES -->
-    <section class="position-relative py-5 bg-white "
-    style="margin-top:30px;">
+    <section class="position-relative py-5 bg-white" style="margin-top: 30px">
       <div class="container py-4">
-
         <!-- Decorative SVGs -->
         <img
           src="./images/svg1.svg"
           alt=""
           class="position-absolute d-none d-lg-block"
-          style="top: -5%; left: 100px; width: 150px;"
+          style="top: -5%; left: 100px; width: 150px"
         />
 
         <img
           src="./images/fish.svg"
           alt=""
           class="position-absolute d-none d-lg-block"
-          style="bottom: -30px; right: 100px; width: 160px;"
+          style="bottom: -30px; right: 100px; width: 160px"
         />
 
         <!-- HEADER ROW -->
@@ -517,10 +557,22 @@
           <div class="col-lg-6">
             <span
               class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
-              style="border:1px solid #E6F0F7; font-family:Poppins, sans-serif; font-size:14px; background: #EAF2FF; font-weight:600;"
+              style="
+                border: 1px solid #e6f0f7;
+                font-family: Poppins, sans-serif;
+                font-size: 14px;
+                background: #eaf2ff;
+                font-weight: 600;
+              "
             >
               <span
-                style="width:10px; height:10px; background:#2F80ED; border-radius:50%; display:inline-block;"
+                style="
+                  width: 10px;
+                  height: 10px;
+                  background: #2f80ed;
+                  border-radius: 50%;
+                  display: inline-block;
+                "
               ></span>
               About Us
             </span>
@@ -532,7 +584,7 @@
                 font-size: 48px;
                 line-height: 1.3;
                 letter-spacing: -0.04em;
-                color: #2F80ED;
+                color: #2f80ed;
               "
             >
               What Shrimplify Does
@@ -562,13 +614,9 @@
 
         <!-- CARDS ROW -->
         <div class="row g-4 align-items-stretch">
-
           <!-- CARD 1 -->
           <div class="col-lg-3 col-md-6">
-            <div
-              class="h-100 p-4 rounded-4"
-              style="background:#E8F8FF;"
-            >
+            <div class="h-100 p-4 rounded-4" style="background: #e8f8ff">
               <h3
                 style="
                   font-family: Poppins, sans-serif;
@@ -597,10 +645,11 @@
                 style="
                   font-family: Poppins, sans-serif;
                   font-size: 16px;
-                  color: #6B7280;
+                  color: #6b7280;
                 "
               >
-                Enabling data-driven shrimp farming through smart tools and insights.
+                Enabling data-driven shrimp farming through smart tools and
+                insights.
               </p>
             </div>
           </div>
@@ -612,17 +661,14 @@
                 src="./images/about-shrimp.png"
                 alt="Shrimp"
                 class="w-100 h-100"
-                style="object-fit: cover;"
+                style="object-fit: cover"
               />
             </div>
           </div>
 
           <!-- CARD 3 -->
           <div class="col-lg-3 col-md-6">
-            <div
-              class="h-100 p-4 rounded-4"
-              style="background:#E8F8FF;"
-            >
+            <div class="h-100 p-4 rounded-4" style="background: #e8f8ff">
               <h3
                 style="
                   font-family: Poppins, sans-serif;
@@ -651,7 +697,7 @@
                 style="
                   font-family: Poppins, sans-serif;
                   font-size: 16px;
-                  color: #6B7280;
+                  color: #6b7280;
                 "
               >
                 Training and technology that strengthen farmer livelihoods.
@@ -666,30 +712,38 @@
                 src="./images/about-boat.png"
                 alt="Community"
                 class="w-100 h-100"
-                style="object-fit: cover;"
+                style="object-fit: cover"
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-       <!-- OUR SERVICES -->
+    <!-- OUR SERVICES -->
     <section class="py-5 bg-white">
       <div class="container py-4">
-
         <!-- HEADER ROW -->
         <div class="row align-items-start mb-5 gx-5">
-
           <!-- LEFT -->
           <div class="col-lg-6">
             <span
               class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
-              style="border:1px solid #E6F0F7; font-family:Poppins, sans-serif; font-size:14px; font-weight:600;"
+              style="
+                border: 1px solid #e6f0f7;
+                font-family: Poppins, sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+              "
             >
               <span
-                style="width:10px; height:10px; background:#2F80ED; border-radius:50%; display:inline-block;"
+                style="
+                  width: 10px;
+                  height: 10px;
+                  background: #2f80ed;
+                  border-radius: 50%;
+                  display: inline-block;
+                "
               ></span>
               Services
             </span>
@@ -701,7 +755,7 @@
                 font-size: 46px;
                 line-height: 1.2;
                 letter-spacing: -0.04em;
-                color: #2F80ED;
+                color: #2f80ed;
                 margin-bottom: 12px;
               "
             >
@@ -722,12 +776,12 @@
 
             <p
               style="
-                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 1.4;
                 letter-spacing: 0;
-                color: #4B5563;
+                color: #4b5563;
                 max-width: 100%;
               "
             >
@@ -741,26 +795,33 @@
           <div class="col-lg-6 d-flex flex-column align-items-end">
             <p
               style="
-                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 1.4;
                 letter-spacing: 0;
-                color: #4B5563;
+                color: #4b5563;
                 max-width: 100%;
                 margin-bottom: 16px;
                 margin-top: 30px;
               "
             >
-              Shrimplify is an Aqua Intelligence platform designed to simplify shrimp
-              farming operations — starting with verified seed sourcing and extending
-              through efficient farming operations to harvest.
+              Shrimplify is an Aqua Intelligence platform designed to simplify
+              shrimp farming operations — starting with verified seed sourcing
+              and extending through efficient farming operations to harvest.
             </p>
 
             <a
               href="#"
               class="btn rounded-pill px-4 py-2 text-white mt-5"
-              style="background:#F7931E; font-family:'Plus Jakarta Sans', sans-serif; font-weight:600; font-size:18px; line-height:1.5; letter-spacing:0;"
+              style="
+                background: #f7931e;
+                font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: 0;
+              "
             >
               How it Works →
             </a>
@@ -769,32 +830,48 @@
 
         <!-- CONTENT ROW -->
         <div class="row align-items-center gx-5">
-
           <!-- LEFT STEPS -->
           <div class="col-lg-6">
             <div class="row g-4">
-
               <!-- STEP 01 -->
               <div class="col-md-6">
-                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/service-feature1.png" class="img-fluid" style="max-width: 52px; height: auto;" />
+                <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/service-feature1.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
                     <span
                       class="fs-3 fs-md-2"
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         line-height: 1;
-                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #e8f8ff 0%,
+                          #4ca8f4 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
                     >
                       01
-                      </span>
-
+                    </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
                     Pond preparation guidance before seed stocking
                   </p>
                 </div>
@@ -802,24 +879,43 @@
 
               <!-- STEP 02 -->
               <div class="col-md-6 step-offset">
-                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/service-feature2.png" class="img-fluid" style="max-width: 52px; height: auto;" />
-                      <span
+                <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/service-feature2.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
+                    <span
                       class="fs-3 fs-md-2"
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         line-height: 1;
-                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #e8f8ff 0%,
+                          #4ca8f4 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
                     >
                       02
-                      </span>
+                    </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
                     Hatchery shortlisting based on stocking plans
                   </p>
                 </div>
@@ -827,24 +923,43 @@
 
               <!-- STEP 03 -->
               <div class="col-md-6">
-                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/service-feature3.png" class="img-fluid" style="max-width: 52px; height: auto;" />
-                      <span
+                <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/service-feature3.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
+                    <span
                       class="fs-3 fs-md-2"
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         line-height: 1;
-                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #e8f8ff 0%,
+                          #4ca8f4 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
                     >
                       03
-                      </span>
+                    </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
                     On-site seed quality verification
                   </p>
                 </div>
@@ -852,54 +967,92 @@
 
               <!-- STEP 04 -->
               <div class="col-md-6 step-offset">
-                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/service-feature4.png" class="img-fluid" style="max-width: 52px; height: auto;" />
-                      <span
+                <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/service-feature4.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
+                    <span
                       class="fs-3 fs-md-2"
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         line-height: 1;
-                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #e8f8ff 0%,
+                          #4ca8f4 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
                     >
                       04
-                      </span>
+                    </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
-                    Seed transport handled using best practices to reduce PL stress
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
+                    Seed transport handled using best practices to reduce PL
+                    stress
                   </p>
                 </div>
               </div>
 
               <!-- STEP 05 -->
               <div class="col-md-6">
-                <div class="p-4 rounded-4 h-100" style="background:#E8F8FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/service-feature5.png" class="img-fluid" style="max-width: 52px; height: auto;" />
-                      <span
+                <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/service-feature5.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
+                    <span
                       class="fs-3 fs-md-2"
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         line-height: 1;
-                        background: linear-gradient(180deg, #E8F8FF 0%, #4CA8F4 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #e8f8ff 0%,
+                          #4ca8f4 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
                     >
                       05
-                      </span>
+                    </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
                     Confidence from Day 1 or reduced risk from Day 1
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -909,12 +1062,11 @@
               <img
                 src="./images/service-shrimp.png"
                 class="w-100 img-fluid"
-                style="height: auto; max-height: 650px; object-fit: cover;"
+                style="height: auto; max-height: 650px; object-fit: cover"
                 alt="Shrimp"
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -941,7 +1093,11 @@
 
               <span
                 class="px-3 py-2 rounded-pill text-white"
-                style="background:#F58524; font-family:Poppins, sans-serif; font-size:14px;"
+                style="
+                  background: #f58524;
+                  font-family: Poppins, sans-serif;
+                  font-size: 14px;
+                "
               >
                 ⏱ Coming Soon
               </span>
@@ -949,17 +1105,18 @@
 
             <p
               style="
-                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 1.4;
                 letter-spacing: 0;
-                color: #4B5563;
+                color: #4b5563;
                 max-width: 100%;
               "
             >
-              A comprehensive farm management service designed to enable efficient,
-              disciplined, and sustainable shrimp farming through best-practice operations.
+              A comprehensive farm management service designed to enable
+              efficient, disciplined, and sustainable shrimp farming through
+              best-practice operations.
             </p>
           </div>
 
@@ -968,13 +1125,13 @@
               href="./contact.html"
               class="btn rounded-pill px-4 py-2 mt-5"
               style="
-                border:1.5px solid #F58524;
-                color:#F58524;
-                font-family:'Plus Jakarta Sans', sans-serif;
-                font-weight:600;
-                font-size:18px;
-                line-height:1.5;
-                letter-spacing:0;
+                border: 1.5px solid #f58524;
+                color: #f58524;
+                font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: 0;
                 margin-top: 40px;
               "
             >
@@ -985,14 +1142,13 @@
 
         <!-- CONTENT -->
         <div class="row align-items-center gx-5">
-
           <!-- LEFT IMAGE -->
           <div class="col-lg-6 mb-4 mb-lg-0">
             <div class="rounded-4 overflow-hidden">
               <img
                 src="./images/farmpro.png"
                 class="w-100"
-                style="height: 520px; object-fit: cover;"
+                style="height: 520px; object-fit: cover"
                 alt="Farm Ponds"
               />
             </div>
@@ -1001,18 +1157,28 @@
           <!-- RIGHT STEPS -->
           <div class="col-lg-6">
             <div class="row g-4">
-
               <!-- STEP 01 -->
               <div class="col-md-6">
-                <div class="p-4 rounded-4 h-100" style="background:#EAF7FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/farmpro-icon1.png" class="img-fluid" style="max-width: 52px; height: auto;" />
+                <div class="p-4 rounded-4 h-100" style="background: #eaf7ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/farmpro-icon1.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
                     <span
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         font-size: 44px;
-                        background: linear-gradient(180deg, #EAF7FF 0%, #6AAEF0 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #eaf7ff 0%,
+                          #6aaef0 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
@@ -1020,7 +1186,15 @@
                       01
                     </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
                     Structured farm operations & protocols
                   </p>
                 </div>
@@ -1028,15 +1202,26 @@
 
               <!-- STEP 02 (OFFSET) -->
               <div class="col-md-6 step-offset">
-                <div class="p-4 rounded-4 h-100" style="background:#EAF7FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/farmpro-icon2.png" class="img-fluid" style="max-width: 52px; height: auto;" />
+                <div class="p-4 rounded-4 h-100" style="background: #eaf7ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/farmpro-icon2.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
                     <span
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         font-size: 44px;
-                        background: linear-gradient(180deg, #EAF7FF 0%, #6AAEF0 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #eaf7ff 0%,
+                          #6aaef0 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
@@ -1044,7 +1229,15 @@
                       02
                     </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
                     Health, growth & performance monitoring
                   </p>
                 </div>
@@ -1052,15 +1245,26 @@
 
               <!-- STEP 03 -->
               <div class="col-md-6">
-                <div class="p-4 rounded-4 h-100" style="background:#EAF7FF;">
-                  <div class="d-flex justify-content-between align-items-start mb-3">
-                    <img src="./images/farmpro-icon3.png" class="img-fluid" style="max-width: 52px; height: auto;" />
+                <div class="p-4 rounded-4 h-100" style="background: #eaf7ff">
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-3"
+                  >
+                    <img
+                      src="./images/farmpro-icon3.png"
+                      class="img-fluid"
+                      style="max-width: 52px; height: auto"
+                    />
                     <span
                       style="
-                        font-family: 'Bricolage Grotesque', sans-serif;
+                        font-family:
+                          &quot;Bricolage Grotesque&quot;, sans-serif;
                         font-weight: 600;
                         font-size: 44px;
-                        background: linear-gradient(180deg, #EAF7FF 0%, #6AAEF0 100%);
+                        background: linear-gradient(
+                          180deg,
+                          #eaf7ff 0%,
+                          #6aaef0 100%
+                        );
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                       "
@@ -1068,122 +1272,129 @@
                       03
                     </span>
                   </div>
-                  <p class="fs-6 fs-md-5" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; line-height:1.4; letter-spacing:-0.02em;">
+                  <p
+                    class="fs-6 fs-md-5"
+                    style="
+                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
+                      font-weight: 500;
+                      line-height: 1.4;
+                      letter-spacing: -0.02em;
+                    "
+                  >
                     Sustainability-focused farming practices
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
 
       <!-- RIGHT BOTTOM FISH (Hidden on mobile) -->
-            <img
-            src="./images/crab.svg"
-            alt="Decorative Fish"
-            class="d-none d-lg-block"
-            style="
-                position: absolute;
-                right: 80px;
-                bottom: 0;
-                width: 230px;
-                opacity: 0.9;
-                pointer-events: none;
-            "
-            />
-
+      <img
+        src="./images/crab.svg"
+        alt="Decorative Fish"
+        class="d-none d-lg-block"
+        style="
+          position: absolute;
+          right: 80px;
+          bottom: 0;
+          width: 230px;
+          opacity: 0.9;
+          pointer-events: none;
+        "
+      />
     </section>
 
     <!--Are you ready-->
     <section class="hero-section d-flex align-items-center">
-  <div class="container text-white">
-    <span class="badge rounded-pill px-3 py-2 mb-3 d-inline-block hero-badge">
-      <span><img src="./images/cup.svg" class="me-2"/></span>Ready to Cultivate Change
-    </span>
+      <div class="container text-white">
+        <span
+          class="badge rounded-pill px-3 py-2 mb-3 d-inline-block hero-badge"
+        >
+          <span><img src="./images/cup.svg" class="me-2" /></span>Ready to
+          Cultivate Change
+        </span>
 
-    <h1 class="fw-bold display-5 mt-3 hero-title">
-      Are You Ready to Grow <br />
-      Smarter and Farm Greener?
-    </h1>
+        <h1 class="fw-bold display-5 mt-3 hero-title">
+          Are You Ready to Grow <br />
+          Smarter and Farm Greener?
+        </h1>
 
-    <a href="./contact.html" class="btn btn-warning btn-lg mt-4 px-4 py-3 rounded-pill hero-button">
-      Join the Green Revolution
-    </a>
-  </div>
-</section>
-<style>
-  .hero-section {
-  min-height: 75vh; 
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.25)
-    ),
-    url("./images/ready-bg.png"); /* update path */
-  background-size: cover;
-  background-position: center bottom; 
-  background-repeat: no-repeat;
-}
+        <a
+          href="./contact.html"
+          class="btn btn-warning btn-lg mt-4 px-4 py-3 rounded-pill hero-button"
+        >
+          Join the Green Revolution
+        </a>
+      </div>
+    </section>
+    <style>
+      .hero-section {
+        min-height: 75vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25)),
+          url("./images/ready-bg.png"); /* update path */
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+      }
 
-.hero-badge {
-  /* background-color: #FFFFFF; */
-  border: 1px solid #e5e7eb; /* light neutral */
-  border-radius: 16px;
-  color: #ffffff;
-  font-family: Poppins;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 16px;
-  line-height: 130%;
-  letter-spacing: -2%;
-  background: rgba(255, 255, 255, 0.15);
+      .hero-badge {
+        /* background-color: #FFFFFF; */
+        border: 1px solid #e5e7eb; /* light neutral */
+        border-radius: 16px;
+        color: #ffffff;
+        font-family: Poppins;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: -2%;
+        background: rgba(255, 255, 255, 0.15);
+      }
 
-}
+      .hero-title {
+        font-family: Poppins;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 60px;
+        line-height: 130%;
+        letter-spacing: -4%;
+      }
 
-.hero-title {
-  font-family: Poppins;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 60px;
-  line-height: 130%;
-  letter-spacing: -4%;
-}
-
-.hero-button {
-  background: #F58524;
-  border: none;
-  color: #ffffff;
-  font-family: Poppins;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 20px;
-  line-height: 20.86px;
-  letter-spacing: 0%;
-}
-
-</style>
+      .hero-button {
+        background: #f58524;
+        border: none;
+        color: #ffffff;
+        font-family: Poppins;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 20.86px;
+        letter-spacing: 0%;
+      }
+    </style>
 
     <!-- Where we Operate -->
-     <section class="py-5 bg-white position-relative" style="background:#366FB6;">
+    <section
+      class="py-5 bg-white position-relative"
+      style="background: #366fb6"
+    >
       <div class="container py-4">
-
         <!-- CARD WRAPPER -->
         <div
           class="p-5 position-relative"
           style="
             background: #ffffff;
             border-radius: 32px;
-            border: 1px solid #EAF0F6;
+            border: 1px solid #eaf0f6;
             box-shadow:
               0px 8px 24px rgba(16, 24, 40, 0.04),
               0px 2px 6px rgba(16, 24, 40, 0.03);
           "
         >
           <div class="row align-items-center gx-5">
-
             <!-- LEFT MAP -->
             <div class="col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center">
               <div class="map-container">
@@ -1197,13 +1408,21 @@
 
             <!-- RIGHT CONTENT -->
             <div class="col-lg-6">
-
               <!-- PILL -->
               <span
                 class="d-inline-flex align-items-center justify-content-center gap-2 px-3 py-2 rounded-pill mb-3"
-                style="border:1px solid #E6F0F7; font-family:Poppins, sans-serif; font-size:14px; background: #F58524; color: white;"
+                style="
+                  border: 1px solid #e6f0f7;
+                  font-family: Poppins, sans-serif;
+                  font-size: 14px;
+                  background: #f58524;
+                  color: white;
+                "
               >
-                <span class="d-flex align-items-center"><img src="./images/locationsvg.svg" class="me-1"/></span> Currently Serving
+                <span class="d-flex align-items-center"
+                  ><img src="./images/locationsvg.svg" class="me-1"
+                /></span>
+                Currently Serving
               </span>
 
               <!-- HEADING -->
@@ -1214,7 +1433,7 @@
                   font-size: 46px;
                   line-height: 1.2;
                   letter-spacing: 0;
-                  color: #2F6FC2;
+                  color: #2f6fc2;
                   margin-bottom: 16px;
                 "
               >
@@ -1224,45 +1443,43 @@
               <!-- DESCRIPTION -->
               <p
                 style="
-                  font-family: 'Plus Jakarta Sans', sans-serif;
+                  font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
                   font-weight: 400;
                   font-size: 18px;
                   line-height: 1.4;
                   letter-spacing: 0;
-                  color: #4B5563;
+                  color: #4b5563;
                   max-width: 480px;
                   margin-bottom: 24px;
                 "
               >
                 HatchPro services are currently available across Andhra Pradesh,
-                with on-ground coordination based on hatchery and farm locations.
+                with on-ground coordination based on hatchery and farm
+                locations.
               </p>
 
               <!-- TAG -->
               <span
                 class="px-4 py-2 rounded-pill d-inline-block"
                 style="
-                  background: #D0F5FF;
-                  color: #2F6FC2;
-                  font-family: 'Plus Jakarta Sans', sans-serif;
+                  background: #d0f5ff;
+                  color: #2f6fc2;
+                  font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
                   font-weight: 600;
                   font-size: 16px;
                 "
               >
                 Whole Coastal Andhra
               </span>
-
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- Why Choose Us-->
-     <section class="py-5 bg-white position-relative overflow-hidden">
+    <section class="py-5 bg-white position-relative overflow-hidden">
       <div class="container py-5 text-center">
-
         <!-- DECORATIVE SVGs (Hidden on mobile) -->
         <img
           src="./images/left-fish.svg"
@@ -1296,7 +1513,7 @@
         <span
           class="d-inline-flex align-items-center gap-2 px-4 py-3 rounded-pill mb-3"
           style="
-            border: 1px solid #E6F0F7;
+            border: 1px solid #e6f0f7;
             font-family: Poppins, sans-serif;
             font-size: 16px;
             font-weight: 600;
@@ -1304,10 +1521,10 @@
             line-height: 90%;
             letter-spacing: 0%;
             color: #000000;
-            background: #E6F0F7;
+            background: #e6f0f7;
           "
         >
-          <span style="color: #1F4FD8; font-size: 20px;">●</span> Why Choose Us
+          <span style="color: #1f4fd8; font-size: 20px">●</span> Why Choose Us
         </span>
 
         <!-- HEADING -->
@@ -1318,7 +1535,7 @@
             font-size: 48px;
             line-height: 1.3;
             letter-spacing: -0.04em;
-            color: #2F6FC2;
+            color: #2f6fc2;
             margin-bottom: 16px;
             text-align: center;
           "
@@ -1334,311 +1551,430 @@
             font-size: 20px;
             line-height: 1.3;
             letter-spacing: -0.02em;
-            color: #4B5563;
+            color: #4b5563;
             max-width: 720px;
             margin: 0 auto 40px;
             text-align: center;
           "
         >
           Built by aquaculture-focused professionals with 30+ years of family
-          experience in aquaculture. Combines intelligence with on-ground execution
+          experience in aquaculture. Combines intelligence with on-ground
+          execution
         </p>
 
         <!-- CONTENT ROW -->
-<div
-  class="row align-items-center justify-content-center gx-0 gy-4"
-  style="margin-top: 40px;"
->
-  <!-- LEFT CARD -->
-  <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-    <div
-      class="p-3 rounded-4 text-start"
-      style="background:#EAF7FF; max-width: 280px; width: 100%;"
-    >
-      <img
-        src="./images/why-card-1.png"
-        class="w-100 rounded-3 mb-3"
-        alt=""
-      />
-      <p
-        style="
-          font-family: Poppins, sans-serif;
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 1.4;
-          letter-spacing: -0.04em;
-          margin: 0;
-        "
-      >
-        Farmer-first, not commission-first
-      </p>
-    </div>
-  </div>
+        <div
+          class="row align-items-center justify-content-center gx-0 gy-4"
+          style="margin-top: 40px"
+        >
+          <!-- LEFT CARD -->
+          <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+            <div
+              class="p-3 rounded-4 text-start"
+              style="background: #eaf7ff; max-width: 280px; width: 100%"
+            >
+              <img
+                src="./images/why-card-1.png"
+                class="w-100 rounded-3 mb-3"
+                alt=""
+              />
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 24px;
+                  line-height: 1.4;
+                  letter-spacing: -0.04em;
+                  margin: 0;
+                "
+              >
+                Farmer-first, not commission-first
+              </p>
+            </div>
+          </div>
 
- <!-- CENTER IMAGE -->
-<div class="col-lg-6 col-md-8 d-none d-md-flex justify-content-center">
-  <img
-    src="./images/why-card-center.png"
-    alt="Happy Farmer"
-    class="img-fluid rounded-circle"
-    style="max-width: 420px;"
-  />
-</div>
+          <!-- CENTER IMAGE -->
+          <div
+            class="col-lg-6 col-md-8 d-none d-md-flex justify-content-center"
+          >
+            <img
+              src="./images/why-card-center.png"
+              alt="Happy Farmer"
+              class="img-fluid rounded-circle"
+              style="max-width: 420px"
+            />
+          </div>
 
-
-
-  <!-- RIGHT CARD -->
-  <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-    <div
-      class="p-3 rounded-4 text-start"
-      style="background:#EAF7FF; max-width: 280px; width: 100%;"
-    >
-      <img
-        src="./images/why-card-2.png"
-        class="w-100 rounded-3 mb-3"
-        alt=""
-      />
-      <p
-        style="
-          font-family: Poppins, sans-serif;
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 1.4;
-          letter-spacing: -0.04em;
-          margin: 0;
-        "
-      >
-        Designed for farmers for long-term farming success
-      </p>
-    </div>
-  </div>
-</div>
-
+          <!-- RIGHT CARD -->
+          <div class="col-lg-3 col-md-6 d-flex justify-content-center">
+            <div
+              class="p-3 rounded-4 text-start"
+              style="background: #eaf7ff; max-width: 280px; width: 100%"
+            >
+              <img
+                src="./images/why-card-2.png"
+                class="w-100 rounded-3 mb-3"
+                alt=""
+              />
+              <p
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  font-size: 24px;
+                  line-height: 1.4;
+                  letter-spacing: -0.04em;
+                  margin: 0;
+                "
+              >
+                Designed for farmers for long-term farming success
+              </p>
+            </div>
+          </div>
+        </div>
 
         <!-- CTA + DOTTED DIVIDER -->
-    <div class="position-relative mt-5 d-flex justify-content-center align-items-center">
+        <div
+          class="position-relative mt-5 d-flex justify-content-center align-items-center"
+        >
+          <!-- DOTTED LINE -->
+          <!-- DOTTED LINE -->
+          <div
+            style="
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              transform: translateY(-50%);
+              background-image: repeating-linear-gradient(
+                to right,
+                #d1d5db 0,
+                #d1d5db 8px,
+                transparent 8px,
+                transparent 18px
+              );
+              z-index: 1;
+            "
+          ></div>
 
-      <!-- DOTTED LINE -->
-      <!-- DOTTED LINE -->
-    <div
-      style="
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        transform: translateY(-50%);
-        background-image: repeating-linear-gradient(
-          to right,
-          #D1D5DB 0,
-          #D1D5DB 8px,
-          transparent 8px,
-          transparent 18px
-        );
-        z-index: 1;
-      "
-    ></div>
-
-
-      <!-- BUTTON -->
-      <a
-        href="./service.html"
-        class="btn rounded-pill px-5 py-3 text-white position-relative"
-        style="
-          background:#F58524;
-          font-family:Poppins, sans-serif;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 20.86px;
-          letter-spacing: -0.04em;
-          z-index: 2;
-          background-clip: padding-box;
-        "
-      >
-        Explore Services
-      </a>
-
-    </div>
-
-
+          <!-- BUTTON -->
+          <a
+            href="./service.html"
+            class="btn rounded-pill px-5 py-3 text-white position-relative"
+            style="
+              background: #f58524;
+              font-family: Poppins, sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 20.86px;
+              letter-spacing: -0.04em;
+              z-index: 2;
+              background-clip: padding-box;
+            "
+          >
+            Explore Services
+          </a>
+        </div>
       </div>
-     </section>
+    </section>
 
-    <!-- What Customers say --> 
+    <!-- What Customers say -->
     <section class="py-5 bg-white">
-  <div class="container">
+      <div class="container">
+        <!-- HEADER -->
+        <div class="row mb-5">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h2
+              class="display-2 display-md-1 section-title"
+              style="
+                font-family: Quicksand, sans-serif;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #366fb6;
+                text-transform: capitalize;
+                margin-bottom: 1rem;
+              "
+            >
+              What Customers say
+            </h2>
+          </div>
+          <div class="col-lg-6 text-center text-lg-start">
+            <p
+              class="fs-5 section-text"
+              style="
+                font-family: Inter, sans-serif;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #4b5563;
+                margin-top: 1rem;
+                margin-bottom: 0;
+              "
+            >
+              Real stories from people who’ve experienced the freshness,
+              quality, and care behind every harvest from dedicated farmers to
+              satisfied customers who now trust Shrimplify for their daily
+              needs.
+            </p>
+          </div>
+        </div>
 
-    <!-- HEADER -->
-    <div class="row mb-5">
-      <div class="col-lg-6 text-center text-lg-start">
-        <h2 class="display-2 display-md-1 section-title" style="font-family: Quicksand, sans-serif; font-weight:700; line-height:1.2; color:#366FB6; text-transform:capitalize; margin-bottom:1rem;">
-          What Customers say
-        </h2>
+        <!-- SLIDER -->
+        <div id="testimonialSlider" class="position-relative">
+          <!-- SLIDES -->
+          <div class="row align-items-center slide active gy-4">
+            <div class="col-lg-5 text-center">
+              <img
+                src="./images/manasa.png"
+                class="img-fluid rounded-4 testimonial-img"
+                alt="Customer"
+              />
+            </div>
+
+            <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+              <p
+                class="fs-5 fs-md-4 testimonial-text"
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  line-height: 1.5;
+                  color: #4c4c4c;
+                  margin-bottom: 16px;
+                "
+              >
+                Shrimplify’s HatchPro Service gave us access to verified,
+                healthy seed with complete traceability. The quality consistency
+                and technical support helped us improve survival rates from the
+                very first cycle.
+              </p>
+              <h6
+                class="fs-3 testimonial-name"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #254039;
+                  margin-bottom: 4px;
+                "
+              >
+                Manasa
+              </h6>
+              <small
+                class="testimonial-role fs-6"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  line-height: 1;
+                  color: #25403980;
+                "
+              >
+                Shrimp Farmer, Andhra Pradesh
+              </small>
+            </div>
+          </div>
+
+          <div class="row align-items-center slide d-none">
+            <div class="col-lg-5 text-center">
+              <img
+                src="./images/person2.png"
+                class="img-fluid rounded-4 testimonial-img"
+                alt="Customer"
+              />
+            </div>
+
+            <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+              <p
+                class="fs-5 fs-md-4 testimonial-text"
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  line-height: 1.5;
+                  color: #4c4c4c;
+                  margin-bottom: 16px;
+                "
+              >
+                Transparency in seed selection changes everything. HatchPro
+                helps us choose with clarity instead of guesswork.
+              </p>
+              <h6
+                class="fs-3 testimonial-name"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #254039;
+                  margin-bottom: 4px;
+                "
+              >
+                Ramesh
+              </h6>
+              <small
+                class="testimonial-role fs-6"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  line-height: 1;
+                  color: #25403980;
+                "
+              >
+                Shrimp Farmer
+              </small>
+            </div>
+          </div>
+
+          <div class="row align-items-center slide d-none">
+            <div class="col-lg-5 text-center">
+              <img
+                src="./images/person1.png"
+                class="img-fluid rounded-4 testimonial-img"
+                alt="Customer"
+              />
+            </div>
+
+            <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+              <p
+                class="fs-5 fs-md-4 testimonial-text"
+                style="
+                  font-family: Poppins, sans-serif;
+                  font-weight: 500;
+                  line-height: 1.5;
+                  color: #4c4c4c;
+                  margin-bottom: 16px;
+                "
+              >
+                Since using HatchPro, our seed selection process has become
+                structured and reliable. We no longer take blind risks. Every
+                batch is verified, and that peace of mind matters.
+              </p>
+              <h6
+                class="fs-3 testimonial-name"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color: #254039;
+                  margin-bottom: 4px;
+                "
+              >
+                Suresh
+              </h6>
+              <small
+                class="testimonial-role fs-6"
+                style="
+                  font-family: Sora, sans-serif;
+                  font-weight: 400;
+                  line-height: 1;
+                  color: #25403980;
+                "
+              >
+                Aquaculture Partner
+              </small>
+            </div>
+          </div>
+
+          <!-- CONTROLS -->
+          <div
+            class="slider-controls d-flex justify-content-end align-items-center gap-3 mt-4 mt-lg-0 controls-desktop"
+          >
+            <button
+              class="btn btn-outline-secondary rounded-circle px-3 prev-btn"
+              id="prevBtn"
+              style="border: none; background: transparent"
+            >
+              <img
+                src="./images/left-arrow.png"
+                width="40"
+                height="40"
+                alt="Previous"
+              />
+            </button>
+
+            <div class="d-flex gap-3" id="dots">
+              <span class="dot active">01</span>
+              <span class="dot">02</span>
+              <span class="dot">03</span>
+            </div>
+
+            <button
+              class="btn rounded-circle px-3 next-btn"
+              id="nextBtn"
+              style="border: none; background: transparent"
+            >
+              <img
+                src="./images/right-arrow.png"
+                width="40"
+                height="40"
+                alt="Next"
+              />
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 text-center text-lg-start">
-        <p class="fs-5 section-text" style="font-family: Inter, sans-serif; font-weight:400; line-height:1.5; color:#4B5563; margin-top:1rem; margin-bottom:0;">
-          Real stories from people who’ve experienced the freshness,
-          quality, and care behind every harvest from dedicated farmers
-          to satisfied customers who now trust Shrimplify for their daily needs.
-        </p>
-      </div>
-    </div>
-
-    <!-- SLIDER -->
-    <div id="testimonialSlider" class="position-relative">
-
-      <!-- SLIDES -->
-      <div class="row align-items-center slide active gy-4">
-
-        <div class="col-lg-5 text-center">
-          <img src="./images/manasa.png" class="img-fluid rounded-4 testimonial-img" alt="Customer" />
-        </div>
-
-        <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
-          <p class="fs-5 fs-md-4 testimonial-text" style="font-family: Poppins, sans-serif; font-weight:500; line-height:1.5; color:#4C4C4C; margin-bottom:16px;">
-            Shrimplify’s HatchPro Service gave us access to verified,
-            healthy seed with complete traceability. The quality
-            consistency and technical support helped us improve
-            survival rates from the very first cycle.
-          </p>
-          <h6 class="fs-3 testimonial-name" style="font-family: Sora, sans-serif; font-weight:400; line-height:1.5; color:#254039; margin-bottom:4px;">
-            Manasa
-          </h6>
-          <small class="testimonial-role fs-6" style="font-family: Sora, sans-serif; font-weight:400; line-height:1; color:#25403980;">
-            Lorem text
-          </small>
-        </div>
-
-      </div>
-
-      <div class="row align-items-center slide d-none">
-
-        <div class="col-lg-5 text-center">
-          <img src="./images/manasa.png" class="img-fluid rounded-4 testimonial-img" alt="Customer" />
-        </div>
-
-        <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
-          <p class="fs-5 fs-md-4 testimonial-text" style="font-family: Poppins, sans-serif; font-weight:500; line-height:1.5; color:#4C4C4C; margin-bottom:16px;">
-            The transparency and on-ground support helped us
-            plan cycles better and reduce losses significantly.
-          </p>
-          <h6 class="fs-3 testimonial-name" style="font-family: Sora, sans-serif; font-weight:400; line-height:1.5; color:#254039; margin-bottom:4px;">
-            Ramesh
-          </h6>
-          <small class="testimonial-role fs-6" style="font-family: Sora, sans-serif; font-weight:400; line-height:1; color:#25403980;">
-            Shrimp Farmer
-          </small>
-        </div>
-
-      </div>
-
-      <div class="row align-items-center slide d-none">
-
-        <div class="col-lg-5 text-center">
-          <img src="./images/manasa.png" class="img-fluid rounded-4 testimonial-img" alt="Customer" />
-        </div>
-
-        <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
-          <p class="fs-5 fs-md-4 testimonial-text" style="font-family: Poppins, sans-serif; font-weight:500; line-height:1.5; color:#4C4C4C; margin-bottom:16px;">
-            A farmer-first platform that genuinely understands
-            long-term farming success.
-          </p>
-          <h6 class="fs-3 testimonial-name" style="font-family: Sora, sans-serif; font-weight:400; line-height:1.5; color:#254039; margin-bottom:4px;">
-            Suresh
-          </h6>
-          <small class="testimonial-role fs-6" style="font-family: Sora, sans-serif; font-weight:400; line-height:1; color:#25403980;">
-            Aquaculture Partner
-          </small>
-        </div>
-
-      </div>
-
-      <!-- CONTROLS -->
-      <div class="slider-controls d-flex justify-content-end align-items-center gap-3 mt-4 mt-lg-0 controls-desktop">
-        <button class="btn btn-outline-secondary rounded-circle px-3 prev-btn" id="prevBtn" style="border:none; background:transparent;">
-          <img src="./images/left-arrow.png" width="40" height="40" alt="Previous" />
-        </button>
-
-        <div class="d-flex gap-3" id="dots">
-          <span class="dot active">01</span>
-          <span class="dot">02</span>
-          <span class="dot">03</span>
-        </div>
-
-        <button class="btn rounded-circle px-3 next-btn" id="nextBtn" style="border:none; background:transparent;">
-          <img src="./images/right-arrow.png" width="40" height="40" alt="Next" />
-        </button>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <style>
-    /* MOBILE STYLES ONLY */
-    @media (max-width: 576px) {
-      /* Stack slides vertically */
-      #testimonialSlider .row.slide {
-        flex-direction: column;
-      }
+      /* MOBILE STYLES ONLY */
+      @media (max-width: 576px) {
+        /* Stack slides vertically */
+        #testimonialSlider .row.slide {
+          flex-direction: column;
+        }
 
-      /* Images smaller and centered */
-      .testimonial-img {
-        max-width: 180px;
-        margin: 0 auto;
-      }
+        /* Images smaller and centered */
+        .testimonial-img {
+          max-width: 180px;
+          margin: 0 auto;
+        }
 
-      /* Reduce text size */
-      .testimonial-text {
-        font-size: 1.125rem !important; /* 18px equivalent */
-      }
+        /* Reduce text size */
+        .testimonial-text {
+          font-size: 1.125rem !important; /* 18px equivalent */
+        }
 
-      .testimonial-name {
-        font-size: 1rem !important;
-      }
+        .testimonial-name {
+          font-size: 1rem !important;
+        }
 
-      .testimonial-role {
-        font-size: 0.8rem !important;
-      }
+        .testimonial-role {
+          font-size: 0.8rem !important;
+        }
 
-      /* Header adjustments */
-      .section-title {
-        font-size: 1.75rem !important;
-      }
-      .section-text {
-        font-size: 0.9rem !important;
-        margin-top: 0.25rem !important;
-      }
+        /* Header adjustments */
+        .section-title {
+          font-size: 1.75rem !important;
+        }
+        .section-text {
+          font-size: 0.9rem !important;
+          margin-top: 0.25rem !important;
+        }
 
-      /* Slider controls below slides */
-      .slider-controls {
-        position: static !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        margin-top: 0.75rem !important;
-      }
+        /* Slider controls below slides */
+        .slider-controls {
+          position: static !important;
+          flex-direction: row !important;
+          justify-content: center !important;
+          gap: 15px !important;
+          margin-top: 0.75rem !important;
+        }
 
-      .slider-controls button img {
-        width: 30px !important;
-        height: 30px !important;
-      }
+        .slider-controls button img {
+          width: 30px !important;
+          height: 30px !important;
+        }
 
-      .slider-controls .dot {
-        font-size: 0.75rem !important;
-      }
+        .slider-controls .dot {
+          font-size: 0.75rem !important;
+        }
 
-      /* Padding adjustments for mobile text */
-      .col-lg-7.ps-lg-5 {
-        padding-left: 0 !important;
-      }
+        /* Padding adjustments for mobile text */
+        .col-lg-7.ps-lg-5 {
+          padding-left: 0 !important;
+        }
 
-      .col-lg-5 {
-        margin-bottom: 0.75rem;
+        .col-lg-5 {
+          margin-bottom: 0.75rem;
+        }
       }
-    }
     </style>
-
 
     <script>
       const TestimonialSlider = {
@@ -1656,8 +1992,8 @@
         },
 
         update() {
-          this.slides.forEach(slide => slide.classList.add("d-none"));
-          this.dots.forEach(dot => dot.classList.remove("active"));
+          this.slides.forEach((slide) => slide.classList.add("d-none"));
+          this.dots.forEach((dot) => dot.classList.remove("active"));
 
           this.slides[this.index].classList.remove("d-none");
           this.dots[this.index].classList.add("active");
@@ -1677,24 +2013,22 @@
         goTo(i) {
           this.index = i;
           this.update();
-        }
+        },
       };
 
       TestimonialSlider.init();
     </script>
 
     <!-- Footer -->
-     <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-      <script>
-        fetch('components/footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-          });
-      </script>
-
-
+    <script>
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
