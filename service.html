@@ -5,13 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shrimplify</title>
 
-  <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-  <!-- Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
@@ -238,11 +232,7 @@ body {
 </head>
 
 <body style="font-family: Inter, sans-serif;">
-
-  <!-- Navbar -->
   <div id="navbar"></div>
-
-  <!-- Navbar underline CSS -->
   <style>
     .navbar-nav .nav-link {
       position: relative;
@@ -287,17 +277,7 @@ body {
       });
   </script>
 
-
-
-  <!-- Hero Section -->
-      <section
-      class="position-relative d-flex align-items-center"
-      style="
-        background: #366FB6;
-        padding: 50px 0 80px;
-        border-radius: 0 0 120px 120px;
-      "
-    >
+  <section class="position-relative d-flex align-items-center" style="background: #366FB6; padding: 50px 0 80px; border-radius: 0 0 120px 120px;">
       <style>
         @media (max-width: 576px) {
           .position-relative.d-flex.align-items-center {
@@ -329,24 +309,16 @@ body {
 
     </style>
 
-  <!-- Service Hero -->
     <section class="hero-wrapper d-flex align-items-center">
       <div class="container text-center text-white">
-
-        <!-- HERO CONTENT -->
-        <h1
-          class="fw-semibold display-5 mb-3 hero-title"
-        >
+        <h1 class="fw-semibold display-5 mb-3 hero-title">
           Verified <span class="text-colour">Vannamei Seed</span>, <br />
           Sourced the Right Way.
         </h1>
-
         <p class="lead mb-4 hero-subtitle">
           HatchPro connects shrimp farmers with verified hatcheries for quality seed procurement —
           transparent, reliable, on time.
         </p>
-
-        <!-- BUTTONS -->
         <div class="d-flex justify-content-center gap-3 flex-wrap hero-buttons">
           <a href="./contact.html" class="btn btn-warning hero-btn-primary">
             Book Now →
@@ -355,40 +327,32 @@ body {
             Search Right Hatchery <span><img src="./images/search-logo.svg"/></span>
           </a>
         </div>
-
-        <!-- STATS -->
         <div class="row g-3 hero-stats mt-5 align-items-stretch">
-
           <div class="col-6 col-md-3 d-flex">
             <div class="stat-card w-100">
               <h4>20+</h4>
               <small>Hatcheries Partnered</small>
             </div>
           </div>
-
           <div class="col-6 col-md-3 d-flex">
             <div class="stat-card w-100">
               <h4>100%</h4>
               <small>Success Rate in Seed Selection</small>
             </div>
           </div>
-
           <div class="col-6 col-md-3 d-flex">
             <div class="stat-card w-100">
               <h4>12,000+</h4>
               <small>PL Delivered</small>
             </div>
           </div>
-
           <div class="col-6 col-md-3 d-flex">
             <div class="stat-card w-100">
               <h4>10+</h4>
               <small>Years of Experience</small>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
     <style>
@@ -399,20 +363,20 @@ body {
       background-position: center;
       border-radius: 20px;
       margin: 24px;
-      padding: 40px 0; /* Add vertical padding on desktop */
+      padding: 40px 0; 
     }
     
-    /* Adjust padding for medium desktop screens */
+
     @media (min-width: 769px) and (max-width: 1199px) {
       .hero-wrapper {
-        padding: 30px 0; /* Slightly less padding on medium screens */
+        padding: 30px 0; 
       }
     }
     
     /* Standard desktop screens */
     @media (min-width: 1200px) {
       .hero-wrapper {
-        padding: 50px 0; /* More padding on larger desktop screens */
+        padding: 50px 0; 
       }
     }
     .text-colour{
@@ -555,7 +519,6 @@ body {
 
     </style>
 
-  <!-- Marquee Section -->
   <div class="marquee-container">
     <div class="marquee-content">
       <span class="marquee-item">Octopus: Whole Round / Whole Cleaned</span>
@@ -569,20 +532,15 @@ body {
     </div>
   </div>
 
-  <!-- How HachPro Works-->
-
-<section class="process-section">
+  <section class="process-section">
   <div class="process-container">
-
     <div class="process-header">
       <span class="process-badge">
         <span><img src="./images/blue-cup.svg"/></span> Simple Process
       </span>
       <h2>How HatchPro Works</h2>
     </div>
-
     <div class="process-steps">
-
       <div class="process-step">
         <div class="process-timeline">
           <span class="process-number">01</span>
@@ -654,7 +612,6 @@ body {
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -707,7 +664,7 @@ body {
   color: #1a1a1a;
 }
 
-/* ===== STEPS CONTAINER ===== */
+
 .process-steps {
   display: flex;
   flex-direction: column;
@@ -719,8 +676,8 @@ body {
   content: '';
   position: absolute;
   left: 28px;
-  top: 26px; /* Center of first circle */
-  height: calc(100% - 52px); /* Stops at bottom of step 5 */
+  top: 26px; 
+  height: calc(100% - 52px); 
   width: 4px;
   background: #CCCCCC;
   z-index: 0;
@@ -730,11 +687,11 @@ body {
 .process-steps::after {
   content: '';
   position: absolute;
-  left: 16px; /* Centered with the 4px line */
-  bottom: 0; /* Aligned with the bottom of step 5 */
+  left: 6px; 
+  bottom: 0; 
   width: 50px;
   height: 50px;
-  background: url('./images/trust4.svg') no-repeat center center;
+  background: url('./images/success6.svg') no-repeat center center;
   background-size: contain;
   z-index: 1;
 }
@@ -783,14 +740,14 @@ body {
   position: relative;
 }
 
-/* Special styling for first step number */
+
 .process-step:first-child .process-number {
-  background: #fbd7b8; /* Light color matching section background */
-  color: #F58524; /* Orange color */
+  background: #fbd7b8;
+  color: #F58524; 
   border: 2px solid #F58524;
 }
 
-/* ===== CARD ===== */
+
 .process-card {
   display: flex;
   width: 100%;
@@ -933,67 +890,25 @@ body {
   }
 }
 </style>
-  
-  <!-- Search the right -->
   <section class="py-5">
   <div class="container">
-
-    <!-- TOP BADGE -->
     <div class="text-center mb-3">
       <span class="badge rounded-pill px-3 py-2 search-badge d-inline-flex align-items-center gap-2">
         <img src="./images/service-cup.svg" style="height: 20px; width: auto;"/> Find Your Hatchery
       </span>
     </div>
-
-    <!-- TITLE -->
-    <h2 
-      class="text-center fw-semibold mb-2 search-title"
-      style="
-        font-family: Quicksand, sans-serif;
-        font-weight: 600;
-        font-style: SemiBold;
-        font-size: 46px;
-        line-height: 120%;
-        letter-spacing: 0%;
-        text-align: center;
-      "
-    >
+    <h2 class="text-center fw-semibold mb-2 search-title" style="font-family: Quicksand, sans-serif; font-weight: 600; font-style: SemiBold; font-size: 46px; line-height: 120%; letter-spacing: 0%; text-align: center;">
       Search the Right Hatchery
     </h2>
-    <p 
-      class="text-center text-muted mb-4"
-      style="
-        font-family: Poppins, sans-serif;
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 18px;
-        line-height: 140%;
-        letter-spacing: 0%;
-        text-align: center;
-      "
-    >
+    <p class="text-center text-muted mb-4" style="font-family: Poppins, sans-serif; font-weight: 400; font-style: Regular; font-size: 18px; line-height: 140%; letter-spacing: 0%; text-align: center;">
       Browse verified hatcheries with real-time broodstock import <br class="d-none d-md-block" />
       data and certifications.
     </p>
-
-    <!-- FILTERS -->
     <div class="row g-3 justify-content-center mb-4">
       <div class="col-md-4">
         <div class="position-relative">
           <input type="text" class="form-control filter-input ps-5" placeholder="Search Hatchery Name..." style="background: #E8F8FF;" />
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="20" 
-            height="20" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            stroke-width="2" 
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
-            class="position-absolute" 
-            style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="position-absolute" style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>

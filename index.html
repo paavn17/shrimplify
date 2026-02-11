@@ -5,31 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shrimplify</title>
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Quicksand:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
       .step-offset {
         transform: translateY(100px);
@@ -190,12 +172,11 @@
           margin-top: 0.5rem !important;
         }
 
-        /* Remove extra bottom margin from last section */
+      
         section:last-child {
           margin-bottom: 0 !important;
         }
 
-        /* Remove video background color on mobile */
         @media (max-width: 768px) {
           .video-container-mobile {
             background: transparent !important;
@@ -203,14 +184,12 @@
         }
       }
 
-      /* Desktop only: space for floating shrimp */
       @media (min-width: 992px) {
         .video-section {
-          margin-bottom: 100px; /* adjust if needed */
+          margin-bottom: 100px; 
         }
       }
 
-      /* Prevent horizontal scrolling/slider on all devices */
       body {
         overflow-x: hidden;
       }
@@ -289,10 +268,7 @@
   </head>
 
   <body style="font-family: Inter, sans-serif">
-    <!-- NAVBAR -->
     <div id="navbar"></div>
-
-    <!-- Navbar underline CSS -->
     <style>
       .navbar-nav .nav-link {
         position: relative;
@@ -339,7 +315,6 @@
       }
     </style>
 
-    <!-- Load navbar + activate underline -->
     <script>
       fetch("components/navbar.html")
         .then((res) => res.text())
@@ -362,11 +337,9 @@
         });
     </script>
 
-    <!-- HERO SECTION -->
     <section class="pt-5 pb-4" style="background: #366fb6">
       <div class="container pt-4">
         <div class="row align-items-center gy-4 gx-5">
-          <!-- LEFT -->
           <div class="col-lg-7">
             <span
               class="d-inline-block mb-3 px-3 py-2 rounded-pill text-white"
@@ -389,7 +362,6 @@
             </h1>
           </div>
 
-          <!-- RIGHT -->
           <div class="col-lg-5 ms-auto">
             <p
               style="
@@ -442,15 +414,7 @@
       }
     </style>
 
-    <!-- VIDEO SECTION -->
-    <section
-      class="position-relative video-section"
-      style="
-        background: #366fb6;
-        padding: 0 20px 30px 20px;
-        border-radius: 0 0 100px 100px;
-      "
-    >
+    <section class="position-relative video-section" style="background: #366fb6; padding: 0 20px 30px 20px; border-radius: 0 0 100px 100px;">
       <div class="d-flex justify-content-center w-100">
         <div
           class="overflow-hidden video-container"
@@ -470,11 +434,7 @@
         </div>
       </div>
 
-      <!-- Floating Shrimp Icon -->
-      <div
-        class="position-absolute start-50 translate-middle-x d-none d-lg-block"
-        style="bottom: -56px"
-      >
+      <div class="position-absolute start-50 translate-middle-x d-none d-lg-block" style="bottom: -56px">
         <div
           class="d-flex align-items-center justify-content-center rounded-circle bg-white"
           style="width: 130px; height: 130px; border: 11px solid #f58524"
@@ -533,27 +493,11 @@
       }
     </style>
 
-    <!-- WHAT SHRIMPLIFY DOES -->
     <section class="position-relative py-5 bg-white" style="margin-top: 30px">
       <div class="container py-4">
-        <!-- Decorative SVGs -->
-        <img
-          src="./images/svg1.svg"
-          alt=""
-          class="position-absolute d-none d-lg-block"
-          style="top: -5%; left: 100px; width: 150px"
-        />
-
-        <img
-          src="./images/fish.svg"
-          alt=""
-          class="position-absolute d-none d-lg-block"
-          style="bottom: -30px; right: 100px; width: 160px"
-        />
-
-        <!-- HEADER ROW -->
+        <img src="./images/svg1.svg" alt="" class="position-absolute d-none d-lg-block" style="top: -5%; left: 100px; width: 150px" />
+        <img src="./images/fish.svg" alt="" class="position-absolute d-none d-lg-block" style="bottom: -30px; right: 100px; width: 160px" />
         <div class="row align-items-start mb-5 gx-5">
-          <!-- LEFT TITLE -->
           <div class="col-lg-6">
             <span
               class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
@@ -591,7 +535,6 @@
             </h2>
           </div>
 
-          <!-- RIGHT DESCRIPTION -->
           <div class="col-lg-6">
             <p
               style="
@@ -612,9 +555,7 @@
           </div>
         </div>
 
-        <!-- CARDS ROW -->
         <div class="row g-4 align-items-stretch">
-          <!-- CARD 1 -->
           <div class="col-lg-3 col-md-6">
             <div class="h-100 p-4 rounded-4" style="background: #e8f8ff">
               <h3
@@ -654,7 +595,6 @@
             </div>
           </div>
 
-          <!-- CARD 2 (IMAGE) -->
           <div class="col-lg-3 col-md-6">
             <div class="h-100 rounded-4 overflow-hidden">
               <img
@@ -666,7 +606,6 @@
             </div>
           </div>
 
-          <!-- CARD 3 -->
           <div class="col-lg-3 col-md-6">
             <div class="h-100 p-4 rounded-4" style="background: #e8f8ff">
               <h3
@@ -705,7 +644,6 @@
             </div>
           </div>
 
-          <!-- CARD 4 (IMAGE) -->
           <div class="col-lg-3 col-md-6">
             <div class="h-100 rounded-4 overflow-hidden">
               <img
@@ -720,12 +658,9 @@
       </div>
     </section>
 
-    <!-- OUR SERVICES -->
     <section class="py-5 bg-white">
       <div class="container py-4">
-        <!-- HEADER ROW -->
         <div class="row align-items-start mb-5 gx-5">
-          <!-- LEFT -->
           <div class="col-lg-6">
             <span
               class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-3"
@@ -791,7 +726,6 @@
             </p>
           </div>
 
-          <!-- RIGHT -->
           <div class="col-lg-6 d-flex flex-column align-items-end">
             <p
               style="
@@ -828,9 +762,7 @@
           </div>
         </div>
 
-        <!-- CONTENT ROW -->
         <div class="row align-items-center gx-5">
-          <!-- LEFT STEPS -->
           <div class="col-lg-6">
             <div class="row g-4">
               <!-- STEP 01 -->
@@ -877,7 +809,6 @@
                 </div>
               </div>
 
-              <!-- STEP 02 -->
               <div class="col-md-6 step-offset">
                 <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
                   <div
@@ -921,51 +852,20 @@
                 </div>
               </div>
 
-              <!-- STEP 03 -->
               <div class="col-md-6">
                 <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
-                  <div
-                    class="d-flex justify-content-between align-items-start mb-3"
-                  >
-                    <img
-                      src="./images/service-feature3.png"
-                      class="img-fluid"
-                      style="max-width: 52px; height: auto"
-                    />
-                    <span
-                      class="fs-3 fs-md-2"
-                      style="
-                        font-family:
-                          &quot;Bricolage Grotesque&quot;, sans-serif;
-                        font-weight: 600;
-                        line-height: 1;
-                        background: linear-gradient(
-                          180deg,
-                          #e8f8ff 0%,
-                          #4ca8f4 100%
-                        );
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                      "
-                    >
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <img src="./images/service-feature3.png" class="img-fluid" style="max-width: 52px; height: auto" />
+                    <span class="fs-3 fs-md-2" style="font-family: &quot;Bricolage Grotesque&quot;, sans-serif; font-weight: 600; line-height: 1; background: linear-gradient(180deg, #e8f8ff 0%, #4ca8f4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                       03
                     </span>
                   </div>
-                  <p
-                    class="fs-6 fs-md-5"
-                    style="
-                      font-family: &quot;Plus Jakarta Sans&quot;, sans-serif;
-                      font-weight: 500;
-                      line-height: 1.4;
-                      letter-spacing: -0.02em;
-                    "
-                  >
+                  <p class="fs-6 fs-md-5" style="font-family: &quot;Plus Jakarta Sans&quot;, sans-serif; font-weight: 500; line-height: 1.4; letter-spacing: -0.02em;">
                     On-site seed quality verification
                   </p>
                 </div>
               </div>
 
-              <!-- STEP 04 -->
               <div class="col-md-6 step-offset">
                 <div class="p-4 rounded-4 h-100" style="background: #e8f8ff">
                   <div
@@ -1140,24 +1040,14 @@
           </div>
         </div>
 
-        <!-- CONTENT -->
         <div class="row align-items-center gx-5">
-          <!-- LEFT IMAGE -->
           <div class="col-lg-6 mb-4 mb-lg-0">
             <div class="rounded-4 overflow-hidden">
-              <img
-                src="./images/farmpro.png"
-                class="w-100"
-                style="height: 520px; object-fit: cover"
-                alt="Farm Ponds"
-              />
+              <img src="./images/farmpro.png" class="w-100" style="height: 520px; object-fit: cover" alt="Farm Ponds" />
             </div>
           </div>
-
-          <!-- RIGHT STEPS -->
           <div class="col-lg-6">
             <div class="row g-4">
-              <!-- STEP 01 -->
               <div class="col-md-6">
                 <div class="p-4 rounded-4 h-100" style="background: #eaf7ff">
                   <div
@@ -1200,7 +1090,6 @@
                 </div>
               </div>
 
-              <!-- STEP 02 (OFFSET) -->
               <div class="col-md-6 step-offset">
                 <div class="p-4 rounded-4 h-100" style="background: #eaf7ff">
                   <div
@@ -1243,7 +1132,6 @@
                 </div>
               </div>
 
-              <!-- STEP 03 -->
               <div class="col-md-6">
                 <div class="p-4 rounded-4 h-100" style="background: #eaf7ff">
                   <div
@@ -1290,23 +1178,9 @@
         </div>
       </div>
 
-      <!-- RIGHT BOTTOM FISH (Hidden on mobile) -->
-      <img
-        src="./images/crab.svg"
-        alt="Decorative Fish"
-        class="d-none d-lg-block"
-        style="
-          position: absolute;
-          right: 80px;
-          bottom: 0;
-          width: 230px;
-          opacity: 0.9;
-          pointer-events: none;
-        "
-      />
+      <img src="./images/crab.svg" alt="Decorative Fish" class="d-none d-lg-block" style="position: absolute; right: 80px; bottom: 0; width: 230px; opacity: 0.9; pointer-events: none;" />
     </section>
 
-    <!--Are you ready-->
     <section class="hero-section d-flex align-items-center">
       <div class="container text-white">
         <span
